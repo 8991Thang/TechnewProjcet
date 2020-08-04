@@ -6,7 +6,6 @@ html {
 }
 body {
   padding-top: 3rem;
-  padding-bottom: 3rem;
   color: #5a5a5a;
   background-image: url(../img/dots.png);
   
@@ -149,7 +148,7 @@ body {
 .container-content {
   margin-bottom: 50px;
 }
-.row-news, .row-tips{
+.row-title{
   height: 70vh;
 }
 
@@ -209,6 +208,76 @@ body {
   color: #5a5a5a;
   font-weight: bold;
 }
+
+.footer {
+  background-color: #343a40;
+}
+
+
+
+
+
+/* NEWS---------------------------------------------------------------------------------------- */
+.container-xl.pg-news {
+  margin-top: 30px;
+}
+.row-content {
+  
+}
+
+.img-sm-pg-news {
+  width: 90%;
+  height: auto;
+}
+
+.img-bg-pg-news {
+  width: 60%;
+  height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 

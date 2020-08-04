@@ -10,7 +10,6 @@ window.scrollTo({
 })
 }
 
-
 // ScrollUp
 var mybutton = document.getElementById("scroll-up");
 
