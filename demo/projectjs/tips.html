@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Jekyll v4.0.1">
+  <title>ProjectJS</title>
+
+  <!-- Bootstrap core CSS -->
+
+  <link href="../vendors/dist/css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="../vendors/dist/css/ct-navbar.css">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+  <!-- Custom styles for this template -->
+  <link href="projectjs.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="scroll-up">
+    <p class="float-right"><a href="#"> <i class="far fa-arrow-alt-circle-up"></i></a></p>
+  </div>
+  <header>
+    <!-- NAVBAR---------------------- -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="index.html">
+        <img src="../img/Logotn.png" alt="logo" style="width: 40px;">
+        TechNews
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tin Tức</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tips.html" style="color: white; font-weight: bold;">Mẹo Vặt</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Forum</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Góc Uy Tín</a>
+          </li>
+        </ul>
+        <div class="nav-link">
+          <a href="https://www.facebook.com/" class="nav-link-icon" title="Follow us on Facebook" target="_blank">
+            <i class="fab fa-facebook-square"></i>
+          </a>
+        </div>
+        <div class="dropdown account-item">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-user-circle"></i>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <button class="dropdown-item" type="button">
+              <i class="fas fa-sign-in-alt"></i> Action</button>
+          </div>
+        </div>
+
+        <form class="form-inline mt-2 mt-md-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Tìm Kiếm" aria-label="Search">
+          <button class="btn btn-outline-success" id="btn-search-pj" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+    </nav>
+    <!-- END NAVBAR---------------------------------->
+  </header>
+
+  <div id="container">
+    <div class="container-xl">
+      <div class="row">
+        <div class="col-md-6 big-img">
+          <div id="myprojectjs" class="projectjs slide" data-ride="projectjs">
+            <ol class="projectjs-indicators">
+              <li data-target="#myprojectjs" data-slide-to="0" class="active"></li>
+              <li data-target="#myprojectjs" data-slide-to="1"></li>
+              <li data-target="#myprojectjs" data-slide-to="2"></li>
+            </ol>
+            <div class="projectjs-inner">
+              <div class="projectjs-item active">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+                  <rect width="100%" height="100%" fill="white" />
+                  <img
+                    src="https://images.pexels.com/photos/1213447/pexels-photo-1213447.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                    alt=""></svg>
+                <div class="container">
+                  <div class="projectjs-caption text-left">
+                    <!-- <h1>Tin Tức</h1>
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
+                          metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <p><a class="btn btn-lg btn-primary" role="button" href="#" onclick="scrollToElement('news')">Learn
+                            More</a></p> -->
+                  </div>
+                </div>
+              </div>
+              <div class="projectjs-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+                  <rect width="100%" height="100%" fill="#777" />
+                  <img
+                    src="https://images.pexels.com/photos/3568520/pexels-photo-3568520.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                    alt="img">
+                </svg>
+                <div class="container">
+                  <div class="projectjs-caption text-right">
+                    <!-- <h1>Mẹo Vặt</h1>
+                        <p class="text-head">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi
+                          porta gravida at eget
+                          metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#" role="button" onclick="scrollToElement('tips')">Learn
+                            More</a></p> -->
+                  </div>
+                </div>
+              </div>
+              <div class="projectjs-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+                  <rect width="100%" height="100%" fill="#777" />
+                  <img
+                    src="https://images.pexels.com/photos/1379640/pexels-photo-1379640.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                    alt=""></svg>
+                <div class="container">
+                  <div class="projectjs-caption text-left">
+                    <!-- <h1>Forum</h1>
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
+                          metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#" role="button" onclick="scrollToElement('forum')">Learn
+                            More</a></p> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="projectjs-control-prev" href="#myprojectjs" role="button" data-slide="prev">
+              <span class="projectjs-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="projectjs-control-next" href="#myprojectjs" role="button" data-slide="next">
+              <span class="projectjs-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 big-img">
+          <div id="myprojectjs" class="projectjs slide" data-ride="projectjs">
+            <ol class="projectjs-indicators">
+              <li data-target="#myprojectjs" data-slide-to="0" class="active"></li>
+              <li data-target="#myprojectjs" data-slide-to="1"></li>
+              <li data-target="#myprojectjs" data-slide-to="2"></li>
+            </ol>
+            <div class="projectjs-inner">
+              <div class="projectjs-item active">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+                  <rect width="100%" height="100%" fill="white" />
+                  <img
+                    src="https://images.pexels.com/photos/1213447/pexels-photo-1213447.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                    alt=""></svg>
+                <div class="container">
+                </div>
+              </div>
+              <div class="projectjs-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+                  <rect width="100%" height="100%" fill="#777" />
+                  <img
+                    src="https://images.pexels.com/photos/3568520/pexels-photo-3568520.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                    alt="img">
+                </svg>
+                <div class="container">
+                  <div class="projectjs-caption text-right">
+                    <!-- <h1>Mẹo Vặt</h1>
+                        <p class="text-head">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi
+                          porta gravida at eget
+                          metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#" role="button" onclick="scrollToElement('tips')">Learn
+                            More</a></p> -->
+                  </div>
+                </div>
+              </div>
+              <div class="projectjs-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+                  <rect width="100%" height="100%" fill="#777" />
+                  <img
+                    src="https://images.pexels.com/photos/1379640/pexels-photo-1379640.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                    alt=""></svg>
+                <div class="container">
+                  <div class="projectjs-caption text-left">
+                    <!-- <h1>Forum</h1>
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
+                          metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#" role="button" onclick="scrollToElement('forum')">Learn
+                            More</a></p> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="projectjs-control-prev" href="#myprojectjs" role="button" data-slide="prev">
+              <span class="projectjs-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="projectjs-control-next" href="#myprojectjs" role="button" data-slide="next">
+              <span class="projectjs-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="container" class="container-xl">
+    <!-- <div class="container-xl title-news">
+    <h2>Tin Tức</h2>
+    <a href="" class="more">
+      <p class="more">
+        Xem thêm
+        <i class="fas fa-angle-double-right"></i>
+      </p>
+    </a>
+  </div> -->
+    <div class="row row-news">
+      <div class="col-md-3 img-mini">
+        <a href=""><h3 class="content">ABCDEF</h3><img src="../img/1.jpg" alt="" class="mini-img"></a>
+      </div>
+      <div class="col-md-3 img-mini">
+        <a href=""><img src="../img/2.jpg" alt="" class="mini-img"></a>
+      </div>
+      <div class="col-md-3 img-mini">
+        <a href=""><img src="../img/3.jpg" alt="" class="mini-img"></a>
+      </div>
+      <div class="col-md-3 img-mini">
+        <a href=""><img src="../img/4.jpg" alt="" class="mini-img"></a>
+      </div>
+    </div>
+  </div>
+
+  <div id="container" class="container-xl">
+    <div class="container-xl title-tips">
+      <h2>Tin Tức</h2>
+      <a href="" class="more">
+        <p class="more">
+          Xem thêm
+          <i class="fas fa-angle-double-right"></i>
+        </p>
+      </a>
+    </div>
+    <div class="row row-tips">
+      <div class="col-md-5 row-left">
+        <a href="">
+          <img src="../img/4.jpg" class="img-tips1">
+        </a>
+        <a href="">
+          <img src="../img/2.jpg" class="img-tips1">
+        </a>
+        <a href="">
+          <img
+            src="https://images.pexels.com/photos/2343475/pexels-photo-2343475.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+            class="img-tips1">
+        </a>
+        <a href="">
+          <img src="../img/1.jpg" class="img-tips1">
+        </a>
+      </div>
+      <div class="col-md-7 row-right">
+        <a href="">
+          <img src="../img/3.jpg" class="img-tips2">
+        </a>
+        <a href="">
+          <img src="../img/4.jpg" class="img-tips2">
+        </a>
+        <a href="">
+          <img src="../img/1.jpg" class="img-tips2">
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <!-- FOOTER -->
+  <footer class="container">
+
+    <p>&copy; 2020 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  </footer>
+  </main>
+
+
+
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="../vendors/js/vendor/jquery.slim.min.js"><\/script>')</script>
+  <script src="../vendors/dist/js/perfect-scrollbar.jquery.min.js"></script>
+  <script src="../vendors/dist/js/bootstrap.bundle.js"></script>
+  <script src="../vendors/dist/js/ct-navbar.js"></script>
+  <script src="./app.js"></script>
+</body>
+
+</html>
