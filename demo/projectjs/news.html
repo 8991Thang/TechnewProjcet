@@ -13,7 +13,7 @@
 
     <link href="../vendors/dist/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="../vendors/dist/css/ct-navbar.css">
-
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -148,17 +148,18 @@
             </div>
         </div>
 <!-- ENDNEWS------------------------------- -->
-
+<br>
+<br>
 <!-- BREAKING NEWS------------------------- -->
 <div class="container-xl">
     <div class="title-content title-style">
         <h2>Tin Hot</h2>
     </div>
-    <div class="container" style="width: 100%; height: 560px;background-color: #eaeaea;">
-        <div class="container-child" style="width: 97%; height: 100%;">
+    <div class="container" style="width: 100%; height: 510px;background-color: #eaeaea;">
+        <div class="container-child" style="width: 98%; height: 100%;">
         <div class="row breaking-row">
             <div class="img-bg-breaking" style="background-image: url(https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);background-size: cover;">
-              ii
+              
             </div>
             <div class="img-bg-breaking" style="background-image: url(https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);background-size: cover;">
               
@@ -191,7 +192,7 @@
 
                 <small class="d-block mb-3 text-muted" id="copyright">&copy;
                     <script>
-                        document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
+                        document.getElementById('copyright').appendChild(document.createTextNode(dayjs().format('YYYY')))
                     </script>
                     Designed and Coded by
                     <a href="https://www.facebook.com/pastetuaam" target="_blank" style="color: #026670;">Pastetu</a>

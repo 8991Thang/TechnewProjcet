@@ -320,7 +320,9 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 50%;
+  height: 54%;
+  margin-left: 6px;
+  
 }
 .img-bg-breaking {
   width: 49.78%;
