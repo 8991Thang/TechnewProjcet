@@ -616,9 +616,9 @@
    * ------------------------------------------------------------------------
    */
 
-  var NAME$2 = 'projectjs';
+  var NAME$2 = 'carousel';
   var VERSION$2 = '4.5.0';
-  var DATA_KEY$2 = 'bs.projectjs';
+  var DATA_KEY$2 = 'bs.carousel';
   var EVENT_KEY$2 = "." + DATA_KEY$2;
   var DATA_API_KEY$2 = '.data-api';
   var JQUERY_NO_CONFLICT$2 = $.fn[NAME$2];
@@ -662,22 +662,22 @@
   var EVENT_DRAG_START = "dragstart" + EVENT_KEY$2;
   var EVENT_LOAD_DATA_API$1 = "load" + EVENT_KEY$2 + DATA_API_KEY$2;
   var EVENT_CLICK_DATA_API$2 = "click" + EVENT_KEY$2 + DATA_API_KEY$2;
-  var CLASS_NAME_projectjs = 'projectjs';
+  var CLASS_NAME_carousel = 'carousel';
   var CLASS_NAME_ACTIVE$1 = 'active';
   var CLASS_NAME_SLIDE = 'slide';
-  var CLASS_NAME_RIGHT = 'projectjs-item-right';
-  var CLASS_NAME_LEFT = 'projectjs-item-left';
-  var CLASS_NAME_NEXT = 'projectjs-item-next';
-  var CLASS_NAME_PREV = 'projectjs-item-prev';
+  var CLASS_NAME_RIGHT = 'carousel-item-right';
+  var CLASS_NAME_LEFT = 'carousel-item-left';
+  var CLASS_NAME_NEXT = 'carousel-item-next';
+  var CLASS_NAME_PREV = 'carousel-item-prev';
   var CLASS_NAME_POINTER_EVENT = 'pointer-event';
   var SELECTOR_ACTIVE$1 = '.active';
-  var SELECTOR_ACTIVE_ITEM = '.active.projectjs-item';
-  var SELECTOR_ITEM = '.projectjs-item';
-  var SELECTOR_ITEM_IMG = '.projectjs-item img';
-  var SELECTOR_NEXT_PREV = '.projectjs-item-next, .projectjs-item-prev';
-  var SELECTOR_INDICATORS = '.projectjs-indicators';
+  var SELECTOR_ACTIVE_ITEM = '.active.carousel-item';
+  var SELECTOR_ITEM = '.carousel-item';
+  var SELECTOR_ITEM_IMG = '.carousel-item img';
+  var SELECTOR_NEXT_PREV = '.carousel-item-next, .carousel-item-prev';
+  var SELECTOR_INDICATORS = '.carousel-indicators';
   var SELECTOR_DATA_SLIDE = '[data-slide], [data-slide-to]';
-  var SELECTOR_DATA_RIDE = '[data-ride="projectjs"]';
+  var SELECTOR_DATA_RIDE = '[data-ride="carousel"]';
   var PointerType = {
     TOUCH: 'touch',
     PEN: 'pen'
@@ -688,8 +688,8 @@
    * ------------------------------------------------------------------------
    */
 
-  var projectjs = /*#__PURE__*/function () {
-    function projectjs(element, config) {
+  var carousel = /*#__PURE__*/function () {
+    function carousel(element, config) {
       this._items = null;
       this._interval = null;
       this._activeElement = null;
@@ -708,7 +708,7 @@
     } // Getters
 
 
-    var _proto = projectjs.prototype;
+    var _proto = carousel.prototype;
 
     // Public
     _proto.next = function next() {
@@ -719,7 +719,7 @@
 
     _proto.nextWhenVisible = function nextWhenVisible() {
       // Don't call next when the page isn't visible
-      // or the projectjs or its parent isn't visible
+      // or the carousel or its parent isn't visible
       if (!document.hidden && $(this._element).is(':visible') && $(this._element).css('visibility') !== 'hidden') {
         this.next();
       }
@@ -884,9 +884,9 @@
 
         if (_this3._config.pause === 'hover') {
           // If it's a touch-enabled device, mouseenter/leave are fired as
-          // part of the mouse compatibility events on first tap - the projectjs
+          // part of the mouse compatibility events on first tap - the carousel
           // would stop cycling until user tapped out of it;
-          // here, we listen for touchend, explicitly pause the projectjs
+          // here, we listen for touchend, explicitly pause the carousel
           // (as if it's the second time we tap on it, mouseenter compat event
           // is NOT fired) and after a timeout (to allow for mouse compatibility
           // events to fire) we explicitly restart cycling
@@ -1090,7 +1090,7 @@
     } // Static
     ;
 
-    projectjs._jQueryInterface = function _jQueryInterface(config) {
+    carousel._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
         var data = $(this).data(DATA_KEY$2);
 
@@ -1103,7 +1103,7 @@
         var action = typeof config === 'string' ? config : _config.slide;
 
         if (!data) {
-          data = new projectjs(this, _config);
+          data = new carousel(this, _config);
           $(this).data(DATA_KEY$2, data);
         }
 
@@ -1122,7 +1122,7 @@
       });
     };
 
-    projectjs._dataApiClickHandler = function _dataApiClickHandler(event) {
+    carousel._dataApiClickHandler = function _dataApiClickHandler(event) {
       var selector = Util.getSelectorFromElement(this);
 
       if (!selector) {
@@ -1131,7 +1131,7 @@
 
       var target = $(selector)[0];
 
-      if (!target || !$(target).hasClass(CLASS_NAME_projectjs)) {
+      if (!target || !$(target).hasClass(CLASS_NAME_carousel)) {
         return;
       }
 
@@ -1143,7 +1143,7 @@
         config.interval = false;
       }
 
-      projectjs._jQueryInterface.call($(target), config);
+      carousel._jQueryInterface.call($(target), config);
 
       if (slideIndex) {
         $(target).data(DATA_KEY$2).to(slideIndex);
@@ -1152,7 +1152,7 @@
       event.preventDefault();
     };
 
-    _createClass(projectjs, null, [{
+    _createClass(carousel, null, [{
       key: "VERSION",
       get: function get() {
         return VERSION$2;
@@ -1164,7 +1164,7 @@
       }
     }]);
 
-    return projectjs;
+    return carousel;
   }();
   /**
    * ------------------------------------------------------------------------
@@ -1173,14 +1173,14 @@
    */
 
 
-  $(document).on(EVENT_CLICK_DATA_API$2, SELECTOR_DATA_SLIDE, projectjs._dataApiClickHandler);
+  $(document).on(EVENT_CLICK_DATA_API$2, SELECTOR_DATA_SLIDE, carousel._dataApiClickHandler);
   $(window).on(EVENT_LOAD_DATA_API$1, function () {
-    var projectjss = [].slice.call(document.querySelectorAll(SELECTOR_DATA_RIDE));
+    var carousels = [].slice.call(document.querySelectorAll(SELECTOR_DATA_RIDE));
 
-    for (var i = 0, len = projectjss.length; i < len; i++) {
-      var $projectjs = $(projectjss[i]);
+    for (var i = 0, len = carousels.length; i < len; i++) {
+      var $carousel = $(carousels[i]);
 
-      projectjs._jQueryInterface.call($projectjs, $projectjs.data());
+      carousel._jQueryInterface.call($carousel, $carousel.data());
     }
   });
   /**
@@ -1189,12 +1189,12 @@
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME$2] = projectjs._jQueryInterface;
-  $.fn[NAME$2].Constructor = projectjs;
+  $.fn[NAME$2] = carousel._jQueryInterface;
+  $.fn[NAME$2].Constructor = carousel;
 
   $.fn[NAME$2].noConflict = function () {
     $.fn[NAME$2] = JQUERY_NO_CONFLICT$2;
-    return projectjs._jQueryInterface;
+    return carousel._jQueryInterface;
   };
 
   /**
@@ -4403,7 +4403,7 @@
 
   exports.Alert = Alert;
   exports.Button = Button;
-  exports.projectjs = projectjs;
+  exports.carousel = carousel;
   exports.Collapse = Collapse;
   exports.Dropdown = Dropdown;
   exports.Modal = Modal;

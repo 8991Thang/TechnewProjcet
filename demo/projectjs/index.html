@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
   <meta name="generator" content="Jekyll v4.0.1">
-  <title>ProjectJS</title>
+  <title>Projectjs</title>
 
   <!-- Bootstrap core CSS -->
 
@@ -49,16 +49,19 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
+            <a class="nav-link" href="index.html" style="font-weight:bold; color: white;">Home</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="news.html">Tin Tức</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Mẹo Vặt</a>
+            <a class="nav-link" href="tip.html">Mẹo Vặt</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Forum</a>
+            <a class="nav-link" href="forum.html">Forum</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Góc Uy Tín</a>
+            <a class="nav-link" href="vote.html">Góc Uy Tín</a>
           </li>
         </ul>
         <div class="nav-link">
@@ -88,21 +91,21 @@
     <!-- END NAVBAR-------------------------------- -->
 
     <!-- BANNER ------------------------------------->
-    <div id="myprojectjs" class="projectjs slide" data-ride="projectjs">
-      <ol class="projectjs-indicators">
-        <li data-target="#myprojectjs" data-slide-to="0" class="active"></li>
-        <li data-target="#myprojectjs" data-slide-to="1"></li>
-        <li data-target="#myprojectjs" data-slide-to="2"></li>
-        <li data-target="#myprojectjs" data-slide-to="3"></li>
+    <div id="mycarousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#mycarousel" data-slide-to="1"></li>
+        <li data-target="#mycarousel" data-slide-to="2"></li>
+        <li data-target="#mycarousel" data-slide-to="3"></li>
       </ol>
-      <div class="projectjs-inner">
-        <div class="projectjs-item active">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
           <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
             <rect width="100%" height="100%" fill="white" />
             <img src="../img/tintuc.png" alt=""></svg>
           <div class="container">
-            <div class="projectjs-caption text-left">
+            <div class="carousel-caption text-left">
               <h1>Tin Tức</h1>
               <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
                 metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -111,14 +114,14 @@
             </div>
           </div>
         </div>
-        <div class="projectjs-item">
+        <div class="carousel-item">
           <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
             <rect width="100%" height="100%" fill="#777" />
             <img src="../img/meo.png" alt="img">
           </svg>
           <div class="container">
-            <div class="projectjs-caption text-right">
+            <div class="carousel-caption text-right">
               <h1>Mẹo Vặt</h1>
               <p class="text-head">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi
                 porta gravida at eget
@@ -128,13 +131,13 @@
             </div>
           </div>
         </div>
-        <div class="projectjs-item">
+        <div class="carousel-item">
           <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
             <rect width="100%" height="100%" fill="#777" />
             <img src="../img/forum.png" alt=""></svg>
           <div class="container">
-            <div class="projectjs-caption text-left">
+            <div class="carousel-caption text-left">
               <h1>Forum</h1>
               <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
                 metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -143,13 +146,13 @@
             </div>
           </div>
         </div>
-        <div class="projectjs-item">
+        <div class="carousel-item">
           <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
             <rect width="100%" height="100%" fill="#777" />
             <img src="../img/vote.png" alt=""></svg>
           <div class="container">
-            <div class="projectjs-caption text-right">
+            <div class="carousel-caption text-right">
               <h1>Góc uy tín</h1>
               <p class="text-head">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi
                 porta gravida at eget
@@ -160,15 +163,16 @@
           </div>
         </div>
       </div>
-      <a class="projectjs-control-prev" href="#myprojectjs" role="button" data-slide="prev">
-        <span class="projectjs-control-prev-icon" aria-hidden="true"></span>
+      <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
       </a>
-      <a class="projectjs-control-next" href="#myprojectjs" role="button" data-slide="next">
-        <span class="projectjs-control-next-icon" aria-hidden="true"></span>
+      <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
     </div>
+
     <!-- END BANNER---------------------------------- -->
   </header>
 
@@ -176,7 +180,7 @@
   <main role="main">
     <!--NEWS--------------------------------------------->
     <div class="container-content" id="news">
-      <div class="container-xl title-news">
+      <div class="container-xl title-content">
         <h2>Tin Tức</h2>
         <a href="" class="more">
           <p class="more">
@@ -189,26 +193,47 @@
         <div class="row row-title">
           <div class="col-md-9 big-img">
             <a href="">
-              <img
-                src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt="" class="img-bg">
+              <div class="trans" style="width: 100%; height: 100%;
+            background-image:url(https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+            background-size: cover;">
+                <div class="content-backgr">
+                  <div class="backgc"></div>
+                  <p>aoaoaooaoaoaoaoaooaoa</p>
+                </div>
+              </div>
+
             </a>
           </div>
-          <div class="col-md-3 img-sm-k">
+          <div class="col-md-3 small-img">
             <a href="">
-              <img
-                src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt="" class="img-sm">
+              <div class="trans" style="width: 100%; height: 100%;
+            background-image:url(https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+            background-size: cover;">
+                <div class="content-backgr">
+                  <div class="backgc"></div>
+                  <p>aoaoaooaoaoaoaoaooaoa</p>
+                </div>
+              </div>
             </a>
             <a href="">
-              <img
-                src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt="" class="img-sm">
+              <div class="trans" style="width: 100%; height: 100%;
+            background-image:url(https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+            background-size: cover;">
+                <div class="content-backgr">
+                  <div class="backgc"></div>
+                  <p>aoaoaooaoaoaoaoaooaoa</p>
+                </div>
+              </div>
             </a>
             <a href="">
-              <img
-                src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt="" class="img-sm">
+              <div class="trans" style="width: 100%; height: 100%;
+              background-image:url(https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+              background-size: cover;">
+                  <div class="content-backgr">
+                    <div class="backgc"></div>
+                    <p>aoaoaooaoaoaoaoaooaoa</p>
+                  </div>
+                </div>
             </a>
           </div>
         </div>
@@ -219,8 +244,8 @@
 
     <!-- TIPS------------------------------------------->
     <div class="container-content" id="tips">
-      <div class="container-xl title-news">
-        <h2>Mẹo Vặt</h2>
+      <div class="container-xl title-content">
+        <h2>Tin Tức</h2>
         <a href="" class="more">
           <p class="more">
             Xem thêm
@@ -232,40 +257,58 @@
         <div class="row row-title">
           <div class="col-md-9 big-img">
             <a href="">
-              <img
-                src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt="" class="img-bg">
+              <div class="trans" style="width: 100%; height: 100%;
+            background-image:url(https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+            background-size: cover;">
+                <div class="content-backgr">
+                  <div class="backgc"></div>
+                  <p>aoaoaooaoaoaoaoaooaoa</p>
+                </div>
+              </div>
+
             </a>
           </div>
-          <div class="col-md-3 img-sm-k">
+          <div class="col-md-3 small-img">
             <a href="">
-              <img
-                src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt="" class="img-sm">
+              <div class="trans" style="width: 100%; height: 100%;
+            background-image:url(https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+            background-size: cover;">
+                <div class="content-backgr">
+                  <div class="backgc"></div>
+                  <p>aoaoaooaoaoaoaoaooaoa</p>
+                </div>
+              </div>
             </a>
             <a href="">
-              <img
-                src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt="" class="img-sm">
+              <div class="trans" style="width: 100%; height: 100%;
+            background-image:url(https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+            background-size: cover;">
+                <div class="content-backgr">
+                  <div class="backgc"></div>
+                  <p>aoaoaooaoaoaoaoaooaoa</p>
+                </div>
+              </div>
             </a>
             <a href="">
-              <img
-                src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt="" class="img-sm">
+              <div class="trans" style="width: 100%; height: 100%;
+              background-image:url(https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+              background-size: cover;">
+                  <div class="content-backgr">
+                    <div class="backgc"></div>
+                    <p>aoaoaooaoaoaoaoaooaoa</p>
+                  </div>
+                </div>
             </a>
           </div>
         </div>
       </div>
-      
     </div>
-    </div>
-
     <!-- END TIPS ------------------------------------------->
 
     <!-- FORUM ---------------------------------------------->
     <div class="container-content" id="forum">
-      <div class="container-xl title-news">
-        <h2>Forum</h2>
+      <div class="container-xl title-content">
+        <h2>Tin Tức</h2>
         <a href="" class="more">
           <p class="more">
             Xem thêm
@@ -277,76 +320,115 @@
         <div class="row row-title">
           <div class="col-md-9 big-img">
             <a href="">
-              <img
-                src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt="" class="img-bg">
+              <div class="trans" style="width: 100%; height: 100%;
+            background-image:url(https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+            background-size: cover;">
+                <div class="content-backgr">
+                  <div class="backgc"></div>
+                  <p>aoaoaooaoaoaoaoaooaoa</p>
+                </div>
+              </div>
+
             </a>
           </div>
-          <div class="col-md-3 img-sm-k">
+          <div class="col-md-3 small-img">
             <a href="">
-              <img
-                src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt="" class="img-sm">
+              <div class="trans" style="width: 100%; height: 100%;
+            background-image:url(https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+            background-size: cover;">
+                <div class="content-backgr">
+                  <div class="backgc"></div>
+                  <p>aoaoaooaoaoaoaoaooaoa</p>
+                </div>
+              </div>
             </a>
             <a href="">
-              <img
-                src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt="" class="img-sm">
+              <div class="trans" style="width: 100%; height: 100%;
+            background-image:url(https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+            background-size: cover;">
+                <div class="content-backgr">
+                  <div class="backgc"></div>
+                  <p>aoaoaooaoaoaoaoaooaoa</p>
+                </div>
+              </div>
             </a>
             <a href="">
-              <img
-                src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt="" class="img-sm">
+              <div class="trans" style="width: 100%; height: 100%;
+              background-image:url(https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+              background-size: cover;">
+                  <div class="content-backgr">
+                    <div class="backgc"></div>
+                    <p>aoaoaooaoaoaoaoaooaoa</p>
+                  </div>
+                </div>
             </a>
           </div>
         </div>
       </div>
-    </div>
     </div>
 
     <!-- END FORUM ---------------------------------------------->
 
     <!--REPUTATION ---------------------------------------------->
     <div class="container-content" id="vote">
-      <div class="container-xl title-news">
-        <h2>Góc Uy Tín</h2>
+      <div class="container-xl title-content">
+        <h2>Tin Tức</h2>
         <a href="" class="more">
           <p class="more">
             Xem thêm
             <i class="fas fa-angle-double-right"></i>
           </p>
-
         </a>
       </div>
-      <div class="container-xl">
+      <div class="container-xl container-pg-news">
         <div class="row row-title">
           <div class="col-md-9 big-img">
             <a href="">
-              <img
-                src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt="" class="img-bg">
+              <div class="trans" style="width: 100%; height: 100%;
+            background-image:url(https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+            background-size: cover;">
+                <div class="content-backgr">
+                  <div class="backgc"></div>
+                  <p>aoaoaooaoaoaoaoaooaoa</p>
+                </div>
+              </div>
+
             </a>
           </div>
-          <div class="col-md-3 img-sm-k">
+          <div class="col-md-3 small-img">
             <a href="">
-              <img
-                src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt="" class="img-sm">
+              <div class="trans" style="width: 100%; height: 100%;
+            background-image:url(https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+            background-size: cover;">
+                <div class="content-backgr">
+                  <div class="backgc"></div>
+                  <p>aoaoaooaoaoaoaoaooaoa</p>
+                </div>
+              </div>
             </a>
             <a href="">
-              <img
-                src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt="" class="img-sm">
+              <div class="trans" style="width: 100%; height: 100%;
+            background-image:url(https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+            background-size: cover;">
+                <div class="content-backgr">
+                  <div class="backgc"></div>
+                  <p>aoaoaooaoaoaoaoaooaoa</p>
+                </div>
+              </div>
             </a>
             <a href="">
-              <img
-                src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt="" class="img-sm">
+              <div class="trans" style="width: 100%; height: 100%;
+              background-image:url(https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+              background-size: cover;">
+                  <div class="content-backgr">
+                    <div class="backgc"></div>
+                    <p>aoaoaooaoaoaoaoaooaoa</p>
+                  </div>
+                </div>
             </a>
           </div>
         </div>
       </div>
-    </div>
     </div>
 
     <!-- END REPUTATION ---------------------------------------------->
