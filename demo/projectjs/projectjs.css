@@ -6,9 +6,24 @@ html {
 }
 body {
   padding-top: 3rem;
-  color: #5a5a5a;
-  background-image: url(../img/dots.png);
-  
+  color: #5a5a5a;  
+
+
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
 }
 a {
   text-decoration: none;
@@ -148,6 +163,7 @@ a {
   transition: all 5s linear;
 }
 .container-content {
+  
   margin-bottom: 50px;
 }
 .row-title{
@@ -171,6 +187,7 @@ a {
   display: flex;
   position: relative;
   overflow: hidden;
+  border-radius: 3px 3px;
 }
 .tab-link:hover .content-backgr {
   transform: translateY(-135px);
@@ -255,7 +272,7 @@ a {
   background-color: #eaeaea;
 }
 .container-xl {
-  
+  border-radius: 5px 5px;
   padding-bottom: 15px;
   padding-top: 10px;
 }
@@ -361,7 +378,7 @@ a {
   top: 10%;
 }
 .img-sm-pg-news .tab-link:hover .content-backgr-sm{
-  transform: translateY(-144%) ;
+  transform: translateY(-14%) ;
 }
 
 /* .breakingnew.. */
