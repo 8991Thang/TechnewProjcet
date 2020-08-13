@@ -560,10 +560,12 @@ a {
   height: 100%;
   
 }
-.card .card-1,.card-2 {
+.card .card-1 {
+  border-right: 2px solid #b5b5af;  
+}
+.card-2 {
   border-right: 1px solid #b5b5af;  
 }
-
 .card-1 .card-img-top {
   width: 95%;
   height: 40%;
