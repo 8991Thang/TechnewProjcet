@@ -13,6 +13,7 @@
 
   <link href="../vendors/dist/css/bootstrap.css" rel="stylesheet">
   <link rel="stylesheet" href="../vendors/dist/css/ct-navbar.css">
+  
 
   <style>
     .bd-placeholder-img {
@@ -42,6 +43,15 @@
   <div id="scroll-up">
     <p class="float-right"><a href="#" style="color: #026670;"> <i class="far fa-arrow-alt-circle-up"></i></a></p>
   </div>
+
+  <div id="weather" class="float-right" style="width: 100px; height: 40px; border-radius: 10px 10px;">
+    <a class="weatherwidget-io" style="border-radius: 10px 10px;" href="https://forecast7.com/en/21d00105d82/hanoi/" data-label_1="HÀ NỘI"
+        data-label_2="WEATHER" data-font="Ubuntu" data-icons="Climacons Animated" data-mode="Current"
+        data-days="3" data-theme="marine"></a>
+    <script>
+        !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+    </script>
+  </div>  
   <header>
     <!-- NAVBAR---------------------- -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">

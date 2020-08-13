@@ -37,8 +37,67 @@
 
 <body>
   <div id="scroll-up">
-    <p class="float-right"><a href="#"> <i class="far fa-arrow-alt-circle-up"></i></a></p>
-  </div>
+    <p class="float-right"><a href="#" style="color: #026670;"> <i class="far fa-arrow-alt-circle-up"></i></a></p>
+</div>
+
+<div id="weather" class="float-right" style="width: 100px; height: 40px; ">
+    <a class="weatherwidget-io" style="border-radius: 10px 10px;" href="https://forecast7.com/en/21d00105d82/hanoi/" data-label_1="HÀ NỘI"
+        data-label_2="WEATHER" data-font="Ubuntu" data-icons="Climacons Animated" data-mode="Current"
+        data-days="3" data-theme="marine">HÀ NỘI WEATHER</a>
+    <script>
+        !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+    </script>
+</div>
+<header>
+    <!-- NAVBAR---------------------- -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="index.html">
+            <img src="../img/Logotn.png" alt="logo" style="width: 40px;">
+            TechNews
+        </a>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="news.html">Tin Tức</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tips.html" style="font-weight:bold; color: white;">Mẹo Vặt</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="forum.html">Forum</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="vote.html">Góc Uy Tín</a>
+                </li>
+            </ul>
+            <div class="nav-link">
+                <a href="https://www.facebook.com/" class="nav-link-icon" title="Follow us on Facebook"
+                    target="_blank">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+            </div>
+            <div class="dropdown account-item">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user-circle"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <button class="dropdown-item" type="button">
+                        <i class="fas fa-sign-in-alt"></i> Action</button>
+                </div>
+            </div>
+
+            <form class="form-inline mt-2 mt-md-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Tìm Kiếm" aria-label="Search">
+                <button class="btn btn-outline-success" id="btn-search-pj" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </nav>
   <header>
     <!-- NAVBAR---------------------- -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">

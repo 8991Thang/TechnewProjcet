@@ -160,7 +160,21 @@ a {
   cursor: pointer;
   padding: 0px;
   border-radius: 4px;
-  transition: all 5s linear;
+  transition: all 2s ease-in-out;
+}
+#weather {
+  position: fixed;
+  top: 40vh;
+  right: 0rem;
+  z-index: 98;
+  font-size: 40px;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  padding: 0px;
+  border-radius: 4px;
+  transition: all 2s ease-in-out;
 }
 .container-content {
   
@@ -472,16 +486,126 @@ a {
 .content-topic-sm {
   margin-top: 10px;
   border-top: 3px solid #b5b5af;
+  height: 43%;
+}
+.topic-sm {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 50%;
+}
+.topic-sm a {
+  width: 45%;
+}
+.topic-sm img {
+  width:100%;
+  height: 100%;
+  padding-left: 0 !important;
+  border-radius: 8px 10px 10px 8px !important;
+}
+.text-topic-sm {
+  width: 65%;
+  height: 90%;
+}
+.text-topic-sm p {
+  font-size: 14px;
+  padding-top: 2px;
+  margin-bottom: 0;
+  font-weight: bold;
 }
 
+.topic-action {
+  background-color: #eaeaea;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 
+}
 
+.topic-action a {
+  font-size: 15px;
+  width: 90%;
+  height: 12%;
+  background-color: #026670;
+  text-align: center;
+}
+.btn-secondary:hover {
+  color: #fff;
+  background-color: #0c7780;
+  border-color: #8abbec;
+}
 
+.btn-secondary:focus, .btn-secondary.focus {
+  color: #fff;
+  background-color: #0c7780;
+  border-color: #8abbec;
+  box-shadow: 0 0 0 0.2rem rgba(75, 158, 231, 0.5);
+}
+/* video */
+.container-video {
+  width: 100%;
+  height: 91vh;
+}
+.video-backgr {
+  height: 88%;
+}
+.container-video .card{
+  border-radius: 0;
+  width: 100% !important;
+  padding: 0;
+  background-color: #eaeaea;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  
+}
+.card .card-1,.card-2 {
+  border-right: 1px solid #b5b5af;  
+}
 
+.card-1 .card-img-top {
+  width: 95%;
+  height: 40%;
+  margin-top: 10px;
+  margin-left: 9px;
 
+}
+.card-2 , .card-3 {
+  margin: 10px 5px 10px 10px;
+  
+}
+.card-3 {
+  margin-left: 5px;
+}
+.content-video-sm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
 
+.video-sm {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 30%;
+}
+.video-sm a {
+  width: 50%;
+  height: 100%;
+}
 
-
+.img-video-1 {
+  width: 100%;
+  height: 70%;
+}
+.text-video-sm {
+  margin-left: 5px;
+  font-weight: bold;
+}
 
 
 

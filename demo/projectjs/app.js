@@ -16,7 +16,7 @@ var mybutton = document.getElementById("scroll-up");
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
     mybutton.style.display = "block";
     mybutton.style.transition = "all 5s linear";
   } else {
@@ -28,3 +28,16 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+// var mybuttonwe = document.getElementById("weather");
+
+// window.onscroll = function() {scrollFunctionwe()};
+
+// function scrollFunctionwe() {
+//   if (document.body.scrollTop > 470 || document.documentElement.scrollTop > 470) {
+//     mybuttonwe.style.display = "block";
+//     mybuttonwe.style.transition = "all 3s ease-in-out";
+//   } else {
+//     mybuttonwe.style.display = "none";
+//   }
+// }

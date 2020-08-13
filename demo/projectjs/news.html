@@ -14,6 +14,7 @@
     <link href="../vendors/dist/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="../vendors/dist/css/ct-navbar.css">
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <script type="text/javascript" src="http://rilwis.googlecode.com/svn/trunk/weather.min.js"></script>
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -38,6 +39,15 @@
 <body>
     <div id="scroll-up">
         <p class="float-right"><a href="#" style="color: #026670;"> <i class="far fa-arrow-alt-circle-up"></i></a></p>
+    </div>
+
+    <div id="weather" class="float-right" style="width: 100px; height: 40px; ">
+        <a class="weatherwidget-io" style="border-radius: 10px 10px;" href="https://forecast7.com/en/21d00105d82/hanoi/" data-label_1="HÀ NỘI"
+            data-label_2="WEATHER" data-font="Ubuntu" data-icons="Climacons Animated" data-mode="Current"
+            data-days="3" data-theme="marine"></a>
+        <script>
+            !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+        </script>
     </div>
     <header>
         <!-- NAVBAR---------------------- -->
@@ -300,11 +310,24 @@
             </div>
         </div>
         <!-- END BREAKINGNEWS---------------------- -->
-<br>
-<br>    
+        <br>
+        <br>
         <!-- TOPIC--------------------------------- -->
         <div class="container-xl">
             <div class="row container container-topic">
+                <div class="col-sm-1 card topic-action">
+                    <div class="title-topic">
+                        <h4>Chủ đề</h4>
+                    </div>
+                    <a href="#" class="btn btn-secondary" role="button" aria-pressed="true">Chủ đề A</a>
+                    <a href="#" class="btn btn-secondary" role="button" aria-pressed="true">Chủ đề B</a>
+                    <a href="#" class="btn btn-secondary" role="button" aria-pressed="true">Chủ đề C</a>
+                    <a href="#" class="btn btn-secondary" role="button" aria-pressed="true">Chủ đề D</a>
+                    <a href="#" class="btn btn-secondary" role="button" aria-pressed="true">Chủ đề E</a>
+                    <a href="#" class="btn btn-secondary" role="button" aria-pressed="true">Chủ đề F</a>
+                    <a href="#" class="btn btn-secondary" role="button" aria-pressed="true"
+                        style="margin-bottom: 5px;">Chủ đề G</a>
+                </div>
                 <div class="col-sm-3 card">
                     <div class="title-topic">
                         <h4>Chủ đề A</h4>
@@ -318,9 +341,30 @@
                             the
                             card's content.</p>
                         <a href="#" class="btn btn-primary">Xem Thêm </a>
-                        <div class="content-topic-sm">aaaaaaaaaaaaaaaa</div>
+                        <div class="content-topic-sm">
+                            <div class="topic-sm">
+                                <a href="">
+                                    <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                        alt="" class="img-topic-1">
+                                </a>
+                                <div class="text-topic-sm">
+                                    <p>Some quick example text to build...</p>
+                                    <small class="time"><i class="far fa-clock"></i> 20/8/2020</small>
+                                </div>
+                            </div>
+                            <div class="topic-sm">
+                                <a href="">
+                                    <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                        alt="" class="img-topic-1">
+                                </a>
+                                <div class="text-topic-sm">
+                                    <p>Some quick example text to build...</p>
+                                    <small class="time"><i class="far fa-clock"></i> 20/8/2020</small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    
+
                 </div>
                 <div class="col-sm-3 card">
                     <div class="title-topic">
@@ -335,7 +379,30 @@
                             the
                             card's content.</p>
                         <a href="#" class="btn btn-primary">Xem Thêm </a>
+                        <div class="content-topic-sm">
+                            <div class="topic-sm">
+                                <a href="">
+                                    <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                        alt="" class="img-topic-1">
+                                </a>
+                                <div class="text-topic-sm">
+                                    <p>Some quick example text to build...</p>
+                                    <small class="time"><i class="far fa-clock"></i> 20/8/2020</small>
+                                </div>
+                            </div>
+                            <div class="topic-sm">
+                                <a href="">
+                                    <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                        alt="" class="img-topic-1">
+                                </a>
+                                <div class="text-topic-sm">
+                                    <p>Some quick example text to build...</p>
+                                    <small class="time"><i class="far fa-clock"></i> 20/8/2020</small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
                 <div class="col-sm-3 card">
                     <div class="title-topic">
@@ -350,15 +417,158 @@
                             the
                             card's content.</p>
                         <a href="#" class="btn btn-primary">Xem Thêm </a>
+                        <div class="content-topic-sm">
+                            <div class="topic-sm">
+                                <a href="">
+                                    <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                        alt="" class="img-topic-1">
+                                </a>
+                                <div class="text-topic-sm">
+                                    <p>Some quick example text to build...</p>
+                                    <small class="time"><i class="far fa-clock"></i> 20/8/2020</small>
+                                </div>
+                            </div>
+                            <div class="topic-sm">
+                                <a href="">
+                                    <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                        alt="" class="img-topic-1">
+                                </a>
+                                <div class="text-topic-sm">
+                                    <p>Some quick example text to build...</p>
+                                    <small class="time"><i class="far fa-clock"></i> 20/8/2020</small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <div class="col-sm-1 card">
 
                 </div>
+
+
             </div>
         </div>
         <!-- END TOPIC----------------------------- -->
+        <br><br>
+        <!-- VIDEO-------------- ------------------- -->
+        <div class="container-xl container-video">
+            <div class="title-content title-style" style="position: relative;">
+                <h2>Video</h2>
+                <a href="videos.html" class="more" style="position: absolute; top:10%; right: 3%;">
+                    <p class="more">
+                        Xem thêm
+                        <i class="fas fa-angle-double-right"></i>
+                    </p>
+                </a>
+            </div>
+            <div class="row container video-backgr">
+                <div class="col card">
+                    <div class="card-1">
+                        <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card with stretched link</h5>
+                            <small class="time"> <i class="far fa-clock"></i> 20/8/2020 </small>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+                                odit iste corporis culpa optio accusantium nam eum perferendis. Repellendus aut velit
+                                qui nulla sunt reprehenderit, voluptatum repellat sit voluptatibus officia?</p>
+                            <a href="#" class="btn btn-primary">Xem Thêm </a>
+                        </div>
+                    </div>
+
+                    <div class="card-2">
+                        <div class="content-video-sm">
+                            <div class="video-sm">
+                                <a href="">
+                                    <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                        alt="" class="img-video-1">
+                                </a>
+                                <div class="text-video-sm">
+                                    <p>Some quick example text to build...</p>
+                                    <small class="time"><i class="far fa-clock"></i> 20/8/2020</small>
+                                </div>
+                            </div>
+                            <div class="video-sm">
+                                <a href="">
+                                    <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                        alt="" class="img-video-1">
+                                </a>
+                                <div class="text-video-sm">
+                                    <p>Some quick example text to build...</p>
+                                    <small class="time"><i class="far fa-clock"></i> 20/8/2020</small>
+                                </div>
+                            </div>
+                            <div class="video-sm">
+                                <a href="">
+                                    <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                        alt="" class="img-video-1">
+                                </a>
+                                <div class="text-video-sm">
+                                    <p>Some quick example text to build...</p>
+                                    <small class="time"><i class="far fa-clock"></i> 20/8/2020</small>
+                                </div>
+                            </div>
+                            <div class="video-sm">
+                                <a href="">
+                                    <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                        alt="" class="img-video-1">
+                                </a>
+                                <div class="text-video-sm">
+                                    <p>Some quick example text to build...</p>
+                                    <small class="time"><i class="far fa-clock"></i> 20/8/2020</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-3">
+                        <div class="content-video-sm">
+                            <div class="video-sm">
+                                <a href="">
+                                    <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                        alt="" class="img-video-1">
+                                </a>
+                                <div class="text-video-sm">
+                                    <p>Some quick example text to build...</p>
+                                    <small class="time"><i class="far fa-clock"></i> 20/8/2020</small>
+                                </div>
+                            </div>
+                            <div class="video-sm">
+                                <a href="">
+                                    <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                        alt="" class="img-video-1">
+                                </a>
+                                <div class="text-video-sm">
+                                    <p>Some quick example text to build...</p>
+                                    <small class="time"><i class="far fa-clock"></i> 20/8/2020</small>
+                                </div>
+                            </div>
+                            <div class="video-sm">
+                                <a href="">
+                                    <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                        alt="" class="img-video-1">
+                                </a>
+                                <div class="text-video-sm">
+                                    <p>Some quick example text to build...</p>
+                                    <small class="time"><i class="far fa-clock"></i> 20/8/2020</small>
+                                </div>
+                            </div>
+                            <div class="video-sm">
+                                <a href="">
+                                    <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                        alt="" class="img-video-1">
+                                </a>
+                                <div class="text-video-sm">
+                                    <p>Some quick example text to build...</p>
+                                    <small class="time"><i class="far fa-clock"></i> 20/8/2020</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--    END VIDEO ------------------------- -->
+            <br><br>
+            
     </main>
     <!-- FOOTER -->
     <footer class=" container-fluid pt-4 my-md pt-md-5 border-top footer">
