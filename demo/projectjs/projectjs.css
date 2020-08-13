@@ -177,7 +177,6 @@ a {
   transition: all 2s ease-in-out;
 }
 .container-content {
-  
   margin-bottom: 50px;
 }
 .row-title{
@@ -208,18 +207,21 @@ a {
   transition: all 0.4s ease-in-out;
 }
 .tab-link:hover .content-backgr-sm {
-  transform: translateY(-120px);
+  transform: translateY(-107px);
 }
 .content-backgr {
   position: absolute;
-  top: 90%;
+  top: 85%;
   height: 50%;
   width: 100%;
   transition: all 0.4s ease-in-out;
 }
+.content-backgr-sm {
+  top:82%
+}
 .blur {
   position: absolute;
-  top: -10px;
+  top: -23px;
   background-color: rgb(7, 5, 5);
   filter: opacity(25%);
   width: 100%;
@@ -231,6 +233,7 @@ a {
 }
 .title-bg {
   position: absolute;
+  top: -1.5rem;
   z-index: 3;
   color: #fff;
   margin-left: 10px;
@@ -243,7 +246,7 @@ a {
   margin: 10px ;
   width: 100% ;
   height: 100px;  
-  top: 20%;
+  top: 30%;
 }
 
 .title-sm {
@@ -261,7 +264,7 @@ a {
   margin: 10px ;
   width: 100% ;
   height: 100px;  
-  top: 10%;
+  top: 30%;
   font-size: small;
 }
 
@@ -350,8 +353,6 @@ a {
   align-self: center;
   padding: 10px;
   height: 90%;
-  
-
 }
 
 .img-bg-pg-news {
@@ -376,6 +377,7 @@ a {
 .img-bg-pg-news .tab-link:hover .content-backgr{
   transform: translateY(-60%) ;
 }
+
 .img-sm-pg-news {
   display: flex;
   flex-direction: row;
@@ -392,10 +394,10 @@ a {
   top:-35%;
 }
 .img-sm-pg-news .content-sm {
-  top: 10%;
+  top: 40%;
 }
 .img-sm-pg-news .tab-link:hover .content-backgr-sm{
-  transform: translateY(-144%) ;
+  transform: translateY(-129%) ;
 }
 
 /* .breakingnew.. */
@@ -424,7 +426,7 @@ a {
   transition: all 0.4s ease-in-out;
 }
 .img-bg-breaking .title-bg {
-  top: 7%;
+  top: -6%;
   width: 100%;
 }
 .img-bg-breaking .content-bg {
@@ -440,11 +442,14 @@ a {
   width: 33%;
   height: 70%;
 }
+.img-sm-breaking .content-backgr {
+  top: 83%;
+}
 .img-sm-breaking .title-sm {
   top:-25%;
 }
 .img-sm-breaking:hover .content-backgr {
-  transform: translateY(-153%) ;
+  transform: translateY(-139%) ;
   transition: all 0.4s ease-in-out;
 }
 
@@ -564,7 +569,7 @@ a {
   border-right: 2px solid #b5b5af;  
 }
 .card-2 {
-  border-right: 1px solid #b5b5af;  
+  border-right: 1 px solid #b5b5af;  
 }
 .card-1 .card-img-top {
   width: 95%;
