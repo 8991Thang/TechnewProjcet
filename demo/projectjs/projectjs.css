@@ -342,7 +342,7 @@ a {
   width: 100%;
   background-color: #eaeaea;
   height: 100%;
-  border-radius: 10px 10px;
+  border-radius: 10px 10px 0 0;
   
 }
 .content {
@@ -402,7 +402,7 @@ a {
 
 /* .breakingnew.. */
 .theme-all {
-  border-radius: 0px 0px 10px 10px;
+  
 }
 .breaking-row {
   display: flex;
