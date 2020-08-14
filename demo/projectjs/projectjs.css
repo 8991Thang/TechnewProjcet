@@ -622,12 +622,124 @@ a {
 
 
 
+/* Tips CSS ---------------------------------*/
+.img-tips1{
+  width: 100%;
+  margin-bottom: 15px;
+}
+.img-tips2{
+  width: 100%;
+  margin-bottom: 15px;
+}
+.row-tips{
+  background-color: #eaeaeaea;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.img-mini-tips{
+  width: 100%;
+  border-radius: 5px;
+}
+.mini-img{
+  width: 100%;
+  border-radius: 5px;
+}
+.title-tips {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  border-top: 5px solid black;
+  background-color: #eaeaea;
+  border-bottom: 1px solid #515150;
+}
+.pg-tips {
+  padding-left: 0%;
+  padding-right: 0%;
+}
+.big-img-tips-left {
+  height: 50% ;
+  padding-left: 0% ;
+  padding-right:0%;
+}
+.big-img-tips-right {
+  height: 50% ;
+  padding-left: 0% ;
+  padding-right:0%;
+}
+.project-tips {
+  height: 23.7rem;
+}
+.xl-tips{
+  padding-left: 0%;
+  padding-right: 0%;
+  margin-top: 20px;
+}
+.tips-container{
+  margin-bottom: 50px;
+  background-color: white !important;
+}
 
 
 
 
 
+/* FORUM CSS------------------------------------------*/
+.row-status{
+  display: flex;
+  justify-content: center;
+}
+.status-box{
+  margin-top: 50px;
+  width: 700px;
+  margin-bottom: 50px;
+}
+.status{
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
 
+}
+.head{
+  display: flex;
+  flex-direction: row;
+}
+.head-left{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.user-name{
+  margin-left: 8px;
+  font-size: 20px;
+}
+.date-status{
+  margin-left: 8px;
+}
+.head-right{
+}
+.box-status{
+  width: 700px; 
+  height: auto;
+  background-color: #eaeaea;
+  border-radius: 5px;
+}
+#title-post{
+  text-decoration: none;
+}
+.title-status .hastag{
+  font-size: x-large;
+  font-weight: 500;
+}
+.summary-status{
+  font-size: 18px;
+}
+.img-vid-status{
+  display: flex;
+  justify-content: center;
+}
 
 
 
