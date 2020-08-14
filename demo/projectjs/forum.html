@@ -37,10 +37,19 @@
 
 <body>
   <div id="scroll-up">
-    <p class="float-right"><a href="#"> <i class="far fa-arrow-alt-circle-up"></i></a></p>
+    <p class="float-right"><a href="#" style="color: #026670;"> <i class="far fa-arrow-alt-circle-up"></i></a></p>
+  </div>
+
+  <div id="weather" class="float-right" style="width: 100px; height: 40px; border-radius: 10px 10px;">
+    <a class="weatherwidget-io" style="border-radius: 10px 0 0 13px;" href="https://forecast7.com/en/21d00105d82/hanoi/"
+      data-label_1="HÀ NỘI" data-label_2="WEATHER" data-font="Ubuntu" data-icons="Climacons Animated"
+      data-mode="Current" data-days="3" data-theme="marine"></a>
+    <script>
+      !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+    </script>
   </div>
   <header>
-    <!--NAVBAR---------------------- -->
+    <!-- NAVBAR---------------------- -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <a class="navbar-brand" href="index.html">
         <img src="../img/Logotn.png" alt="logo" style="width: 40px;">
@@ -49,16 +58,19 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="news.html">Tin Tức</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="tips.html">Mẹo Vặt</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="forum.html">Forum</a>
+            <a class="nav-link" href="forum.html" style="font-weight:bold; color: white;">Forum</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Góc Uy Tín</a>
+            <a class="nav-link" href="vote.html">Góc Uy Tín</a>
           </li>
         </ul>
         <div class="nav-link">
