@@ -7,6 +7,7 @@ html {
 body {
   padding-top: 3rem;
   color: #5a5a5a;  
+  
 
 
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
@@ -774,8 +775,36 @@ a {
   justify-content: center;
 }
 
+/* VOTE PAGE---------------------------------------- */
+.jumbotron {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-bottom: 0;
+  background-color: rgb(216, 206, 206);
+  height: 95vh;
+}
 
 
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron h1 {
+  font-weight: 300;
+}
+
+.jumbotron .container {
+  max-width: 40rem;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
 
 
 
@@ -797,8 +826,16 @@ a {
   }
 }
 
+
 @media (min-width: 62em) {
   .featurette-heading {
     margin-top: 7rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 }
