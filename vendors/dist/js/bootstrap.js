@@ -662,7 +662,7 @@
   var EVENT_DRAG_START = "dragstart" + EVENT_KEY$2;
   var EVENT_LOAD_DATA_API$1 = "load" + EVENT_KEY$2 + DATA_API_KEY$2;
   var EVENT_CLICK_DATA_API$2 = "click" + EVENT_KEY$2 + DATA_API_KEY$2;
-  var CLASS_NAME_CAROUSEL = 'carousel';
+  var CLASS_NAME_carousel = 'carousel';
   var CLASS_NAME_ACTIVE$1 = 'active';
   var CLASS_NAME_SLIDE = 'slide';
   var CLASS_NAME_RIGHT = 'carousel-item-right';
@@ -688,8 +688,8 @@
    * ------------------------------------------------------------------------
    */
 
-  var Carousel = /*#__PURE__*/function () {
-    function Carousel(element, config) {
+  var carousel = /*#__PURE__*/function () {
+    function carousel(element, config) {
       this._items = null;
       this._interval = null;
       this._activeElement = null;
@@ -708,7 +708,7 @@
     } // Getters
 
 
-    var _proto = Carousel.prototype;
+    var _proto = carousel.prototype;
 
     // Public
     _proto.next = function next() {
@@ -1090,7 +1090,7 @@
     } // Static
     ;
 
-    Carousel._jQueryInterface = function _jQueryInterface(config) {
+    carousel._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
         var data = $(this).data(DATA_KEY$2);
 
@@ -1103,7 +1103,7 @@
         var action = typeof config === 'string' ? config : _config.slide;
 
         if (!data) {
-          data = new Carousel(this, _config);
+          data = new carousel(this, _config);
           $(this).data(DATA_KEY$2, data);
         }
 
@@ -1122,7 +1122,7 @@
       });
     };
 
-    Carousel._dataApiClickHandler = function _dataApiClickHandler(event) {
+    carousel._dataApiClickHandler = function _dataApiClickHandler(event) {
       var selector = Util.getSelectorFromElement(this);
 
       if (!selector) {
@@ -1131,7 +1131,7 @@
 
       var target = $(selector)[0];
 
-      if (!target || !$(target).hasClass(CLASS_NAME_CAROUSEL)) {
+      if (!target || !$(target).hasClass(CLASS_NAME_carousel)) {
         return;
       }
 
@@ -1143,7 +1143,7 @@
         config.interval = false;
       }
 
-      Carousel._jQueryInterface.call($(target), config);
+      carousel._jQueryInterface.call($(target), config);
 
       if (slideIndex) {
         $(target).data(DATA_KEY$2).to(slideIndex);
@@ -1152,7 +1152,7 @@
       event.preventDefault();
     };
 
-    _createClass(Carousel, null, [{
+    _createClass(carousel, null, [{
       key: "VERSION",
       get: function get() {
         return VERSION$2;
@@ -1164,7 +1164,7 @@
       }
     }]);
 
-    return Carousel;
+    return carousel;
   }();
   /**
    * ------------------------------------------------------------------------
@@ -1173,14 +1173,14 @@
    */
 
 
-  $(document).on(EVENT_CLICK_DATA_API$2, SELECTOR_DATA_SLIDE, Carousel._dataApiClickHandler);
+  $(document).on(EVENT_CLICK_DATA_API$2, SELECTOR_DATA_SLIDE, carousel._dataApiClickHandler);
   $(window).on(EVENT_LOAD_DATA_API$1, function () {
     var carousels = [].slice.call(document.querySelectorAll(SELECTOR_DATA_RIDE));
 
     for (var i = 0, len = carousels.length; i < len; i++) {
       var $carousel = $(carousels[i]);
 
-      Carousel._jQueryInterface.call($carousel, $carousel.data());
+      carousel._jQueryInterface.call($carousel, $carousel.data());
     }
   });
   /**
@@ -1189,12 +1189,12 @@
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME$2] = Carousel._jQueryInterface;
-  $.fn[NAME$2].Constructor = Carousel;
+  $.fn[NAME$2] = carousel._jQueryInterface;
+  $.fn[NAME$2].Constructor = carousel;
 
   $.fn[NAME$2].noConflict = function () {
     $.fn[NAME$2] = JQUERY_NO_CONFLICT$2;
-    return Carousel._jQueryInterface;
+    return carousel._jQueryInterface;
   };
 
   /**
@@ -4403,7 +4403,7 @@
 
   exports.Alert = Alert;
   exports.Button = Button;
-  exports.Carousel = Carousel;
+  exports.carousel = carousel;
   exports.Collapse = Collapse;
   exports.Dropdown = Dropdown;
   exports.Modal = Modal;
