@@ -659,10 +659,26 @@ a {
 .img-tips1{
   width: 100%;
   margin-bottom: 15px;
+  border-radius: 5px;
+}
+.row-left{
+  margin-top: 15px;
+  padding-right: 0%;
+}
+.row-right{
+  margin-top: 15px;
 }
 .img-tips2{
   width: 100%;
   margin-bottom: 15px;
+  border-radius: 5px;
+}
+.row-tips-mini{
+  background-color: #eaeaeaea;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
 }
 .row-tips{
   background-color: #eaeaeaea;
@@ -673,6 +689,8 @@ a {
 .img-mini-tips{
   width: 100%;
   border-radius: 5px;
+  margin-top:10px;
+  margin-bottom: 10px;
 }
 .mini-img{
   width: 100%;
@@ -683,8 +701,9 @@ a {
   flex-direction: row;
   justify-content: space-between;
   padding-bottom: 10px;
-  margin-bottom: 15px;
   border-top: 5px solid black;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   background-color: #eaeaea;
   border-bottom: 1px solid #515150;
 }
@@ -693,17 +712,8 @@ a {
   padding-right: 0%;
 }
 .big-img-tips-left {
-  height: 50% ;
-  padding-left: 0% ;
+  padding-left: 0%;
   padding-right:0%;
-}
-.big-img-tips-right {
-  height: 50% ;
-  padding-left: 0% ;
-  padding-right:0%;
-}
-.project-tips {
-  height: 23.7rem;
 }
 .xl-tips{
   padding-left: 0%;
@@ -711,8 +721,8 @@ a {
   margin-top: 20px;
 }
 .tips-container{
-  margin-bottom: 50px;
-  background-color: white !important;
+  margin-bottom: 10px;
+  margin-top:30px ;
 }
 
 
@@ -744,9 +754,11 @@ a {
   flex-direction: row;
   align-items: center;
 }
-.user-name{
+#user-name{
   margin-left: 8px;
   font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
 }
 .date-status{
   margin-left: 8px;
@@ -762,7 +774,7 @@ a {
 #title-post{
   text-decoration: none;
 }
-.title-status .hastag{
+.title-status{
   font-size: x-large;
   font-weight: 500;
 }
