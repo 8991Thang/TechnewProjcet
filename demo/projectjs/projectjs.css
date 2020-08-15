@@ -764,8 +764,7 @@ a {
 .date-status{
   margin-left: 8px;
 }
-.head-right{
-}
+
 .box-status{
   width: 700px; 
   height: auto;
@@ -793,9 +792,8 @@ a {
   padding-bottom: 3rem;
   margin-bottom: 0;
   background-color: rgb(216, 206, 206);
-  height: 95vh;
+  height: 93vh;
 }
-
 
 .jumbotron p:last-child {
   margin-bottom: 0;
@@ -809,6 +807,51 @@ a {
   max-width: 40rem;
 }
 
+.search-vote {
+  background-color: #eaeaea;
+}
+.search-vote form {
+  width: 90% ;
+  height: 50% ;
+}
+.box-pg-vote {
+  padding: 0;
+}
+.content-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 99%;
+  height: 270px;
+  margin: 5px;
+}
+.co-1 {
+  width: 32%;
+  height: 100%;
+  padding-left: 7px;
+  border-right: 1px solid black ;
+}
+.co-2 {
+  width: 40%;
+  border-right: 1px solid black ;
+  height: 100%;
+}
+.co-3 {
+  width: 28%;
+  height: 100%;
+}
+.co-1 img{
+  width: 95%;
+  margin: 0 auto;
+}
+.co-2 img{
+  width: 100%;
+  
+}
+.co-3 img{
+  width: 100%;
+ 
+}
 footer {
   padding-top: 3rem;
   padding-bottom: 3rem;

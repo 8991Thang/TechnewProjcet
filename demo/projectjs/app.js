@@ -12,6 +12,7 @@ window.scrollTo({
 
 // ScrollUp
 var mybutton = document.getElementById("scroll-up");
+var mybuttonwe = document.getElementById("weather");
 
 window.onscroll = function() {scrollFunction()};
 
@@ -22,22 +23,15 @@ function scrollFunction() {
   } else {
     mybutton.style.display = "none";
   }
+  if (document.body.scrollTop > 470 || document.documentElement.scrollTop > 470) {
+    mybuttonwe.style.display = "block";
+    mybuttonwe.style.transition = "all 3s ease-in-out";
+  } else {
+    mybuttonwe.style.display = "none";
+  }
 }
 
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
-
-// var mybuttonwe = document.getElementById("weather");
-
-// window.onscroll = function() {scrollFunctionwe()};
-
-// function scrollFunctionwe() {
-//   if (document.body.scrollTop > 470 || document.documentElement.scrollTop > 470) {
-//     mybuttonwe.style.display = "block";
-//     mybuttonwe.style.transition = "all 3s ease-in-out";
-//   } else {
-//     mybuttonwe.style.display = "none";
-//   }
-// }
