@@ -8,11 +8,12 @@
   <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
   <meta name="generator" content="Jekyll v4.0.1">
   <title>TechNews</title>
+  <link rel="shortcut icon" type="image/png" href="/resources/img/Logotn.png"/>
   <!-- Bootstrap core CSS -->
   <link href="/vendors/dist/css/bootstrap.css" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
   <style>
     .bd-placeholder-img {
       font-size: 1.125rem;
@@ -102,10 +103,10 @@
       <!-- SECTION------------------------------ -->
       <section class="jumbotron text-center">
         <div class="container">
-          <h1 style="font-weight: bold;">Chào Mừng Bạn Đến Với </h1>
-          <h1 style="font-weight: bold;">Góc Uy Tín </h1>
+          <h1 class="title-section-vote font-title">Chào Mừng Bạn Đến Với </h1>
+          <h1 class="title-section-vote font-title">Góc Uy Tín </h1>
           <br>
-          <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator,
+          <p class="lead text-muted" style="color: rgb(117, 108, 108) !important ;font-weight: 400;" >Something short and leading about the collection below—its contents, the creator,
             etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
           <p>
             <a href="#" class="btn btn-primary my-2" onclick="scrollToElement('voteclick')">Khám Phá</a>
@@ -122,7 +123,7 @@
         <div class="row">
           <div class=" col-2 search-vote">
             <div class="input-group md-form form-sm form-2 pl-0" style="position: absolute; top: 20%; left: 0;">
-              <input class="form-control my-0 py-1 amber-border" type="text" placeholder="Search" aria-label="Search">
+              <input class="form-control my-0 py-1 amber-border" type="text" placeholder="Tên cửa hàng " aria-label="Search">
               <div class="input-group-append">
                 <button class="input-group-text amber lighten-3" id="basic-text1"><i class="fas fa-search text-grey"
                     aria-hidden="true"></i></button>
@@ -139,9 +140,9 @@
                     alt="">
                   <a href="https://maytinhduylong.vn/" target="_blank" style="text-decoration: none;" >
                     <i class="fas fa-laptop-house">
-                      <span style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> May tinh Duy Long</span>
+                      <span class="nameshop font-title"> Máy Tính Duy Long -- <i class="fas fa-star-half-alt" style="color: rgb(196, 196, 28)"> 4.3</i></span>
                     </i>
-                    <i class="fas fa-star-half-alt"> 4.3</i>
+                    
                   </a>
                   <p>Địa chỉ: Số 42 Lê Thanh Nghị - Hai Bà Trưng - Hà Nội</p>
                   <p>Hotline: 024.36251504</p>
@@ -152,7 +153,7 @@
                     <img src="https://qodebrisbane.com/wp-content/uploads/2019/07/This-is-not-a-person-2-1.jpeg"
                       class="mr-3 rounded-circle" alt="..." style="width: 10%;">
                     <div class="media-body">
-                      <h5 class="mt-0 mb-1">Nguyen Van A</h5>
+                      <h6 class="mt-0 mb-1">Nguyen Van A - <span><small><i class="fas fa-star-half-alt"> 4.6</i></small></span></h6>
                       Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque .
                     </div>
                   </li>
@@ -193,7 +194,7 @@
                   <div class="mb-3">
                     <div class="form-group">
                       <label for="exampleFormControlTextarea2">Bình Luận</label>
-                      <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Enter comment!"></textarea>
+                      <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Enter comment!" style="min-height: 165px;max-height: 165px;"></textarea>
                     </div>
                   </div>
                   <div id="rating">
@@ -227,7 +228,7 @@
                     <input type="radio" id="starhalf" name="rating" value="half" />
                     <label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
                   </div>
-                  <button type="button" class="btn btn-success">Success</button>
+                  <button type="button" class="btn btn-success">Gửi</button>
                 </form>
               </div>
             </div>
@@ -238,10 +239,11 @@
                   <img
                     src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
                     alt="">
-                  <a href="https://maytinhduylong.vn/" target="_blank">
-                    <i class="fas fa-laptop-house"> May tinh Duy Long</i> 
-                    <i class="fas fa-star-half-alt"> 4.3</i>
-                  </a>
+                    <a href="https://maytinhduylong.vn/" target="_blank" style="text-decoration: none;" >
+                      <i class="fas fa-laptop-house">
+                        <span class="nameshop font-title"> Máy Tính Duy Long -- <i class="fas fa-star-half-alt" style="color: rgb(196, 196, 28)"> 4.3</i></span>
+                    </i>
+                    </a>
                   <p>Địa chỉ: Số 42 Lê Thanh Nghị - Hai Bà Trưng - Hà Nội</p>
                   <p>Hotline: 024.36251504</p>
                 </div>
@@ -291,7 +293,7 @@
                   <div class="mb-3">
                     <div class="form-group">
                       <label for="exampleFormControlTextarea2">Bình Luận</label>
-                      <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Enter comment!"></textarea>
+                      <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Enter comment!" style="min-height: 165px;max-height: 165px;"></textarea>
                     </div>
                   </div>
                   <div id="rating">
@@ -325,7 +327,7 @@
                     <input type="radio" id="starhalf" name="rating" value="half" />
                     <label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
                   </div>
-                  <button type="button" class="btn btn-success">Success</button>
+                  <button type="button" class="btn btn-success">Gửi</button>
                 </form>
 
               </div>
@@ -337,9 +339,11 @@
                   <img
                     src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
                     alt="">
-                  <a href="https://maytinhduylong.vn/" target="_blank">
-                    <i class="fas fa-laptop-house"> May tinh Duy Long</i> 
-                    <i class="fas fa-star-half-alt"> 4,3</i></a>
+                    <a href="https://maytinhduylong.vn/" target="_blank" style="text-decoration: none;" >
+                      <i class="fas fa-laptop-house">
+                        <span class="nameshop font-title"> Máy Tính Duy Long -- <i class="fas fa-star-half-alt" style="color: rgb(196, 196, 28)"> 4.3</i></span>
+                    </i>
+                    </a>
                   <p>Địa chỉ: Số 42 Lê Thanh Nghị - Hai Bà Trưng - Hà Nội</p>
                   <p>Hotline: 024.36251504</p>
                 </div>
@@ -389,7 +393,7 @@
                   <div class="mb-3">
                     <div class="form-group">
                       <label for="exampleFormControlTextarea2">Bình Luận</label>
-                      <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Enter comment!"></textarea>
+                      <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Enter comment!" style="min-height: 165px;max-height: 165px;"></textarea>
                     </div>
                   </div>
                   <div id="rating">
@@ -423,7 +427,7 @@
                     <input type="radio" id="starhalf" name="rating" value="half" />
                     <label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
                   </div>
-                  <button type="button" class="btn btn-success">Success</button>
+                  <button type="button" class="btn btn-success">Gửi</button>
                 </form>
               </div>
             </div>
@@ -434,8 +438,11 @@
                   <img
                     src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
                     alt="">
-                  <a href="https://maytinhduylong.vn/" target="_blank"><i class="fas fa-laptop-house"> May tinh Duy
-                      Long</i> <i class="fas fa-star-half-alt"> 4,3</i></a>
+                    <a href="https://maytinhduylong.vn/" target="_blank" style="text-decoration: none;" >
+                      <i class="fas fa-laptop-house">
+                        <span class="nameshop font-title"> Máy Tính Duy Long -- <i class="fas fa-star-half-alt" style="color: rgb(196, 196, 28)"> 4.3</i></span>
+                    </i>
+                    </a>
                   <p>Địa chỉ: Số 42 Lê Thanh Nghị - Hai Bà Trưng - Hà Nội</p>
                   <p>Hotline: 024.36251504</p>
                 </div>
@@ -485,7 +492,7 @@
                   <div class="mb-3">
                     <div class="form-group">
                       <label for="exampleFormControlTextarea2">Bình Luận</label>
-                      <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Enter comment!"></textarea>
+                      <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Enter comment!" style="min-height: 165px;max-height: 165px;"></textarea>
                     </div>
                   </div>
                   <div id="rating">
@@ -519,7 +526,7 @@
                     <input type="radio" id="starhalf" name="rating" value="half" />
                     <label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
                   </div>
-                  <button type="button" class="btn btn-success">Success</button>
+                  <button type="button" class="btn btn-success">Gửi</button>
                 </form>
               </div>
             </div>

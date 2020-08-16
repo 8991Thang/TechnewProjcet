@@ -7,9 +7,6 @@ html {
 body {
   padding-top: 3rem;
   color: #5a5a5a;  
-  
-
-
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
@@ -29,6 +26,10 @@ body {
 
 a {
   text-decoration: none;
+}
+.font-title {
+  font-family: 'Roboto Condensed', sans-serif;
+  color:black;
 }
 /* CUSTOMIZE THE carousel
 -------------------------------------------------- */
@@ -121,17 +122,6 @@ a {
 -------------------------------------------------- */
 
 /* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-.marketing h2 {
-  font-weight: 400;
-}
-.marketing .col-lg-4 p {
-  margin-right: .75rem;
-  margin-left: .75rem;
-}
 
 
 /* Featurettes
@@ -488,7 +478,6 @@ a {
 
 .title-topic {
   border-bottom: 3px solid #b5b5af;
-  font-family: 'Anton', sans-serif;
   width: 100%;
   padding: 10px 0 0 10px;
 }
@@ -784,8 +773,7 @@ a {
 .date-status{
   margin-left: 8px;
 }
-.head-right{
-}
+
 .post-div{
   display: flex;
   flex-direction: column;
