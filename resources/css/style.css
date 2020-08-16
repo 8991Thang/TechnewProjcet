@@ -116,8 +116,21 @@ a {
   background-color: #026670;
   border-color: #026670;
 }
+.btn-success {
+  background-color:#026670;
+  border-color: #026670;
+}
 
+.btn-success:hover {
+  background-color: #0d9393 !important;
+  border-color: #0ca5b3;
+}
+.btn-success:focus {
 
+  background-color: #026670;
+  border-color: #0a919d;
+  box-shadow: 0 0 0 0.2rem #8fd7dd;
+}
 /* MARKETING CONTENT
 -------------------------------------------------- */
 
@@ -891,35 +904,33 @@ a {
   padding-left: 7px;
   border-right: 1px solid black ;
 }
-.co-2 {
-  width: 40%;
-  border-right: 1px solid black ;
-  height: 100%;
-}
-.co-3 {
-  width: 28%;
-  height: 100%;
-}
 .co-1 img{
   width: 95%;
   margin: 0 auto;
 }
-.co-2 img{
-  width: 100%;
-  
+.icon-shop {
+  color: #026670;
 }
-.co-3 img{
-  width: 100%;
- 
+
+.co-2 {
+  width: 40%;
+  border-right: 1px solid black ;
+  height: 98%;
 }
+
+.co-3 {
+  width: 28%;
+  height: 100%;
+}
+
 footer {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
-
 footer p {
   margin-bottom: .25rem;
 } 
+
 /****** Style Star Rating Widget *****/
 #rating{border:none;float:left;}
 #rating>input{display:none;}/*ẩn input radio - vì chúng ta đã có label là GUI*/
