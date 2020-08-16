@@ -101,6 +101,23 @@
 <!--POST STATUS----------------------------------->
 <div class="post-div bg-post">
   <p class="new-p">Tạo bài viết mới</p>
+  <p class="chu-thich">Chủ đề của bạn:</p>
+  <input type="text" name="chu-de" class="chu-de">
+  <p class="chu-thich">Nội dung tóm tắt:</p>
+  <input type="text" name="tom-tat" class="tom-tat">
+  <p class="chu-thich">Chọn Hastag cho bài đăng:</p>
+  <div class="btn-group hastag-btn" role="group">
+    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Dropdown
+    </button>
+    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+      <button class="dropdown-item " value="hastag">#SAMSUNG</button>
+      <button class="dropdown-item " value="hastag">#SAMSUNG</button>
+      <button class="dropdown-item " value="hastag">#SAMSUNG</button>
+      <button class="dropdown-item " value="hastag">#SAMSUNG</button>
+    </div>
+  </div>
+  <p class="chu-thich">Nội dung chính:</p>
     <textarea class="tinymce" id="content"></textarea>
   <input class="up-post" type="submit" name="uppost" value="Đăng bài">
 </div>
