@@ -882,7 +882,6 @@ a {
 }
 .box-pag-vote-all {
   border-top: 5px solid black; 
-  
 }
 .box-pg-vote {
   padding: 0;
@@ -890,6 +889,7 @@ a {
   border-top: 5px solid black;
   border-radius: 10px 10px 2px 2px;
 }
+
 .content-box {
   display: flex;
   flex-direction: row;
@@ -898,11 +898,12 @@ a {
   height: 270px;
   margin: 5px;
 }
+
 .co-1 {
   width: 32%;
   height: 100%;
   padding-left: 7px;
-  border-right: 1px solid black ;
+  border-right: 3px solid #b5b5af;
 }
 .co-1 img{
   width: 95%;
@@ -914,10 +915,12 @@ a {
 
 .co-2 {
   width: 40%;
-  border-right: 1px solid black ;
   height: 98%;
 }
-
+.co-2 .media {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #b5b5af;
+}
 .co-3 {
   width: 28%;
   height: 100%;
