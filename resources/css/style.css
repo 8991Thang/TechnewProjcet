@@ -131,6 +131,13 @@ a {
   border-color: #0a919d;
   box-shadow: 0 0 0 0.2rem #8fd7dd;
 }
+.nav-item {
+  margin-left: 10px;
+}
+.nav-link {
+    padding:0 !important;
+}
+
 /* MARKETING CONTENT
 -------------------------------------------------- */
 
@@ -151,7 +158,7 @@ a {
   letter-spacing: -.05rem;
 }
 
-
+/* HOME----------------------------------- */
 #scroll-up {
   display: none;
   position: fixed;
