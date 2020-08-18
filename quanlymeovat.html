@@ -2,171 +2,948 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-  <meta name="generator" content="Jekyll v4.0.1">
-  <title>TechNews</title>
-  <link rel="shortcut icon" type="image/png" href="/resources/img/Logotn.png"/>
-  <!-- Bootstrap core CSS -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <title>TechNews</title>
+    <link rel="shortcut icon" type="image/png" href="/resources/img/Logotn.png" />
+    <!-- Bootstrap core CSS -->
 
-  <link href="/vendors/dist/css/bootstrap.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
-  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link href="/vendors/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <!--phân trang-->
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="../jquery.simplePagination.js"></script>
+    <link href="../simplePagination.css" rel="stylesheet" type="text/css" />
+    <script>
 
-  <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
+        function test(pageNumber) {
 
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
-  </style>
-  <!-- Custom styles for this template -->
-  <link href="/resources/css/style.css" rel="stylesheet">
+            var page = "#page-id-" + pageNumber;
+            $('.select').hide()
+            $(page).show()
+
+        }
+
+    </script>
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="/resources/css/style.css" rel="stylesheet">
 </head>
 
 <body>
-  <div id="scroll-up">
-    <p class="float-right"><a href="#" style="color: #026670;"> <i class="far fa-arrow-alt-circle-up"></i></a></p>
-  </div>
-
-  <div id="weather" class="float-right" style="width: 100px; height: 40px; border-radius: 10px 10px;">
-    <a class="weatherwidget-io" style="border-radius: 10px 0 0 13px;" href="https://forecast7.com/en/21d00105d82/hanoi/"
-      data-label_1="HÀ NỘI" data-label_2="WEATHER" data-font="Ubuntu" data-icons="Climacons Animated"
-      data-mode="Current" data-days="3" data-theme="marine"></a>
-    <script>
-      !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
-    </script>
-  </div>
-  <header>
-    <!-- NAVBAR---------------------- -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="
-    background-color: #212121;">
-      <a class=" navbar-brand" href="quantri.html">
-        <img src="/resources/img/Logotn.png" alt="logo" style="width: 40px;">
-        TechNews
-      </a>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto cssf">
-          <!-- Example split danger button -->
-          <li>
-          <div class="btn-group">
-            <a href="quanlyadmin.html"><button type="button" class="btn btn-danger">Quản lý Admin</button></a>
-            <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              <span class="sr-only">Toggle Dropdown</span>
-            </button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="themadmin.html">Thêm admin</a>
-            </div>
-          </div>
-        </li>
-
-        <li>
-          <a href="quanlyuser.html"><button type="button" class="btn btn-danger">Quản lý Users</button></a>
-        </li>
-
-        <li>
-          <div class="btn-group">
-            <a href="quanlytintuc.html"><button type="button" class="btn btn-danger">Quản lý Tin tức</button></a>
-            <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              <span class="sr-only">Toggle Dropdown</span>
-            </button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="themtintuc.html">Thêm tin tức<</a>
-            </div>
-          </div>
-        </li>
-
-        <li>
-          <div class="btn-group">
-            <a href="quanlymeovat.html"><button type="button" class="btn btn-danger">Quản lý Mẹo vặt</button></a>
-            <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              <span class="sr-only">Toggle Dropdown</span>
-            </button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="themmeovat.html">Thêm mẹo vặt<</a>
-            </div>
-          </div>
-        </li>
-
-        <li>
-          <a href="quanlyforum.html"><button type="button" class="btn btn-danger">Quản lý Forum</button></a>
-        </li>
-
-        <li>
-          <a href="quanlygocuytin.html"><button type="button" class="btn btn-danger">Quản lý Góc uy tín</button></a>
-        </li>
-        </ul>
-      </div>
-    </nav>
-    <!-- END NAVBAR-------------------------------- -->
-    <p style="margin-top: 50px;border: 3px solid #fff;font-size:30px;text-align: center;">Quản lý mẹo vặt</p>
-
-
-    <!-- FOOTER -->
-  <footer class=" container-fluid pt-4 my-md pt-md-5 border-top footer">
-    <div class="row">
-      <div class="col-12 col-md">
-        <img class="mb-2"
-          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWgAAACMCAMAAABmmcPHAAAAw1BMVEX///8xMTHAAAAAAAAiIiIeHh67AAAoKCi4uLigoKArKysaGho2NjbMzMxhYWElJSVWVlaSkpIVFRWxsbHh4eEJCQmHh4epqalQUFB6enrv7+/IyMjU1NTCwsL19fVHR0fjq6uWlpbm5uY/Pz9tbW303993d3f46uqEhITT09Ptycl5eXlvb2+cnJzUdnbEKCjLUVHPYWHdl5fIQUHpvr7uzc3GODjDHx/ck5PmtbXWf3/x19fBDg7SbW3NWFjgoqLJSEjl8CeVAAATRklEQVR4nO1dCXubOBM2EcS3MRhsB9s4xk7itPZ2e329tsf//1WfLkAziMtxk3qX99l2ixFCejUazYwOWq0GDRo0aNCgQYMGDRo0aNCgQYPzYzWDeIS3f94yfJNXD/zyZ3GOr/gjdyCHn9+KnvhP4N41VfhdePvdNcNVfPmGXxYy/cCTXD/oM/jv4qZtqDAR0a03Vwxf5dXDNbtKWNThfzzFO/hAI9ClRN8JpmJN8Jlf/srP75YneBNfvuft9Ne5S32BKCO69RUy94nz/iUvOyTBgvZGcbQqEN26Brrgm7jMy+5voGlCkfjDbyj3xaGc6I9QL//Fqfyuz+0LlOC3/OrH7yj3xaGc6Nb3K6CX+dX1R21uok1eyasP4jI8f6kvEBWIlvTFevlDvt4VTfI2vhRNcvsbSn2BqEI0kswf/OprNt0rmE4omfe/qeCnYNF1uosXencVouUQF0tqCC2+FFdA8r+V29zPi67bN22z35+9yNsrEf0Ade9PaPHF+Aol+BOwVl4e476sY3/8Eq+vRLSkNtHLwvtDnjiS4M/61ngxjO20kqMXeH81ogW1iX18p9MKUIL/NN974iq1dDvPX4CKRN9B3oS4/q2mED99ii9hy7w8QC2NwfMXoCLRmMd/sCf+h/venguq6UfPXoKqREtqY83wEXviUIJDOHq+PFYWqGb/+Y28ykSjse479MQfoAT/KPLTXwIdSLS1evYSVCYa+x/X0BO/1vjev6/UtTHsg2r2H8sfOTOqE408ahE/+ie+eXt9ff0dpsyNpb4AQgKqSZ6/BDWIRp44dxevP8d3v31JpPsvGIX6I7BT69k+PH8BahAtNW8c9XzI88T/ON+bIVJFmjy/0VGLaBTHF+7i/zLJ/tH5jS+OSco0eQF/pRbR2Dp+o2X0cw7/L42OL5xw039+k6NVk2hpLcdzrVpP/C5Po7w4Qqftu37PeZmJiHpEI/9PxOuAJy4DTp+zz/4JCKIXm+6pRzT2xK+A0mb4Ca2+BjFqEi1jdLHAvsIhjQfkxzSIUZfoYk9czsWcc8FMsJg5+5v9ZpLnzAVDnsCZrc5ttEWrrrPfTzeTYVDnsfBxcpzu9/vNbKE8V5do6Y3ERgWKcRRM3J6E4Djw+6Ztt9u22SejrLkQHLcsQZslsFxzfz7X2pvarsVytumr/YGzrPbYcEpLnD7Xm8Ylqk201MsyrMElOp2ozersqng9HytYD9lvwYGYauF6fQNSHaEERtsd6G23McRabZA5vMX7RTTybZCz7a7LrcLwaPbhY/S5wYTfq080l1ppPX+EQ9934DrWwsjuKXBZGHNGYNkY3J3yzEaTwHDnun5u9ADcoXLPBLd8j/7UJb1Mxj13XqKbHN/Mlscw+gPWrPWJ5p64tJOvwND38QkLZkagZixefANj9bGEDOLsw7mlS2D0fE2weYDqrhINGXA9tpZZnzOZFNRgYWtpZiDTk4huvb+WkTmxADIZCv8B4b16yBB9AwObaW17gumgpxFnWa8sH7WIPuhbkN3c51Zg7+c9RGHNTyK6JYXqDoadn+R7I6KHHb1QUfS2vAh2tnMnyAYzahAddHNfTR/MY3qc2zgc7fkBlrca0RJvwNCndcgrAxJtTgrKbd7T9NsCninTHsq+OtFmp0g0DVevPba53Uuih8pbh+ifcCr8ab73CDV4UaGpEj7YRQmoBKHsqxNd/GrahrqxtpTnDGoQjbZZ/ITOeV2MCiUUYZCvWCRs1MVrEF2Ctmb1zbg2z3WI/gWCpE9dMFOL6DKpMzLK43xEGz5WS619sX7WojrRX+DQB5f610c9osuBZqvOSHT7BhV9UajUc1CZaLSk9MtTfe9zE20QYM6fkWjDR0U/QZ5rEP0WDn1PXjBzdqJNsDr3nESj1Tf7knE5p3gViX6l873fFj1Rghyie7ZtFxLRa9MEumd7YNA6geh23qttR805Iro0rOSmaeYb+1WJPp/vXUB0r9/fOUfnYOV2TtOf7zeb/dzXSBXo4XWJbrvGwdk4rw1XE/QA66vv9Y9bu81sMnN2/b6+HSsS/RWGoQXtT1owoyHaXMd9dIXNfVljtyvbNnSyA5KrhoBqEu3fx6aFt8uGAlzl4UAj0D1/nwZVHw++rvDViL6DQ9/Xsu20FZAl2lJNYZ0j2BsovsMwwzQgsx7RICyV9ch9peses5ZmfwR9Gm+tsUarEX1O31siQ3RbDYi2Qo2H4oL6TLDkWWrAoxbRLow8Z0Y7V7Gks8XC5xZQTLOlr0T0u2sQdtYv76iJDNF9eL+bkQoLRR3WOJqgmh11iIZNTIFpUp72suKuW52zySSrQvQDHPrUrUPh96u/T5NsTLS9gffDrGpAOUzMghzqEO3iWas9SqHYd5n27+sJfI17RRWif4GwM1iCd3q4AxPtYkd3jBK0ccAyQlIDrLA6RPdw2dAqdnV1NS52L2/HF3pHFaKR7/1LmTXk1vVpO95wiU2cYINkwsp0UaSk7alyrwbRGRe7FaAmVIjGA0Puno0FyqOc6BAOfR9Uz6XCuSl5QET3sJ7Ea/azIo9l/lSiNRQgtZUSjZugYD3wti7RyPf+Cnzv03clI6Kh98WA1uwbbsY9Qq7DqURnuwru9ynRj6hQBXtjkDYvJfoVCjsLCwTtsz/BdcGB/0w58PiOQzvUiEILBE4kGtwTQAZNSjTuZtlC5ZW/lOgrHHaGSzlOPjkCE52ZMSon2vltRM/ziJ5BMe2tC2oI9U8Z0cL3Vpd8oeV3P04MLyGisZH8nERnVzvlEo38wsItG7AIJUR/04Sd3wLuT91heJlEI1MoY3LmZ1JCNPS9BcKz7JltiFaBfG+J23PsAr9MorHquC+oIbTvCol+yBnp3gOLL3e3ViEuk2hks+X6hQw1BsP3wPdOgfyUk07quEyi8TofN/Nogqi6eSdUROqNfEs8wHfQKz9l/9tlEr3AXlTGXU2ATO4CopHv/er6OvUP3wBZP2VH52USjQuFY475FSwgGvrenPZk0vBOdz7Yr9ysystxIUS38ERWJhYWI0Lxknyike/9A/rawpFJ7JH6nviFEp2Zbcjjb1ceupKAvnfG1dZ64nl5aXChRE9xQD8nTrrCUyy5RH+F1vEVNkC0nniNk1EulGg8J2D0tMc14UmJfKKR760Jh2o98er7DS+U6IySNtqawFKUXZiSR/QnEMHQmRVaT7y68rhUorHupUwPsI2nW9qeQzSKOsODrCS+aDxx3Qmmelwq0XiKioGAff3eSLeYu/DIzPhxtCE8xq+neOKXSrRmYQd9tX/ocLEOl7O5dqFSDtHQ90aHDSbQeuJV9w5dLNGZhTscbcv1ffpf38xZ5qglGvneueG5dzDdpzqe+MUSjbOuCB3RyPdGB8KqeIInfrlEZ1f9nUr0WzD0oSOOAbSe+N+6lBlcLtGlO8SqEv0KRj3hod0IX+FN6C4W4oKJrr1lIIfoK2A9lExz6zzxStNal0y0l7Povx7RyPeGH1bI4GRP/JKJbq3qM50hGvne6FMhWWg98Qq7Dy+aaPVQvTzMS5YbQN/7Y6khofXEK5xlddlElzNNomKike99rfO9IbSeePkO8QsnujXU7CpSSztDLiQiGvneyADR4xeI21VdYHrpRLeCec4BI7ywR+yrI6Lfw6GP28ll4YsHmKiiJ37xRLdaMzdni3qbH9JZRPQt3m719rqCGrhVp21jLX9b8tDYtVRkD5HxiAVTZLJwfJDAV5cN2X34sLq8Fr7ZIprVpOjpnENkw41rZRVIm+z4rib4FibjCdBXTRlu/6owEfjwQRX6b9lcNFh1IDLz9uEEJsgeULJEWaiSiW5NooJ72QM5SguXYDImlrJdtmf33b2nfY26UebhjuHJ50DfnSebC0G4ckZt32Xw7dEm2z0anBNhFEW1jn9s0KBBgwYNGjRo0KBBgwYNGjRo0KBBDeg3SYS/7RN9wXN8XurR2G63a/pncCxOuK7zzcdx5hybyghGhJBp5uflnP48ElxPzOJA6K5oHy1GeEMz1n7bZGnX+RJxkD2AA+Y22h1G9vyw2xWnaw3qfKV+XaeqAKFFppMDwS9bEKvbcYg4nHqmPRw9xWhb43022XdmA6JZ+rgkdT4LGJBZaZqoQprnInrKZxW7uI6+wbq35/MdQeckeidmKteab4een2hP154Yz0T0nO/MDJHyWMlpWYewGb9SoovOo4EIidCIS5Ldevs7iV50N+r0abg6HuNrSnTYOR7jdy+DVjTbdJWZuWiy6cZKLSEaZRhNjt2VeDrwkiHIU1KM+CR7ROAZWjN5oP1yvww9b+M/evLpR1GGcEkvA9oIq1noReNt5HniN8EBa52I/bWixQETvB6RQ9Neak6P1kLWkRHtzTYzZTbXU+rIMOxuZjK/OkR3XEJMOuTEBaQ60bfoNZefwe6RkD4dODqCiYnDE8c7oUI6htG08txKSXTH5z/GGYY7fknLT3kMEqEdqkscOuR1i9END3XspAsNWCkMmgmbah/2eBnspcfub0hkkO2RkDb9mdCE8TO8maaE9gv+fvWDUCEBw3ZEh1yLFpqzvySLG57/OgB1dON8h21xO6pJtEN2jLWO1RcZz4nD/rGyuTht12RPCfPmvENF/prTs7J8njiwOMXRToiiIDrO0LVEGps/Et2TiU876iFeIDICZ3Ae/GmnzTvy6/S0k4DYsSCGS8/xhx4T1y4Zs/ZYjsmMrZTpWnOjEwVLb7z1vKXS8ydMATvuhNwwSlYGUdZDzH2FnyVps2cCh7DyL90tX4DT8W1RCJdT7O2kmpmQOXv9wuBSUZ3oVdxdQ4MPObt4sUvIjxPemlIC1+xsjMj1hdaIhEgMZONQserERHdimQ1sg/1vGx8s3SXsMIKhlLiIAMPSs8z+fMHroYwcHdovOrFmnonPCAy58DPcuxYnWg6CQkdjou2EibWi4yOLDLpJ74+Ve4fsaQZ9+Z2MpaiIEVuVDi/5MukMa8ZPdaKteXo9Y100qedyRzPexh9JWLEKRH6shfeEVz1R1mO2ZIwT3U8yXLIMJ+nYsuszmTDE/Sn4+sKUuGvxuSYbHFjg3TM7WlRcDoZGuil522dEx5IhrA5MdD/pIAFRD+fcUG1g8Da/TxvgSNXd0o+fGDHZ6qYdYcz64NoG+VUmeqisyBpvJYEKBnFrh0wCUzFcsY6zTg2qIasfI3qhLP+aU07GRnIpxng5wiVyyatEdiH968DuYsN+tZMDhCB6qSTgjdiNedITrXwg5h7Wbem43Pgg8Ais9AUzlsE2tWVY1SKlw92QGkTP3KkjsWFDP7bQUvOOdaTU9OYNpFhjvB3Yw11FUjcEVoMTLWy4ifqFnI6wtna0V1ppu6QFbXNzVxDdUR70BNHyhTlEp/lMMp/0GlFV7aGlfWkG/FWKIRRSwlbKeM3uVya6a6YLPwdmmLGb84h+pESHqpplBWJEb5SaHSkHqsUmhhMuWMY8/bk1ls/s3EFfZ8QOedsIoieKjxFUIFo5dqmTIbpltjN2MyQ6VCQ4pOVX82CkVyZ6gnyjMZKoYolOlR6/w4ieKRmyvqV84zMURDMDbAhql6j1G9tSXx7GnYMPDYLolWI8LAuJnmGJTpRMmvGehNhBxhKd9kiPKpWFompZfpWJVnXOZMiEEH30qojoXSouXPMyoj3lzYxkRTF2fGEgUWkeAUIHsa53TEtVXST+3R+1YqJDpYs4fpbotIhTTrSvHF+TCNFNTDklumWqnStDtFLSLpfwlHiWX3WrY5R8E6LLuAtJUtMZU16FRD8mSjp02WNcwY/d1PN5ZOVOSmabG5nxAnr/e9m6Hhk7RGF6ROK6O63E6rhPukzkW1miW26cgcnsSsdM2O2kw2hiCvUMWU+BLckQPUwaNuTNvU8kkedXnejAN2QUUjDSie3EFR+hCommQiO0dLjlJHCiA19+RmQmmmEqSxpu15Lo0Lfhl7UCYrBHojatxJSkAjYUuknmLokObenFeNa6ryH6KHnbSaK361DWR2lCEaaiks24n8dMH4RkAKIps0IogoFw0uJvEqx4rLGGZxiZZL9azNaxwp0Qd7NaTMaCcKOQaErLdrZYTYnF6y5MFo9nOFnHoryXadpBHMK5sdBx80NCbro3hFfRIdukFRyy7nY2fVH1OKgUDMihs+jcUweRMXRERNOh9Z6+fuBKqyMwicProw7zj6TvTJI6j8h8slgdTf4eTDQt/5qX3xQCSZudvX4k8qtE9FZ2pY3JvIJEyUcsJk7G4nXjxNzdUuENtnEvW27FmDRkAXtLEjiSswTMGVAy5GmosxLGhVplhv/owF4pfnWUOMRqnTosk23iIw7orwa1zLbUZp/F7XIfM9lt09u74HEgB0NqLyf1SV64Y4H/uDYrNr/g7wNRs+QDS1vx4uGY3jVTC2vGgi7ys+XBtiSgDxEGxdeF0E0JpRkseLl5msSXmc+zT7Q0uYjsK79U93phdWjrA7MozhDdrcXPc6GfjEZzubOrXsT3aXBIeZp/CYZkLsThEI85O6sg+ZnxHyK6NfTJrtvd+7GGjqrM7JwL0/8Q0XR0GvtkO43N3+XkOeb5JR5rjVUNGjRo0OBfjf8D0VKtUHNP29UAAAAASUVORK5CYII="
-          alt="" width="120" height="50" style="border-radius: 10px 10px;">
-
-        <small class="d-block mb-3 text-muted" id="copyright">&copy;
-                    <script>
-                        document.getElementById('copyright').appendChild(document.createTextNode(dayjs().format('YYYY')))
-                    </script>
-                    Designed by
-                    <a href="https://www.facebook.com/pastetuaam" target="_blank" style="color: #026670;">Pastetu</a>
-                </small>
-      </div>
-      <div class="col-6 col-md">
-        <h5>Chịu trách nhiệm quản lý nội dung</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="text-muted" href="https://www.facebook.com/12344566g" target="_blank">Phạm Đức Long</a></li>
-          <li><a class="text-muted" href="https://www.facebook.com/pastetuaam" target="_blank">Đinh Quang Anh</a></li>
-          <li><a class="text-muted" href="https://www.facebook.com/tho.tranquang.921" target="_blank">Trần Quang Thọ</a></li>
-        </ul>
-      </div>
-      <div class="col-6 col-md">
-        <h5>Hợp tác truyền thông</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="text-muted" href="#"><i class="fas fa-phone-alt"></i> 0567 444 444</a></li>
-          <li><a class="text-muted" href="#"><i class="fas fa-envelope"></i> technews@gmail.com</a></li>
-          
-        </ul>
-      </div>
-      <div class="col-6 col-md">
-        <h5>Đối tác phát triển</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="text-muted" href="https://mindx.edu.vn/">MINDX</a></li>
-        </ul>
-      </div>
+    <div id="scroll-up">
+        <p class="float-right"><a href="#" style="color: #026670;"> <i class="far fa-arrow-alt-circle-up"></i></a></p>
     </div>
-  </footer>
+
+    <div id="weather" class="float-right" style="width: 100px; height: 40px; border-radius: 10px 10px;">
+        <a class="weatherwidget-io" style="border-radius: 10px 0 0 13px;"
+            href="https://forecast7.com/en/21d00105d82/hanoi/" data-label_1="HÀ NỘI" data-label_2="WEATHER"
+            data-font="Ubuntu" data-icons="Climacons Animated" data-mode="Current" data-days="3"
+            data-theme="marine"></a>
+        <script>
+            !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+        </script>
+    </div>
+    <header>
+        <!-- NAVBAR---------------------- -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="
+    background-color: #212121;">
+            <a class=" navbar-brand" href="quantri.html">
+                <img src="/resources/img/Logotn.png" alt="logo" style="width: 40px;">
+                TechNews
+            </a>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto cssf">
+                    <!-- Example split danger button -->
+                    <li>
+                        <div class="btn-group">
+                            <a href="quanlyadmin.html"><button type="button" class="btn btn-danger">Quản lý
+                                    Admin</button></a>
+                            <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="themadmin.html">Thêm admin</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="quanlyuser.html"><button type="button" class="btn btn-danger">Quản lý
+                                Users</button></a>
+                    </li>
+
+                    <li>
+                        <div class="btn-group">
+                            <a href="quanlytintuc.html"><button type="button" class="btn btn-danger">Quản lý Tin
+                                    tức</button></a>
+                            <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="themtintuc.html">Thêm tin tức</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="btn-group">
+                            <a href="quanlymeovat.html"><button type="button" class="btn btn-danger">Quản lý Mẹo
+                                    vặt</button></a>
+                            <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="themmeovat.html">Thêm mẹo vặt</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="quanlyforum.html"><button type="button" class="btn btn-danger">Quản lý
+                                Forum</button></a>
+                    </li>
+
+                    <li>
+                        <a href="quanlygocuytin.html"><button type="button" class="btn btn-danger">Quản lý Góc uy
+                                tín</button></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- END NAVBAR-------------------------------- -->
+        <p style="margin-top: 50px;border: 3px solid #fff;font-size:30px;text-align: center;">Quản lý tin tức</p>
+        <div class="container-ql">
+            <table class="responsive-table paginated" style="border: 1px;">
+                <thead>
+                    <tr>
+                        <th style="width: 5%;">STT</th>
+                        <th style="width: 20%;">Tiêu đề</th>
+                        <th style="width: 15%;">Tóm tắt</th>
+                        <th style="width: 28%;">Nội dung</th>
+                        <th style="width: 8%;">Chủ đề</th>
+                        <th style="width: 8%;">Ảnh tin</th>
+                        <th style="width: 8%;">Người đăng</th>
+                        <th style="width: 8%;">Chức năng</th>
+                    </tr>
+                </thead>
+                <!-- 1 -->
+                <tbody>
+                    <tr>
+                        <td style="width: 5%;">1</td>
+                        <td style="width: 30%;">Hướng dẫn build cấu hình PC chơi game cho sinh viên</td>
+                        <td style="width: 10%;">
+                            <textarea>Build một dàn PC chơi game giá rẻ không phải là khó, nhưng nó là cả một thách thức thật sự với những người mới bước chân vào con đường đam mê PC. Sau đây là bài viết hướng dẫn build PC chơi game giá rẻ dành cho những người muốn bỏ chi phí thấp nhưng vẫn muốn có một dàn PC mạnh mẽ để chiến game.                    </textarea>
+                        </td>
+                        <td style="width: 31%;"><textarea class="tinymce" id="content">
+                          <p>Đối với một d&agrave;n PC chơi game gi&aacute; rẻ th&igrave; điều quan trọng nhất l&agrave; hiệu năng chơi game của n&oacute;, tất cả mọi linh kiện đều phải hướng đến việc l&agrave;m sao để c&oacute; mức hiệu năng tốt nhất với mức gi&aacute; rẻ nhất. Nghe th&igrave; c&oacute; vẻ phức tạp nhưng thật ra kh&aacute; dễ nếu bạn biết c&aacute;ch.</p>
+                          <figure class="wp-block-image"><img class="td-animation-stack-type0-2" src="https://wallpaperaccess.com/full/7460.jpg" alt="Kết quả h&igrave;nh ảnh cho gaming wallpaper" /></figure>
+                          <p>C&oacute; một mẹo nhỏ cho người mới bắt đầu tập build PC chơi game, đ&oacute; l&agrave; h&atilde;y định ra một mức chi ph&iacute; m&agrave; bạn muốn đầu tư cho PC, sau đ&oacute; chọn một chiếc VGA mạnh nhất c&oacute; thể, rồi x&acirc;y dựng c&aacute;c linh kiện c&ograve;n lại sao cho vừa đủ để chiếc VGA c&oacute; thể ph&aacute;t huy được hết sức mạnh của m&igrave;nh. Đ&acirc;y l&agrave; c&aacute;ch l&agrave;m mặc d&ugrave; c&oacute; ch&uacute;t nhược điểm l&agrave; hơi phức tạp cho việc n&acirc;ng cấp về sau nhưng sẽ tiết kiệm chi ph&iacute; tối đa. Cho bạn một cấu h&igrave;nh mạnh nhất, hiệu quả nhất với mức gi&aacute; thấp nhất. V&igrave; đối tượng của b&agrave;i viết n&agrave;y l&agrave; c&aacute;c bạn học sinh, sinh vi&ecirc;n c&oacute; nguồn kinh ph&iacute; hạn chế n&ecirc;n ch&uacute;ng ta ch&uacute;ng ta sẽ build theo c&aacute;ch n&agrave;y.</p>
+                          <p><strong>C&aacute;c khoản chi khuyến nghị cho từng linh kiện (theo tổng kinh ph&iacute;):</strong></p>
+                          <ul>
+                          <li>VGA: 30-40%</li>
+                          <li>CPU: 15-20%</li>
+                          <li>Mainboard: 10-15%</li>
+                          <li>RAM: 10-15%</li>
+                          <li>PSU (nguồn): 7-10%</li>
+                          <li>Case v&agrave; Fan: T&ugrave;y theo nhu cầu, sở th&iacute;ch v&agrave; kinh ph&iacute; nhưng phải đủ tốt để bảo vệ v&agrave; l&agrave;m m&aacute;t cho c&aacute;c linh kiện trong d&agrave;n PC.</li>
+                          </ul>
+                          <p><strong><em>*Sau đ&acirc;y l&agrave; chi tiết về c&aacute;c linh kiện khuyến nghị</em></strong></p>
+                          <h2><strong>1. VGA</strong></h2>
+                          <p>Đối với VGA, người viết xin được đề xuất&nbsp;<strong><a href="https://gearvn.com/collections/vga-gtx-1650-4g">GTX 1650</a></strong>, đ&acirc;y l&agrave; một trong những d&ograve;ng VGA thuộc thế hệ kiến tr&uacute;c Turing mới nhất của NVIDIA. Với hiệu năng mạnh mẽ (mạnh hơn GTX 1050 Ti xấp xỉ 20%) v&agrave; mức gi&aacute; cực kỳ dễ chịu, đ&acirc;y l&agrave; một trong những d&ograve;ng VGA được game thủ b&igrave;nh d&acirc;n lựa chọn nhiều nhất.</p>
+                          <figure class="wp-block-image"><img class="td-animation-stack-type0-2" src="https://product.hstatic.net/1000026716/product/msi_geforce_gtx_1650_ventus_xs_4g_oc_product_photo_3d3_94c9dd9f69af48e8b74ddafda65e3856.png" alt="" />
+                          <figcaption><strong><a href="https://gearvn.com/products/msi-gtx-1650-ventus-xs-4g-oc-gddr5">MSI GTX 1650 Ventus XS 4G OC GDDR5</a></strong></figcaption>
+                          </figure>
+                          <p>C&aacute;c mẫu VGA&nbsp;<strong><a href="https://gearvn.com/collections/vga-gtx-1650-4g">GTX 1650</a></strong>&nbsp;tr&ecirc;n thị trường hiện nay c&oacute; mức gi&aacute; dao động trong khoảng 4 đến 5 triệu đồng t&ugrave;y mẫu&hellip; Để tiết kiệm chi ph&iacute; nhất c&oacute; thể th&igrave; bạn n&ecirc;n hướng đến những mẫu c&oacute; mức gi&aacute; dễ chịu. C&aacute;c mẫu đề xuất</p>
+                          <ul>
+                          <li><strong><a href="https://gearvn.com/products/msi-gtx-1650-ventus-xs-4g-oc-gddr5">MSI GTX 1650 Ventus XS 4G OC GDDR5</a></strong></li>
+                          <li><strong><a href="https://gearvn.com/products/asus-geforce-gtx-1650-4gb-phoenix">ASUS GeForce GTX 1650 4GB PHOENIX</a></strong></li>
+                          </ul>
+                          <p>Đ&acirc;y l&agrave; 2 mẫu VGA đến từ những nh&agrave; sản xuất danh tiếng l&agrave;&nbsp;<strong>Asus</strong>&nbsp;v&agrave;&nbsp;<strong>MSI&nbsp;</strong>nhưng lại c&oacute; mức gi&aacute; cực kỳ hợp l&yacute;, đ&aacute;ng để c&acirc;n nhắc v&agrave; lựa chọn. Ngo&agrave;i ra bạn cũng c&oacute; thể chọn những mẫu cao cấp hơn để c&oacute; thiết kế đẹp hơn, VRM chất lượng hơn v&agrave; hệ thống tản nhiệt khỏe hơn.</p>
+                          <h2><strong>2. CPU</strong></h2>
+                          <p>Như đ&atilde; n&oacute;i ở tr&ecirc;n, sau khi đ&atilde; chọn được một d&ograve;ng VGA ưng &yacute; th&igrave; c&aacute;c linh kiện tiếp theo n&ecirc;n được x&acirc;y dựng xung quanh VGA, Một chiếc VGA d&ugrave; mạnh mẽ như thế n&agrave;o cũng sẽ bị giới hạn lại khi bị gh&eacute;p cặp với một CPU qu&aacute; yếu. Khi chọn CPU cho m&aacute;y t&iacute;nh chơi game th&igrave; bạn n&ecirc;n chắc chắn rằng CPU &iacute;t nhất phải đủ mạnh để c&oacute; thể gi&uacute;p VGA ph&aacute;t huy được mức hiệu năng tối đa, tốt nhất l&agrave; n&ecirc;n &ldquo;thừa&rdquo; ra th&ecirc;m một ch&uacute;t hiệu năng để gi&uacute;p PC chạy đa nhiệm tốt hơn.</p>
+                          <figure class="wp-block-image"><img class="td-animation-stack-type0-2" src="https://product.hstatic.net/1000026716/product/intel-pentium-gold-gearvn.jpg" alt="" />
+                          <figcaption><strong><a href="https://gearvn.com/products/intel-pentium-gold-g5400-4m-3-7ghz-2-nhan-4-luong">Intel Pentium Gold G5400</a></strong></figcaption>
+                          </figure>
+                          <p>Để ph&aacute;t huy được hết sức mạnh của VGA&nbsp;<strong><a href="https://gearvn.com/collections/vga-gtx-1650-4g">GTX 1650</a></strong>&nbsp;th&igrave; một CPU như&nbsp;<strong><a href="https://gearvn.com/products/intel-pentium-gold-g5400-4m-3-7ghz-2-nhan-4-luong">Intel Pentium Gold G5400</a></strong>&nbsp;l&agrave; vừa đủ. Đ&acirc;y l&agrave; một CPU rất mạnh trong ph&acirc;n kh&uacute;c CPU gi&aacute; rẻ với 2 nh&acirc;n thực c&oacute; mức xung nhịp tối đa l&agrave; 3.7GHz, ứng dụng c&ocirc;ng nghệ si&ecirc;u ph&acirc;n luồng cho ra 4 luồng xử l&yacute;, đạt ngưỡng sức mạnh tiệm cận với Core i3 7100.</p>
+                          <p>Mức gi&aacute; của&nbsp;<strong><a href="https://gearvn.com/products/intel-pentium-gold-g5400-4m-3-7ghz-2-nhan-4-luong">Intel Pentium Gold G5400</a></strong>&nbsp;sẽ nằm ở mức tr&ecirc;n dưới 2 triệu t&ugrave;y nơi b&aacute;n. Đ&acirc;y sẽ l&agrave; sự lựa chọn cực kỳ hợp l&yacute; cho những cấu h&igrave;nh PC b&igrave;nh d&acirc;n. Nếu bạn muốn một CPU mạnh hơn, nhiều nh&acirc;n hơn để c&oacute; thể chạy đa nhiệp tốt hơn th&igrave; bạn c&oacute; thể nhắm đến<a href="https://gearvn.com/products/intel-core-i3-8100-6m-3-6ghz-4-nhan-4-luong">&nbsp;</a><strong><a href="https://gearvn.com/products/intel-core-i3-8100-6m-3-6ghz-4-nhan-4-luong">Core i3 8100</a></strong>&nbsp;hoặc&nbsp;<strong><a href="https://gearvn.com/products/core-i3-9100f-6m-3-6ghz-upto-4-20ghz-4-nhan-4-luong">Core i3 9100F</a></strong>&nbsp;với 4 nh&acirc;n thực v&agrave; 4 luồng xử l&yacute; với mức gi&aacute; khoảng tr&ecirc;n dưới 3 triệu đồng.</p>
+                          <h2><strong>3. RAM</strong></h2>
+                          <p>Việc lựa chọn RAM như thế n&agrave;o cho hợp l&yacute; th&igrave; dễ d&agrave;ng hơn chọn CPU v&agrave; VGA rất nhiều. Đối với một chiếc PC chơi game b&igrave;nh d&acirc;n th&igrave; 8GB RAM hiện nay c&oacute; thể xem l&agrave; một ti&ecirc;u chuẩn. Bạn c&oacute; thể nghe được nhiều nguồn tin kh&aacute;c nhau n&oacute;i rằng n&ecirc;n mua 2 thanh RAM 4GB để c&oacute; thể chạy Dual Channel v&agrave; cho băng th&ocirc;ng RAM lớn hơn. Tuy nhi&ecirc;n tr&ecirc;n thực tế th&igrave; với t&aacute;c vụ chơi game sẽ kh&ocirc;ng ngốn băng th&ocirc;ng RAM qu&aacute; nhiều đến mức bạn bắt buộc phải l&agrave;m vậy, Dual Channel c&oacute; t&aacute;c dụng tăng FPS thật nhưng rất &iacute;t, một v&agrave;i FPS ch&ecirc;nh lệch l&agrave; kh&ocirc;ng đ&aacute;ng để đ&aacute;nh đổi 1 slot RAM. Thay v&agrave;o đ&oacute; th&igrave; việc cắm một thanh RAM 8GB để tiện n&acirc;ng cấp l&ecirc;n 16GB về sau vẫn l&agrave; thiết thực hơn.</p>
+                          <figure class="wp-block-image"><img class="td-animation-stack-type0-2" src="https://product.hstatic.net/1000026716/product/hx-product-memory-fury-ddr4-red-4kit-zm-lg.jpg" alt="" />
+                          <figcaption><strong><a href="https://gearvn.com/search?type=product&amp;q=filter=((title%3Aproduct**RAM%20Kingston%20HyperX))">RAM Kingston HyperX Fury</a></strong></figcaption>
+                          </figure>
+                          <p>Về RAM, người viết sẽ đề cử một thanh RAM&nbsp;<strong><a href="https://gearvn.com/search?type=product&amp;q=filter=((title%3Aproduct**RAM%20Kingston%20HyperX))">Kingston HyperX Fury 8GB</a></strong>. D&ograve;ng RAM n&agrave;y đ&atilde; qu&aacute; nổi tiếng rồi, chất lượng, độ bền v&agrave; t&iacute;nh năng của n&oacute; cũng đ&atilde; được cộng đồng trong giới c&ocirc;ng nghệ kiểm chứng từ l&acirc;u. 1,5 triệu đồng cho một thanh RAM 8GB chất lượng vẫn l&agrave; một c&aacute;i gi&aacute; hời.</p>
+                          <h2><strong>4. Mainboard</strong></h2>
+                          <p>Mainboard l&agrave; cầu nối giữa c&aacute;c linh kiện b&ecirc;n trong hệ thống với nhau v&agrave; với thiết bị ngoại vi v&agrave; với thế giới b&ecirc;n ngo&agrave;i. Đối với c&aacute;c linh kiện tr&ecirc;n th&igrave; một chiếc mainboard&nbsp;<a href="https://gearvn.com/collections/h310-mainboard-coffeelake"><strong>H310</strong></a>&nbsp;sẽ l&agrave; hợp l&yacute; v&agrave; tiết kiệm chi ph&iacute; hơn cả. Hiện nay, gi&aacute; của mainboard mang chipset<strong><a href="https://gearvn.com/collections/h310-mainboard-coffeelake">&nbsp;H310</a></strong>&nbsp;sẽ dao động trong khoảng 1,3 đến 1,7 triệu đồng t&ugrave;y m&atilde;, đ&acirc;y sẽ l&agrave; mảnh gh&eacute;p kh&ocirc;ng thể hợp l&yacute; hơn cho những d&agrave;n PC gi&aacute; rẻ.</p>
+                          <figure class="wp-block-image"><img class="td-animation-stack-type0-2" src="https://product.hstatic.net/1000026716/product/gearvn_h310m_prod_plus__a00a4ca275d4452b97aff142921e6aca.jpg" alt="" />
+                          <figcaption><strong><a href="https://gearvn.com/products/msi-h310m-pro-d-plus-lga1151v2">H310M Pro-D Plus</a></strong></figcaption>
+                          </figure>
+                          <p>Tuy nhi&ecirc;n, nếu muốn n&acirc;ng cấp dễ d&agrave;ng hơn về sau th&igrave; bạn c&oacute; thể hướng đến những d&ograve;ng mainboard mang chipset cao cấp hơn như<strong><a href="https://gearvn.com/collections/b360-mainboard-coffeelake">&nbsp;B360</a></strong>,&nbsp;<strong><a href="https://gearvn.com/collections/h370-mainboard-coffeelake-1">H370</a></strong>,&nbsp;<strong><a href="https://gearvn.com/collections/b365-mainboard-coffeelake">B365</a></strong>&hellip;</p>
+                          <h2><strong>5. Nguồn</strong></h2>
+                          <p>Trong c&aacute;c linh kiện phần cứng PC th&igrave; người ta thường &iacute;t để &yacute; đến nguồn nhất. Tuy nhi&ecirc;n, đ&acirc;y lại l&agrave; linh kiện cực kỳ quan trọng, nguồn l&agrave; thiết bị chuyển đổi d&ograve;ng điện xoay chiều (AC) th&agrave;nh d&ograve;ng điện 1 chiều (DC) để c&oacute; thể sử dụng cho cho hệ thống m&aacute;y t&iacute;nh. Nguồn giống như tr&aacute;i tim của hệ thống vậy, v&agrave; một bộ nguồn tốt l&agrave; một bộ nguồn c&oacute; thể cung cấp d&ograve;ng điện ổn định với điện &aacute;p hợp l&yacute; cho to&agrave;n bộ hệ thống. Tr&aacute;i tim phải khỏe th&igrave; cơ thể mới mạnh, nguồn v&agrave; hệ thống cũng vậy.</p>
+                          <figure class="wp-block-image"><img class="td-animation-stack-type0-2" src="https://product.hstatic.net/1000026716/product/gvn_cm_mwe_400_1_32a3e1d0466c41e6b5678edc8b9f16af.jpg" alt="" />
+                          <figcaption><strong><a href="https://gearvn.com/products/cooler-master-mwe-400-80plus">Cooler Master MWE 400 80Plus</a></strong></figcaption>
+                          </figure>
+                          <p>Hiện nay, t&igrave;m một chiếc nguồn cũ từ một thương hiệu lớn với c&ocirc;ng suất thực ph&ugrave; hợp cho một chiếc m&aacute;y t&iacute;nh chơi game l&agrave; chuyện kh&ocirc;ng hề kh&oacute;. Bạn c&oacute; thể dễ d&agrave;ng t&igrave;m được một chiếc nguồn cũ c&ocirc;ng suất thực 400-500W với mức gi&aacute; chỉ tầm tr&ecirc;n dưới 400 ngh&igrave;n đồng. Tuy nhi&ecirc;n việc mua h&agrave;ng cũ l&agrave; đồng nghĩa với chấp nhận rủi ro, v&agrave; nếu bạn kh&ocirc;ng phải l&agrave; một chuy&ecirc;n gia th&igrave; tốt nhất bạn vẫn n&ecirc;n đầu tư hẳn một bộ nguồn mới, đến từ nh&agrave; sản xuất uy t&iacute;n cho chiếc PC của m&igrave;nh.</p>
+                          <p>Với d&agrave;n linh kiện b&ecirc;n tr&ecirc;n, người viết đề xuất một bộ nguồn c&oacute; c&ocirc;ng suất thực từ khoảng 400W trở l&ecirc;n, trong tầm gi&aacute; tr&ecirc;n dưới 1 triệu đồng, bạn c&oacute; thể nhắm đến những bộ nguồn như:</p>
+                          <ul>
+                          <li><strong><a href="https://gearvn.com/products/cooler-master-mwe-400-80plus">Cooler Master MWE 400 80Plus</a></strong>&nbsp;(400W)</li>
+                          <li><strong><a href="https://gearvn.com/products/500w-silverstone-st50f-es230-80-plus">SilverStone ST50F-ES230 80Plus</a></strong>&nbsp;(500W)</li>
+                          <li><strong><a href="https://gearvn.com/products/cooler-master-mwe500-80-plus">Cooler Master MWE500 80Plus</a></strong>&nbsp;(500W)</li>
+                          </ul>
+                          <p>Đ&acirc;y l&agrave; những bộ nguồn đến từ c&aacute;c thương hiệu lớn, đạt chứng chỉ 80Plus, đảm bảo độ bền khi hoạt động trong thời gian d&agrave;i v&agrave; hiệu suất chuyển h&oacute;a năng lượng cao. Nguồn 400W sẽ cho bạn mức năng lượng đủ d&ugrave;ng, 500W sẽ tạo th&ecirc;m khoảng trống để việc n&acirc;ng cấp về sau dễ d&agrave;ng hơn.</p>
+                          <h2><strong>6. Bộ nhớ lưu trữ</strong></h2>
+                          <p>Với khoảng tr&ecirc;n dưới 1 triệu đồng, bạn sẽ c&oacute; thể hướng đến những chiếc SSD 120GB cho tốc độ đọc ghi cao hoặc HDD 1TB cho dung lượng lưu trữ lớn. Với m&aacute;y t&iacute;nh chơi game th&igrave; người viết khuy&ecirc;n bạn n&ecirc;n hướng về những chiếc SSD để c&oacute; thể khởi động hệ điều h&agrave;nh, bật game v&agrave; chạy phần mềm nhanh nhất c&oacute; thể. Nếu bạn muốn c&oacute; th&ecirc;m kh&ocirc;ng gian lưu trữ th&igrave; h&atilde;y gắn th&ecirc;m một chiếc HDD để c&oacute; dung lượng lưu trữ lớn v&agrave; tiết kiệm chi ph&iacute; hơn.</p>
+                          <figure class="wp-block-image"><img class="td-animation-stack-type0-2" src="https://product.hstatic.net/1000026716/product/pny-ssd-cs900-la_0c11edd0a40940d9804af81981a5ab91.png" alt="" />
+                          <figcaption><strong><a href="https://gearvn.com/products/pny-ssd-cs900-120g-2-5-sata-3"><br />PNY SSD CS900 120G</a></strong></figcaption>
+                          </figure>
+                          <h2><strong>Case v&agrave; Fan</strong></h2>
+                          <p>V&igrave; case v&agrave; fan kh&ocirc;ng ảnh hưởng trược tiếp đến hiệu năng của một d&agrave;n PC n&ecirc;n bạn c&oacute; thể xem x&eacute;t để c&acirc;n đối cho ph&ugrave; hợp với sở th&iacute;ch nhu cầu v&agrave; hầu bao của m&igrave;nh. Tuy nhi&ecirc;n bạn cũng kh&ocirc;ng n&ecirc;n xem nhẹ ch&uacute;ng, c&ograve;n l&yacute; do v&igrave; sao th&igrave; bạn c&oacute; thể tham khảo trong b&agrave;i viết dưới đ&acirc;y.</p>
+                          <figure class="wp-block-embed is-type-rich is-provider-gearvn">
+                          <div class="wp-block-embed__wrapper"><iframe class="wp-embedded-content" title="&ldquo;Case v&agrave; Fan &ndash; Ch&uacute;ng quan trong hơn bạn nghĩ đấy!&rdquo; &mdash; GEARVN" src="http://news.gearvn.com/cong-nghe/case-va-fan-chung-quan-trong-hon-ban-nghi-day/embed/#?secret=NpqgpZj0Ki" width="600" height="533" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" sandbox="allow-scripts" data-secret="NpqgpZj0Ki" data-mce-fragment="1"></iframe></div>
+                          </figure>
+                          <h2><strong>Chi&nbsp;ph&iacute;&nbsp;v&agrave;&nbsp;hiệu&nbsp;năng</strong></h2>
+                          <p>Một cấu h&igrave;nh PC chơi game tiết kiệm v&agrave; tối ưu nhất thời điểm hiện tại sẽ gồm những linh kiện sau:</p>
+                          <ul>
+                          <li><strong>CPU</strong>: Pentium G5400 (khoảng 2 triệu đồng)</li>
+                          <li><strong>VGA</strong>: GTX 1650 (4-5 triệu đồng)</li>
+                          <li><strong>RAM</strong>: DDR4 8GB (khoảng 1,5 triệu đồng)</li>
+                          <li><strong>Mainboard</strong>: H310 (Khoảng 1,5 triệu đồng)</li>
+                          <li><strong>SSD: 120GB</strong>&nbsp;/ HDD 1TB (khoảng 1 triệu đồng)</li>
+                          <li><strong>Nguồn</strong>: 400-500W (tr&ecirc;n dưới 1 triệu đồng)</li>
+                          <li><strong>Case v&agrave; fan</strong>: Nếu bạn trang bị một chiếc case k&egrave;m theo một bộ fan vừa đủ d&ugrave;ng th&igrave; mức chi ph&iacute; sẽ rơi v&agrave;o khoảng 1 triệu đồng nữa.</li>
+                          </ul>
+                          <p>Tổng cộng lại, chi ph&iacute; cho việc build một d&agrave;n PC chuẩn như b&agrave;i viết sẽ v&agrave;o khoảng từ 12 đến 13 triệu đồng, t&ugrave;y theo mức gi&aacute; của từng linh kiện.</p>
+                          <p>Về hiệu năng của một d&agrave;n PC như thế n&agrave;y th&igrave; bạn kh&ocirc;ng cần phải lo, với sức mạnh của những phần cứng thế hệ mới nhất, một chiếc PC c&oacute; cấu h&igrave;nh như tr&ecirc;n l&agrave; thừa sức để bạn c&oacute; thể chơi được hầu hết mọi tựa game hiện nay, kể cả những tựa game AAA như&nbsp;<strong>BF1, BF5, Shadow of Tomb Raider, Assassin Creed Odyssey,&nbsp;COD Black Ops 4</strong>&hellip; (Lưu &yacute; l&agrave;&nbsp;<strong>chơi được với mức FPS &ldquo;mượt mắt&rdquo;</strong>&nbsp;chứ kh&ocirc;ng phải l&agrave;&nbsp;<strong>chỉ bật được game</strong>&nbsp;với mức FPS tệ hại). C&ograve;n những tựa game nhẹ nh&agrave;ng như,<strong>&nbsp;CS:GO, LOL, FFO 4</strong>,&hellip; th&igrave; cấu h&igrave;nh n&agrave;y đều c&oacute; thể &ldquo;c&acirc;n&rdquo; tốt ở mức thiết lập cao nhất.</p>
+                          <p><strong>GEARVN&nbsp;</strong>cũng c&oacute; một bộ m&aacute;y mang cấu h&igrave;nh tương tự (<strong><a href="https://gearvn.com/products/gvn-titan-1650">GVN Titan</a></strong>) bạn c&oacute; thể tham khảo hiệu năng thực tế của n&oacute; trong video dưới đ&acirc;y:</p>
+                          <figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio">
+                          <div class="wp-block-embed__wrapper"><iframe src="https://www.youtube.com/embed/xyXP-1WVBbQ?feature=oembed" width="100%" height="392" frameborder="0" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe></div>
+                          </figure>
+                          <p><strong><em>Tr&ecirc;n đ&acirc;y l&agrave; b&agrave;i hướng dẫn c&aacute;ch để build một cấu h&igrave;nh case PC với mức gi&aacute; trong khoảng từ 12 đến 13 triệu đồng với đầy đủ c&aacute;c linh kiện. Đ&acirc;y l&agrave; cấu h&igrave;nh gồm những linh kiện thế hệ mới với hiệu năng mạnh mẽ v&agrave; c&oacute; mức chi ph&iacute; rẻ nhất c&oacute; thể, ph&ugrave; hợp với những người cần một chiếc PC mạnh mẽ nhưng c&oacute; mức gi&aacute; phải chăng . Hy vọng đ&atilde; mang đến cho bạn đọc những th&ocirc;ng tin hữu &iacute;ch.</em></strong></p>
+                          <p><strong>GEARVN (Axium Fox)</strong></p>
+                          <p><strong>*G&oacute;c quảng c&aacute;o ????</strong>&nbsp;&ndash; Nếu bạn cảm thấy 12 đến 13 triệu vẫn c&ograve;n l&agrave; qu&aacute; cao th&igrave; bạn c&oacute; thể xem qua bộ m&aacute;y&nbsp;<strong><a href="https://gearvn.com/products/gvn-titan-1650">GVN Titan</a></strong>, đ&acirc;y l&agrave; một trong những bộ m&aacute;y b&aacute;n chạy nhất của của&nbsp;<strong>GEARVN</strong>, c&oacute; cấu h&igrave;nh giống hệt như cấu h&igrave;nh l&yacute; tưởng trong b&agrave;i viết nhưng mức gi&aacute; th&igrave; lại rẻ hơn nhiều, chỉ hơn 10 triệu đồng m&agrave; th&ocirc;i, nếu bạn đang c&oacute; &yacute; định muốn mua PC th&igrave; h&atilde;y nhớ xem qua nh&eacute;!</p>                    </textarea>
+                        </td>
+                        <td style="width: 8%;">
+                            Tin Hot
+                        </td>
+                        <td style="width: 8%;">
+                            <img src="http://news.gearvn.com/wp-content/uploads/2019/07/Custom-PC-Builder-Fast-Fix-Computer-Repair-1068x601.jpg" style="width: 70%;">
+                        </td>
+                        <td style="width: 8%;">Admin</td>
+                        <td style="width: 8%;" class="chuc-nang">
+                            <a href="">Sửa</a>
+                            <a href="">Xóa</a>
+                        </td>
+                    </tr>
+                </tbody>
+                <!-- 2 -->
+                <tbody>
+                    <tr>
+                        <td style="width: 5%;">2</td>
+                        <td style="width: 30%;">Build PC khủng Chuẩn Workstation : Dual Xeon E5 2696v4 88 threads, Quadro RTX5000 16Gb Ddr6</td>
+                        <td style="width: 10%;">
+                            <textarea>Ngày nay khi nhu cầu làm đồ họa ngày càng nhiều thì công nghệ phát triển cũng càng mạnh. Làm đồ họa với các phần mềm như 3Dsmax, Sketchup Render Corona, Vray với Ram, VGA có thể đôi khi là thừa nhưng với CPU thì không có khái niệm thừa, khi render cpu load 100% và cpu càng mạnh thì render càng nhanh, rút ngắn thời gian chờ render lại. Hôm nay Máy Tính Nguyễn Công giới thiệu đến các bạn bộ máy workstation dual xeon E5 2696v4 sở hữu 44 core 88 thread mang lại tốc độ render siêu khủng :                    </textarea>
+                        </td>
+                        <td style="width: 31%;"><textarea class="tinymce" id="content">
+                          <figure class="wp-block-image"><img class="alignnone wp-image-7846 size-full" src="https://nguyencongpc.vn/wp-content/uploads/@-7.jpg" sizes="(max-width: 1950px) 100vw, 1950px" srcset="https://nguyencongpc.vn/wp-content/uploads/@-7.jpg 1950w, https://nguyencongpc.vn/wp-content/uploads/@-7-213x142.jpg 213w, https://nguyencongpc.vn/wp-content/uploads/@-7-640x427.jpg 640w" alt="Bộ m&aacute;y workstation cao cấp Dual Xeon E5 2696 v4" width="100%" />
+                            <figcaption><strong><em>Bộ m&aacute;y workstation cao cấp Dual Xeon E5 2696 v4</em></strong></figcaption>
+                            </figure>
+                            <p>Bộ m&aacute;y sử dụng VGA đ&uacute;ng chất chuy&ecirc;n nghiệp d&agrave;nh cho d&acirc;n đồ họa chuy&ecirc;n s&acirc;u : Quadro RTX5000 với 16Gb Ram Ddr6 rất khủng khiếp. Quadro RTX l&agrave; sản phẩm mới nhất nằm trong nh&oacute;m kiến tr&uacute;c Turing của Nvidia. Turing l&agrave; kiến tr&uacute;c GPU thế hệ thứ 8 của Nvidia cho ph&eacute;p GPU với c&ocirc;ng nghệ Ray Tracing đầu ti&ecirc;n tr&ecirc;n thế giới.</p>
+                            <p>Kiến tr&uacute;c Turing được trang bị RT Core chuy&ecirc;n dụng gi&uacute;p tăng tốc độ ray-tracing v&agrave; Tensor Cores mới cho AI. Ch&uacute;ng hoạt động c&ugrave;ng nhau v&agrave; hai engine n&agrave;y cho khả năng t&iacute;nh to&aacute;n mạnh mẽ hơn để m&ocirc; phỏng qu&aacute; tr&igrave;nh tạo điểm ảnh, cho ph&eacute;p trải nghiệm tương t&aacute;c với chất lượng điện ảnh, hiệu ứng mới tuyệt vời hơn.</p>
+                            <figure class="wp-block-image"><img class="alignnone wp-image-7847 size-full" src="https://nguyencongpc.vn/wp-content/uploads/RTX5000.jpg" sizes="(max-width: 2048px) 100vw, 2048px" srcset="https://nguyencongpc.vn/wp-content/uploads/RTX5000.jpg 2048w, https://nguyencongpc.vn/wp-content/uploads/RTX5000-213x136.jpg 213w, https://nguyencongpc.vn/wp-content/uploads/RTX5000-640x407.jpg 640w" alt="VGA QUADRO RTX 5000" width="100%" /></figure>
+                            <p>Kiến tr&uacute;c Turing tăng tốc ray-tracing thời gian thực l&ecirc;n 25 lần so với thế hệ Pascal trước đ&oacute;, v&agrave; c&oacute; thể được sử dụng để dựng khung h&igrave;nh cuối c&ugrave;ng cho hiệu ứng phim với tốc độ hơn 30 lần tốc độ của CPU.</p>
+                            <figure class="wp-block-image"><img class="alignnone wp-image-7848 size-full" src="https://nguyencongpc.vn/wp-content/uploads/rtx-5000-2.jpg" sizes="(max-width: 2048px) 100vw, 2048px" srcset="https://nguyencongpc.vn/wp-content/uploads/rtx-5000-2.jpg 2048w, https://nguyencongpc.vn/wp-content/uploads/rtx-5000-2-213x142.jpg 213w, https://nguyencongpc.vn/wp-content/uploads/rtx-5000-2-640x427.jpg 640w" alt=" VGA Cao cấp Quadro RTX 5000 Nguyencongpc" width="100%" />
+                            <figcaption><em><strong>VGA Cao cấp Quadro RTX5000 16Gb Ddr6</strong></em></figcaption>
+                            </figure>
+                            <p>Kiến tr&uacute;c Turing cải thiện đ&aacute;ng kể hiệu suất &ldquo;raster&rdquo; so với thế hệ Pascal trước với một pipeline đồ họa n&acirc;ng cao v&agrave; c&aacute;c c&ocirc;ng nghệ shading lập tr&igrave;nh mới. C&aacute;c c&ocirc;ng nghệ n&agrave;y bao gồm shading biến đổi, shading kh&ocirc;ng gian kết cấu v&agrave; hiển thị nhiều chế độ xem, cung cấp khả năng tương t&aacute;c nhiều hơn với c&aacute;c m&ocirc; h&igrave;nh, cảnh lớn v&agrave; trải nghiệm VR được cải thiện.<br /><br />Main được sử dụng l&agrave; Z10PE-D16 WS chuẩn workstation bao gồm c&aacute;c t&iacute;nh năng ti&ecirc;n tiến tr&ecirc;n một ti&ecirc;u chuẩn của Enterprise Electronics Bay (EEB) nhằm mang lại t&iacute;nh linh hoạt v&agrave; hiệu năng cao với 2 socket hỗ trợ vi xử l&yacute; Intel&reg; Xeon&reg; E5-2600 v3 / v4, 16 khe cắm DDR4 DIMM v&agrave; s&aacute;u khe PCI Express 3.0 x16. Hơn nữa, bố tr&iacute; của Z10PE-D16 WS được thiết kế cho luồng kh&ocirc;ng kh&iacute; tối ưu, với cả bộ xử l&yacute; v&agrave; khe cắm bộ nhớ được bố tr&iacute; song song trực tiếp ph&iacute;a sau quạt để tăng hiệu suất giải nhiệt tối đa &ndash; Bo mạch chủ n&agrave;y thực sự l&yacute; tưởng cho cả datacenter v&agrave; m&aacute;y trạm l&agrave;m việc.</p>
+                            <figure class="wp-block-image"><img class="alignnone wp-image-7849 size-full" src="https://nguyencongpc.vn/wp-content/uploads/@-9.jpg" sizes="(max-width: 2048px) 100vw, 2048px" srcset="https://nguyencongpc.vn/wp-content/uploads/@-9.jpg 2048w, https://nguyencongpc.vn/wp-content/uploads/@-9-213x142.jpg 213w, https://nguyencongpc.vn/wp-content/uploads/@-9-640x427.jpg 640w" alt="Main Asus Z10PE-D16 Workstation" width="100%" />
+                            <figcaption><strong><em>Main Asus Z10PE-D16 WS</em></strong></figcaption>
+                            </figure>
+                            <p>Ram Samsung Ecc Registered với khả năng tự sửa lỗi đem lại khả năng ổn định nhất cho hệ thống khi l&agrave;m việc . Ở đ&acirc;y bộ PC sử dụng 128Gb được settup d&agrave;nh ri&ecirc;ng cho cho người d&ugrave;ng với khối lượng c&ocirc;ng việc lớn , file l&agrave;m việc si&ecirc;u nặng l&ecirc;n đến cả tỷ poly (L&acirc;u đ&agrave;i, t&acirc;n cổ điển&hellip;)</p>
+                            <figure class="wp-block-image"><img class="alignnone wp-image-7850 size-full" src="https://nguyencongpc.vn/wp-content/uploads/tan-co-dien.jpg" sizes="(max-width: 1410px) 100vw, 1410px" srcset="https://nguyencongpc.vn/wp-content/uploads/tan-co-dien.jpg 1410w, https://nguyencongpc.vn/wp-content/uploads/tan-co-dien-213x103.jpg 213w, https://nguyencongpc.vn/wp-content/uploads/tan-co-dien-640x309.jpg 640w" alt="Những file 3dmax t&acirc;n cổ điển cần vga khỏe v&agrave; ram dung lượng cao" width="100%" />
+                            <figcaption><strong><em>Những file 3dmax t&acirc;n cổ điển cần vga khỏe v&agrave; ram dung lượng cao</em></strong></figcaption>
+                            </figure>
+                            <p><br />SSD Samsung 970 EVO NVMe M.2 1TB : Dung lượng cao , tốc độ đọc / ghi (tối đa): 3400MB/s / 1500MB/s đem lại tốc độ vượt trội , cho khả năng load , truyển tải c&aacute;c dữ liệu nặng hay xử l&yacute; t&aacute;c vụ đồ họa phức tạp 1 c&aacute;ch si&ecirc;u tốc.<br /><br /><br /></p>
+                            <figure class="wp-block-image"><img class="alignnone wp-image-7863 size-full" src="https://nguyencongpc.vn/wp-content/uploads/970-EVO-M2-1TB.png" sizes="(max-width: 1479px) 100vw, 1479px" srcset="https://nguyencongpc.vn/wp-content/uploads/970-EVO-M2-1TB.png 1479w, https://nguyencongpc.vn/wp-content/uploads/970-EVO-M2-1TB-213x109.png 213w, https://nguyencongpc.vn/wp-content/uploads/970-EVO-M2-1TB-640x329.png 640w" alt="SSD Samsung 970 EVO NVMe M.2 1TB" width="100%" />
+                            <figcaption><strong><em>SSD Samsung 970 EVO NVMe M.2 1TB</em></strong></figcaption>
+                            </figure>
+                            <p>Nguồn EVGA SuperNOVA 1000W G1 chuẩn 80 PLUS GOLD hoạt động ở hiệu suất tối thiểu tr&ecirc;n 90% với tải định mức c&ocirc;ng suất, đồng thời gi&uacute;p tiết kiệm điện năng . Nguồn cao cấp với thời gian bảo h&agrave;nh l&ecirc;n đến 10 năm &ndash; đem lại khả năng hoạt động nhất cho cả hệ thống<br /><br /><br /></p>
+                            <figure class="wp-block-image"><img class="alignnone wp-image-7859 size-full" src="https://nguyencongpc.vn/wp-content/uploads/Ngu%E1%BB%93n-EVGA-SuperNOVA-1000W-G1.jpg" sizes="(max-width: 1965px) 100vw, 1965px" srcset="https://nguyencongpc.vn/wp-content/uploads/Nguồn-EVGA-SuperNOVA-1000W-G1.jpg 1965w, https://nguyencongpc.vn/wp-content/uploads/Nguồn-EVGA-SuperNOVA-1000W-G1-213x120.jpg 213w, https://nguyencongpc.vn/wp-content/uploads/Nguồn-EVGA-SuperNOVA-1000W-G1-640x360.jpg 640w" alt="Nguồn EVGA 120-GP-1000-X1 1000W" width="100%" />
+                            <figcaption><br /><strong><em>Nguồn EVGA 120-GP-1000-X1 1000W</em></strong>&nbsp;</figcaption>
+                            </figure>
+                            <p>Với những người đang l&agrave;m đồ họa Render 3D th&igrave; đ&acirc;y đ&uacute;ng l&agrave; một bộ m&aacute;y mơ ước của tất cả c&aacute;c anh em kiến tr&uacute;c sư, designer. Bộ m&aacute;y đ&aacute;p ứng được to&agrave;n bộ những y&ecirc;u cầu khắt khe nhất : Mở file, dựng file si&ecirc;u nặng : t&acirc;n cổ điển, l&acirc;u đ&agrave;i.., Render si&ecirc;u tốc với 88 threads, chuẩn workstation tr&acirc;u b&ograve; bền bỉ l&agrave;m việc 24/24 thoải m&aacute;i với khối lượng c&ocirc;ng việc cực lớn.</p>
+                            <figure class="wp-block-image"><img class="alignnone wp-image-7853 size-full" src="https://nguyencongpc.vn/wp-content/uploads/@-4-1.jpg" sizes="(max-width: 1908px) 100vw, 1908px" srcset="https://nguyencongpc.vn/wp-content/uploads/@-4-1.jpg 1908w, https://nguyencongpc.vn/wp-content/uploads/@-4-1-213x145.jpg 213w, https://nguyencongpc.vn/wp-content/uploads/@-4-1-640x436.jpg 640w" alt="Bộ m&aacute;y workstation cao cấp Dual Xeon E5 2696 v4 Nguyencongpc" width="100%" /><br /><br /><img class="alignnone wp-image-7857 size-full" src="https://nguyencongpc.vn/wp-content/uploads/@-2.jpg" sizes="(max-width: 1883px) 100vw, 1883px" srcset="https://nguyencongpc.vn/wp-content/uploads/@-2.jpg 1883w, https://nguyencongpc.vn/wp-content/uploads/@-2-213x147.jpg 213w, https://nguyencongpc.vn/wp-content/uploads/@-2-640x442.jpg 640w" alt="" width="100%" /></figure>
+                            <figure class="wp-block-image"><img class="alignnone wp-image-7855 size-full" src="https://nguyencongpc.vn/wp-content/uploads/@-1.jpg" sizes="(max-width: 1950px) 100vw, 1950px" srcset="https://nguyencongpc.vn/wp-content/uploads/@-1.jpg 1950w, https://nguyencongpc.vn/wp-content/uploads/@-1-213x142.jpg 213w, https://nguyencongpc.vn/wp-content/uploads/@-1-640x427.jpg 640w" alt="Bộ m&aacute;y workstation cao cấp Dual Xeon E5 2696 v4 Nguyencongpc" width="100%" /></figure>
+                            <p><br /><strong>Chi tiết cấu h&igrave;nh bộ m&aacute;y v&agrave; gi&aacute; b&aacute;n :</strong><br /><br /></p>
+                            <p><strong>➣ Dual CPU Xeon E5 2696v4 : 22 Cores/44Threads ( Dual CPU = 44 Cores 88 Threads )&nbsp;<br />➣ Main Asus Z10PE D16 Workstation&nbsp;<br />➣ Ram DDR4 ECC Registered 128Gb ( 8*16) Bus 2133&nbsp;<br />➣ VGA Quadro RTX 5000 16Gb GDDR6&nbsp;<br />➣ SSD Samsung 970 EVO NVMe M.2 1TB&nbsp;<br />➣ HDD Western Caviar Black 4T/7200RPM&nbsp;<br />➣ Nguồn EVGA 120-GP-1000-X1 1000W&nbsp;<br />➣ 2 Tản nhiệt Cooler Master MA610P RGB&nbsp;<br />➣ Case CoolerMaster C700P&nbsp;<br />➣ M&agrave;n H&igrave;nh Dell Ultrasharp U3415W</strong></p>
+                            <p><strong><em>✢ Tổng gi&aacute; trị bộ m&aacute;y : 196.100.000 VND</em></strong></p></textarea>
+                        </td>
+                        <td style="width: 8%;">
+                            Tin Hot
+                        </td>
+                        <td style="width: 8%;">
+                            <img src="https://nguyencongpc.vn/wp-content/uploads/@-7.jpg"
+                                style="width: 70%;">
+                        </td>
+                        <td style="width: 8%;">Admin</td>
+                        <td style="width: 8%;" class="chuc-nang">
+                            <a href="">Sửa</a>
+                            <a href="">Xóa</a>
+                        </td>
+                    </tr>
+                </tbody>
+                <!-- 3 -->
+                <tbody>
+                    <tr>
+                        <td style="width: 5%;">3</td>
+                        <td style="width: 30%;">Tìm hiểu về Windows 10 và các phiên bản của nó hiện nay</td>
+                        <td style="width: 10%;">
+                            <textarea>Windows 10 được biết đến như một nền tảng hệ điều hành phổ biến nhất hiện nay. Windows 10 được sử dụng trên PC, laptop, máy tính bảng...Hệ điều hành này sở hữu độ ổn định cùng vói tính bảo mật lý tưởng nhất cho người sử dụng.
+                        </textarea>
+                        </td>
+                        <td style="width: 31%;">
+                          <textarea class="tinymce" id="content">
+                            <h3 id="hmenuid1"><strong>1. Windows 10 l&agrave; g&igrave;?</strong></h3>
+<p>Windows 10 l&agrave; phi&ecirc;n bản hệ điều h&agrave;nh mới nhất của Microsoft Windows ph&aacute;t triển v&agrave;o ng&agrave;y 29 th&aacute;ng 7 năm 2015. Từ nay trở về sau sẽ kh&ocirc;ng c&oacute; Windows 11 m&agrave; thay v&agrave;o đ&oacute; l&agrave; c&aacute;c phi&ecirc;n bản cập nhật của Windows 10.</p>
+<p><img class="lazy" title="Giao diện Windows 10" src="https://cdn.tgdd.vn/hoi-dap/1184370/giao-gien-windows-10.jpg" alt="Giao diện Windows 10" data-cke-saved-src="//cdn.tgdd.vn/hoi-dap/1184370/giao-gien-windows-10.jpg" data-original="//cdn.tgdd.vn/hoi-dap/1184370/giao-gien-windows-10.jpg" /></p>
+<p>Windows 10 l&agrave; hệ điều h&agrave;nh&nbsp;<strong>phổ biến nhất hiện nay</strong>&nbsp;tr&ecirc;n m&aacute;y t&iacute;nh. Với c&aacute;c t&iacute;nh năng được người d&ugrave;ng ưa chuộng từ h&agrave;ng chục năm nay:</p>
+<p>-&nbsp;<strong>Startmenu:&nbsp;</strong>&Ocirc; cửa số start được t&ugrave;y biến theo hướng phẳng v&agrave; hiện đại hơn</p>
+<p><img class="lazy" title="Startmenu tr&ecirc;n Windows 10" src="https://cdn1.tgdd.vn/hoi-dap/1184370/windows-10-la-gi.jpg" alt="Startmenu tr&ecirc;n Windows 10" data-cke-saved-src="//cdn.tgdd.vn/hoi-dap/1184370/windows-10-la-gi.jpg" data-original="//cdn1.tgdd.vn/hoi-dap/1184370/windows-10-la-gi.jpg" /></p>
+<p>-&nbsp;<strong>C&ocirc; trợ l&yacute; ảo Cortana:&nbsp;</strong>Bạn c&oacute; thể ra lệnh bằng giọng n&oacute;i, đặt lịch hẹn, t&igrave;m kiếm mọi thứ nhờ trợ l&yacute; ảo n&agrave;y.</p>
+<p><img class="lazy" title="Trợ l&yacute; ảo Cortana tr&ecirc;n Windows 10" src="https://cdn3.tgdd.vn/hoi-dap/1184370/windows-10-cortana.jpg" alt="Trợ l&yacute; ảo Cortana tr&ecirc;n Windows 10" data-cke-saved-src="//cdn.tgdd.vn/hoi-dap/1184370/windows-10-cortana.jpg" data-original="//cdn3.tgdd.vn/hoi-dap/1184370/windows-10-cortana.jpg" /></p>
+<p>-&nbsp;<strong>Tr&igrave;nh duyệt Microsoft Edge</strong></p>
+<p><img class="lazy" title="Tr&igrave;nh duyệt Microsoft Edge tr&ecirc;n Windows 10" src="https://cdn.tgdd.vn/hoi-dap/1184370/giao-dien-edge-windows-10.jpg" alt="Tr&igrave;nh duyệt Microsoft Edge tr&ecirc;n Windows 10" data-cke-saved-src="//cdn.tgdd.vn/hoi-dap/1184370/giao-dien-edge-windows-10.jpg" data-original="//cdn.tgdd.vn/hoi-dap/1184370/giao-dien-edge-windows-10.jpg" /></p>
+<p><strong>-&nbsp;</strong><strong>Bảo mật với Windows Hello:&nbsp;</strong>Cảm biến v&acirc;n tay, nhận diện gương mặt tr&ecirc;n Windows được hỗ trợ tối đa, c&agrave;i đặt dễ d&agrave;ng.</p>
+<h3 id="hmenuid2"><img class="lazy" title="Windows Hello tr&ecirc;n Windows 10" src="https://cdn2.tgdd.vn/hoi-dap/1184370/windows-10-windows-hello.jpg" alt="Windows Hello tr&ecirc;n Windows 10" data-cke-saved-src="//cdn.tgdd.vn/hoi-dap/1184370/windows-10-windows-hello.jpg" data-original="//cdn2.tgdd.vn/hoi-dap/1184370/windows-10-windows-hello.jpg" /></h3>
+<h3 id="hmenuid3"><strong>2. Những lợi &iacute;ch của Windows 10 bản quyền</strong></h3>
+<p><strong>Hệ thống bảo mật tốt:&nbsp;</strong>Đối với c&aacute;c bản Windows "lậu", ch&uacute;ng ta kh&ocirc;ng thể biết l&agrave; b&ecirc;n trong c&oacute; chứa phần mềm độc hại, virus, trojan... hay kh&ocirc;ng. Những vấn đề bảo mật n&agrave;y sẽ kh&ocirc;ng xảy ra tr&ecirc;n c&aacute;c bản Windows bản quyền v&agrave; Microsoft đảm bảo rằng những bản v&aacute; thường xuy&ecirc;n sẽ được cập nhật tr&ecirc;n thiết bị của bạn.</p>
+<p><img class="lazy" title="Windows Defenders tr&ecirc;n Windows 10" src="https://cdn1.tgdd.vn/hoi-dap/1184370/windows-10-windows-defenders.jpg" alt="Windows Defenders tr&ecirc;n Windows 10" data-cke-saved-src="//cdn.tgdd.vn/hoi-dap/1184370/windows-10-windows-defenders.jpg" data-original="//cdn1.tgdd.vn/hoi-dap/1184370/windows-10-windows-defenders.jpg" /></p>
+<p><strong>M&aacute;y t&iacute;nh sẽ &iacute;t lỗi hơn, hoạt động ổn định hơn:&nbsp;</strong>Như m&igrave;nh chia sẻ ở tr&ecirc;n, việc crack kh&ocirc;ng chỉ l&agrave;m cho t&iacute;nh bảo mật của HĐH Windows giảm s&uacute;t m&agrave; c&ograve;n ảnh hưởng tới sự ổn định tr&ecirc;n m&aacute;y t&iacute;nh. Do vậy, bạn y&ecirc;u cầu một HĐH &iacute;t lỗi v&agrave; ổn định th&igrave; chắc chắn phải lựa chọn Windows chuẩn của Microsoft.</p>
+<p><strong>Thoải m&aacute;i c&agrave;i đặt lại hay cập nhật:&nbsp;</strong>Một điều m&agrave; gần như người d&ugrave;ng Windows "lậu" rất hiếm l&agrave;m l&agrave; cập nhật hay c&agrave;i đặt lại HĐH.Tuy nhi&ecirc;n, c&aacute;c vấn đề đ&oacute; sẽ kh&ocirc;ng xảy ra đối với Windows c&oacute; bản quyền.</p>
+<p><img class="lazy" title="Windows Updates tr&ecirc;n Windows 10" src="https://cdn2.tgdd.vn/hoi-dap/1184370/windows-10-windows-update.jpg" alt="Windows Updates tr&ecirc;n Windows 10" data-cke-saved-src="//cdn.tgdd.vn/hoi-dap/1184370/windows-10-windows-update.jpg" data-original="//cdn2.tgdd.vn/hoi-dap/1184370/windows-10-windows-update.jpg" /></p>
+<p><strong>Những lợi &iacute;ch nhỏ đi k&egrave;m:</strong>&nbsp;Trong rất nhiều đợt, Microsoft thường tặng k&egrave;m cho kh&aacute;ch h&agrave;ng khi mua Windows c&oacute; bản quyền c&aacute;c g&oacute;i qu&agrave; "rất gi&aacute; trị" kh&aacute;c. Chẳng hạn như rất nhiều dung lượng OneDrive tốc độ cao miễn ph&iacute;, bộ ứng dụng văn ph&ograve;ng Microsoft Office hay&nbsp;<a href="http://www.thegioididong.com/phan-mem/office-365-personal-32-bit-x64-1-nam" target="_blank" rel="noopener" data-cke-saved-href="http://www.thegioididong.com/phan-mem/office-365-personal-32-bit-x64-1-nam">Office 365</a>.</p>
+<p><img class="lazy" title="Dịch vụ lưu trữ OneDrive tr&ecirc;n Windows 10" src="https://cdn2.tgdd.vn/hoi-dap/1184370/windows-10-windows-ondrive.jpg" alt="Dịch vụ lưu trữ OneDrive tr&ecirc;n Windows 10" data-cke-saved-src="//cdn.tgdd.vn/hoi-dap/1184370/windows-10-windows-ondrive.jpg" data-original="//cdn2.tgdd.vn/hoi-dap/1184370/windows-10-windows-ondrive.jpg" /></p>
+<p>Hiện nay, bạn sẽ c&oacute; một số c&aacute;ch để mua Windows 10 "xịn" của Microsoft với mức gi&aacute; ưu đ&atilde;i. Chẳng hạn bạn c&oacute; thể mua laptop, m&aacute;y t&iacute;nh c&oacute;&nbsp;<strong>c&agrave;i đặt sẵn</strong>&nbsp;c&aacute;c bản Windows đ&atilde; active từ chương tr&igrave;nh khuyến m&atilde;i tặng k&egrave;m.</p>
+<h3 id="hmenuid4"><strong>3. Những phi&ecirc;n bản của Windows 10 tr&ecirc;n laptop hiện nay</strong></h3>
+<p><strong><img class="lazy" title="C&aacute;c phi&ecirc;n bản Windows 10" src="https://cdn1.tgdd.vn/hoi-dap/1184370/windows-10-phien-ban.jpg" alt="C&aacute;c phi&ecirc;n bản Windows 10" data-original="//cdn1.tgdd.vn/hoi-dap/1184370/windows-10-phien-ban.jpg" data-cke-saved-src="//cdn.tgdd.vn/hoi-dap/1184370/windows-10-phien-ban.jpg" /></strong></p>
+<p>C&oacute; rất nhiều phi&ecirc;n bản của Windows 10 hiện nay nhưng dưới đ&acirc;y l&agrave; một v&agrave;i phi&ecirc;n bản phổ biến nhất hiện tại.</p>
+<p><strong>Windows 10 Home</strong>: Windows 10 Home được thiết kế cho c&aacute;c PC, m&aacute;y t&iacute;nh bảng. N&oacute; bao gồm tất cả c&aacute;c t&iacute;nh năng hướng tới người ti&ecirc;u d&ugrave;ng phổ th&ocirc;ng c&aacute; nh&acirc;n.</p>
+<p><strong>Windows 10 Pro</strong>: Windows 10 Pro l&agrave; phi&ecirc;n bản Home được bổ sung th&ecirc;m c&aacute;c t&iacute;nh năng cần thiết cho đối tượng doanh nghiệp nhỏ.</p>
+<p><strong>Windows 10 Enterprise</strong>: Windows 10 Enterprise d&agrave;nh cho doanh nghiệp, cung cấp tất cả c&aacute;c t&iacute;nh năng của Windows 10 Pro, với c&aacute;c t&iacute;nh năng bổ sung để hỗ trợ c&aacute;c tổ chức c&ocirc;ng nghệ v&agrave; c&aacute;c t&iacute;nh năng tương đương với Windows 8.1 Enterprise.</p>
+<p><strong>Windows 10 Education</strong>: Windows 10 Education c&oacute; đầy đủ c&aacute;c t&iacute;nh năng của bản Enterprise, nhưng thay v&igrave; được cấu h&igrave;nh cho doanh nghiệp th&igrave; lại được cấu h&igrave;nh để ph&ugrave; hợp với m&ocirc;i trường gi&aacute;o dục. Được trang bị th&ecirc;m Cortana ở thời gian gần đ&acirc;y.</p>
+<p><img class="lazy" title="Bảng so s&aacute;nh c&aacute;c phi&ecirc;n bản của Windows 10" src="https://cdn2.tgdd.vn/hoi-dap/1184370/tim-hieu-ve-windows-10-va-cac-phien-ban-cua-no-h-1184370-bang-so-sanh.jpg" alt="Bảng so s&aacute;nh c&aacute;c phi&ecirc;n bản của Windows 10" data-cke-saved-src="//cdn.tgdd.vn/hoi-dap/1184370/tim-hieu-ve-windows-10-va-cac-phien-ban-cua-no-h-1184370-bang-so-sanh.jpg" data-original="//cdn2.tgdd.vn/hoi-dap/1184370/tim-hieu-ve-windows-10-va-cac-phien-ban-cua-no-h-1184370-bang-so-sanh.jpg" /></p>
+                            </textarea>
+                        </td>
+                        <td style="width: 8%;">
+                            Tin Hot
+                        </td>
+                        <td style="width: 8%;">
+                            <img src="https://win10.vn/wp-content/uploads/2019/07/fb.jpg"
+                                style="width: 70%;">
+                        </td>
+                        <td style="width: 8%;">Admin</td>
+                        <td style="width: 8%;" class="chuc-nang">
+                            <a href="">Sửa</a>
+                            <a href="">Xóa</a>
+                        </td>
+                    </tr>
+                </tbody>
+                <!-- 4 -->
+                <tbody>
+                    <tr>
+                        <td style="width: 5%;">4</td>
+                        <td style="width: 30%;">Top 10 laptop cho sinh viên CNTT để lập trình, xem phim, lướt web</td>
+                        <td style="width: 10%;">
+                            <textarea>  Nhiều người thường thắc mắc rằng không biết laptop cho sinh viên ngành CNTT có gì khác biệt so với ngành khác? Và những chiếc máy tính nào sẽ thực sự phù hợp với họ? Hãy cùng Blog Adayroi tìm câu trả lời qua bài viết dưới đây nhé!
+                            </textarea>
+                        </td>
+                        <td style="width: 31%;"><textarea class="tinymce" id="content">
+                          <h2><strong>1. Những nhu cầu sử dụng laptop của sinh vi&ecirc;n ng&agrave;nh c&ocirc;ng nghệ th&ocirc;ng tin</strong></h2>
+                          <p>Ng&agrave;nh nghề c&ocirc;ng nghệ th&ocirc;ng tin đang được coi rất l&agrave; &ldquo;hot&rdquo; khi c&oacute; nhiều người y&ecirc;u th&iacute;ch, ưa chuộng &nbsp;v&agrave; được c&aacute;c bạn sinh vi&ecirc;n lựa chọn kh&aacute; nhiều. Bởi n&oacute; kh&ocirc;ng chỉ gi&uacute;p bạn dễ d&agrave;ng xin việc v&agrave;o c&aacute;c c&ocirc;ng ty lớn m&agrave; c&ograve;n cực kỳ tiện &iacute;ch trong những ứng dụng h&agrave;ng ng&agrave;y của cuộc sống hiện đại n&agrave;y. Th&ocirc;ng thường, trong c&aacute;c trường đại học lớn, ng&agrave;nh n&agrave;y sẽ được ph&acirc;n chia ra l&agrave;m một số chuy&ecirc;n ng&agrave;nh lớn như cơ sở dữ liệu, thiết kế v&agrave; ph&aacute;t triển web, lập tr&igrave;nh vi&ecirc;n (viết code), lập tr&igrave;nh game.</p>
+                          <p>Khi được theo học ng&agrave;nh c&ocirc;ng nghệ như vậy, sinh vi&ecirc;n chắc chắn sẽ được thực h&agrave;nh, kh&aacute;m ph&aacute; hay nghi&ecirc;n cứu một c&aacute;ch chuy&ecirc;n s&acirc;u, từ cơ bản đến n&acirc;ng cao về m&aacute;y t&iacute;nh, rồi hệ thống th&ocirc;ng tin, an to&agrave;n th&ocirc;ng tin mạng, đa phương tiện hay c&ocirc;ng nghệ phần mềm&hellip; Do đ&oacute;, dường như bắt buộc ai ai cũng phải sở hữu một chiếc laptop thật ph&ugrave; hợp để phục vụ tốt nhất cho sự nghiệp học tập của m&igrave;nh.</p>
+                          <p>Tuy nhi&ecirc;n, như đ&atilde; n&oacute;i, do c&oacute; nhiều ng&agrave;nh nghề kh&aacute;c nhau n&ecirc;n việc lựa chọn laptop cho sinh vi&ecirc;n c&ocirc;ng nghệ th&ocirc;ng tin cũng sẽ dựa tr&ecirc;n những đặc trưng cơ bản kh&aacute;c nhau, như về phần mềm sử dụng, cấu h&igrave;nh&hellip;</p>
+                          <p>&nbsp;</p>
+                          <p><img src="https://cdn02.static-adayroi.com/0/2019/06/05/1559711383988_1246232.jpg" alt="Sinh vi&ecirc;n ng&agrave;nh c&ocirc;ng nghệ th&ocirc;ng tin (CNTT) c&oacute; những y&ecirc;u cầu g&igrave; với chiếc laptop của m&igrave;nh?" /></p>
+                          <p><em>Sinh vi&ecirc;n ng&agrave;nh c&ocirc;ng nghệ th&ocirc;ng tin (CNTT) c&oacute; những y&ecirc;u cầu g&igrave; với chiếc laptop của m&igrave;nh? (Nguồn: kenh14.vn)</em></p>
+                          <h2><strong>2. Cấu h&igrave;nh laptop cho sinh vi&ecirc;n nh&oacute;m ng&agrave;nh c&ocirc;ng nghệ th&ocirc;ng tin như thế n&agrave;o l&agrave; ph&ugrave; hợp?</strong></h2>
+                          <p>Nếu bạn đang muốn chọn một chiếc laptop ph&ugrave; hợp cho sinh vi&ecirc;n c&ocirc;ng nghệ th&ocirc;ng tin th&igrave; n&ecirc;n tham khảo những ti&ecirc;u ch&iacute; quan trọng dưới đ&acirc;y:</p>
+                          <p><img src="https://cdn02.static-adayroi.com/0/2019/06/05/1559711383648_6383309.png" alt="Laptop d&agrave;nh cho sinh vi&ecirc;n ng&agrave;nh c&ocirc;ng nghệ th&ocirc;ng tin" /></p>
+                          <p><em>Laptop d&agrave;nh cho sinh vi&ecirc;n ng&agrave;nh c&ocirc;ng nghệ th&ocirc;ng tin (Nguồn: techz.vn)</em></p>
+                          <h3><strong>2.1. Chip xử l&yacute;</strong></h3>
+                          <p>Đối với những ng&agrave;nh văn ph&ograve;ng nhẹ nh&agrave;ng th&igrave; th&ocirc;ng thường đ&atilde; n&ecirc;n sở hữu cấu h&igrave;nh Core i3 để phục vụ cho t&aacute;c vụ cơ bản như lướt web, soạn thảo văn bản, tra cứu th&ocirc;ng tin&hellip; rồi. V&igrave; thế, m&aacute;y t&iacute;nh của c&aacute;c bạn sinh vi&ecirc;n c&ocirc;ng nghệ th&ocirc;ng tin cần c&oacute; CPU tối thiểu từ Core i5 trở l&ecirc;n. M&agrave; tốt nhất n&ecirc;n l&agrave; Core i5 thế hệ thứ 7 d&ograve;ng U th&igrave; mới thực sự ph&ugrave; hợp v&agrave; hỗ trợ học tập đạt hiệu quả cao nhất.</p>
+                          <h3><strong>2.2. M&agrave;n h&igrave;nh</strong></h3>
+                          <p>C&oacute; một số c&ocirc;ng việc đặc th&ugrave; hoặc t&ugrave;y theo sở th&iacute;ch của mỗi người m&agrave; c&oacute; thể lựa chọn laptop m&agrave;n h&igrave;nh nhỏ như 12.5 inches hoặc 13.3 inches. Tuy nhi&ecirc;n, lời khuy&ecirc;n d&agrave;nh cho c&aacute;c bạn khi lựa chọn laptop cho sinh vi&ecirc;n CNTT đ&oacute; l&agrave; n&ecirc;n sử dụng m&agrave;n h&igrave;nh c&oacute; k&iacute;ch thước dao động trong khoảng 14 inches hay 15.6 inches th&ocirc;i. V&igrave; to qu&aacute; th&igrave; sẽ rất cồng kềnh, nặng nề c&ograve;n nhỏ qu&aacute; lại kh&ocirc;ng hề tốt cho đ&ocirc;i mắt một ch&uacute;t n&agrave;o.</p>
+                          <h3><strong>2.3. Ram</strong></h3>
+                          <p>Hiện nay, đa số c&aacute;c loại m&aacute;y đều được c&agrave;i Ram 4GB để phục vụ được c&aacute;c nhu cầu, t&aacute;c vụ v&agrave; lưu trữ dữ liệu tối thiểu nhất của một chiếc m&aacute;y t&iacute;nh x&aacute;ch tay. Nhưng nếu muốn thoải m&aacute;i hơn th&igrave; c&aacute;c bạn sinh vi&ecirc;n c&ocirc;ng nghệ th&ocirc;ng tin c&oacute; thể lựa chọn Ram 8GB để được sử dụng &ldquo;tẹt ga&rdquo;.</p>
+                          <h3><strong>2.4. Thời gian pin</strong></h3>
+                          <p>Pin lu&ocirc;n được coi l&agrave; một trong những ti&ecirc;u ch&iacute; h&agrave;ng đầu khi lựa chọn m&aacute;y t&iacute;nh. V&agrave; một gợi &yacute; trong việc mua laptop m&agrave; c&aacute;c bạn c&oacute; thể tham khảo qua đ&oacute; l&agrave; n&ecirc;n nhắm v&agrave;o những chiếc laptop c&oacute; số Cell lớn hơn 4 trở l&ecirc;n. V&igrave; như vậy mới pin &ldquo;tr&acirc;u&rdquo; v&agrave; c&oacute; thể sử dụng trong một khoảng thời gian l&acirc;u d&agrave;i m&agrave; kh&ocirc;ng cần phải lo lắng g&igrave; cả.</p>
+                          <h3><strong>2.5. Loại ổ cứng v&agrave; dung lượng</strong></h3>
+                          <p>Cũng giống như nhiều loại m&aacute;y t&iacute;nh kh&aacute;c, laptop cho sinh vi&ecirc;n lập tr&igrave;nh cũng c&oacute; thể sử dụng ổ cứng b&igrave;nh thường HDD với dung lượng tối thiểu l&agrave; 500GB. Như vậy l&agrave; đủ rồi. Nhưng ngo&agrave;i ra, c&oacute; thể xem x&eacute;t, c&acirc;n nhắc th&ecirc;m về loại ổ cứng thể rắn SDD bởi n&oacute; c&oacute; những ưu điểm tuyệt vời như bền vững, nhanh ch&oacute;ng, tuy nhi&ecirc;n gi&aacute; th&agrave;nh sẽ đắt hơn HDD kh&aacute; nhiều.</p>
+                          <h3><strong>2.6. Thiết kế v&agrave; khối lượng</strong></h3>
+                          <p>Để đ&aacute;p ứng nhu cầu sử dụng m&aacute;y t&iacute;nh x&aacute;ch tay của con người ng&agrave;y c&agrave;ng nhiều th&igrave; tr&ecirc;n thị trường laptop hiện nay cũng c&oacute; v&ocirc; số thiết kế, mẫu m&atilde; rất đa dạng, phong ph&uacute;. C&aacute;c bạn sinh vi&ecirc;n c&oacute; thể tha hồ v&agrave; thoải m&aacute;i lựa chọn. Đương nhi&ecirc;n l&agrave; ai cũng th&iacute;ch một chiếc laptop trong top&nbsp;<strong><a href="https://blog.adayroi.com/15-laptop-nho-gon-cau-hinh-manh-tot-nhat-2018-co-gia-tu-8-trieu-d5300" target="_blank" rel="noopener">15 chiếc laptop gọn nhẹ sang trọng</a></strong>&nbsp;v&agrave; dễ d&agrave;ng di chuyển mọi l&uacute;c mọi nơi. Đồng thời cũng rất chắc chắn, bền vững khi x&aacute;c suất tuột tay rơi vỡ cũng &iacute;t hơn so với những d&ograve;ng kh&aacute;c. Nhưng tất nhi&ecirc;n gi&aacute; th&agrave;nh sẽ cao hơn. V&igrave; thế, bạn n&ecirc;n lựa chọn kỹ.</p>
+                          <h3><strong>2.7. Cổng kết nối</strong></h3>
+                          <p>Để thuận tiện v&agrave; phục vụ tốt nhất cho nhu cầu học tập th&igrave; laptop cho sinh vi&ecirc;n c&ocirc;ng nghệ th&ocirc;ng tin n&ecirc;n được trang bị đầy đủ một số cổng kết nối phổ biến như LAN, USB 2.0, USB 3.0, HDMI&hellip; Như vậy, việc trao đổi th&ocirc;ng tin, dữ liệu từ ngo&agrave;i v&agrave;o trong v&agrave; trong ra ngo&agrave;i mới dễ d&agrave;ng hơn bao giờ hết.</p>
+                          <h3><strong>2.8. Hệ điều h&agrave;nh</strong></h3>
+                          <p>Đa số c&aacute;c d&ograve;ng laptop đều đang sử dụng phổ biến hệ điều h&agrave;nh Windows với những ưu điểm tuyệt vời như hỗ trợ nhiều ứng dụng, hỗ trợ tối đa m&agrave;n h&igrave;nh cảm ứng, c&oacute; t&iacute;nh tương th&iacute;ch cao&hellip; Tuy nhi&ecirc;n, n&oacute; lại kh&ocirc;ng c&oacute; t&iacute;nh bảo mật v&agrave; sự ổn định cao như MacOS &ndash; phi&ecirc;n bản độc quyền của Apple. Do đ&oacute;, t&ugrave;y thuộc v&agrave;o từng loại m&aacute;y bạn n&ecirc;n lựa chọn một hệ điều h&agrave;nh sao cho ph&ugrave; hợp với nhu cầu học tập của m&igrave;nh nh&eacute;!</p>
+                          <h3><strong>2.9. Mức gi&aacute; laptop cho sinh vi&ecirc;n nh&oacute;m ng&agrave;nh c&ocirc;ng nghệ th&ocirc;ng tin</strong></h3>
+                          <p>Tương ứng với nhiều mẫu m&atilde; v&agrave; c&aacute;c d&ograve;ng m&aacute;y laptop kh&aacute;c nhau tr&ecirc;n thị trường hiện nay sẽ l&agrave; gi&aacute; th&agrave;nh. Rẻ c&oacute; (5-10 triệu) hay đắt cũng c&oacute; ( 20- 30 triệu). Nhưng tốt nhất, c&aacute;c bạn sinh vi&ecirc;n n&ecirc;n c&acirc;n nhắc thật kỹ về điều kiện t&agrave;i ch&iacute;nh cho ph&eacute;p để mua laptop. Đa số, trong mức gi&aacute; 10-15 triệu th&igrave; cũng c&oacute; kh&aacute; nhiều m&aacute;y cho cấu h&igrave;nh v&agrave; hiệu năng rất tốt, cực kỳ ph&ugrave; hợp cho việc học tập cũng như thư gi&atilde;n, giải tr&iacute; của sinh vi&ecirc;n.</p>
+                          <h2><strong>3. Top 10 sản phẩm laptop c&oacute; cấu h&igrave;nh ph&ugrave; hợp cho sinh vi&ecirc;n c&ocirc;ng nghệ th&ocirc;ng tin</strong></h2>
+                          <p>Dựa v&agrave;o những ti&ecirc;u ch&iacute; như tr&ecirc;n m&agrave; bạn vẫn c&ograve;n đang băn khoăn khi kh&ocirc;ng biết laptop cho sinh vi&ecirc;n IT như thế n&agrave;o mới ph&ugrave; hợp th&igrave; c&oacute; thể tham khảo 10 sản phẩm dưới đ&acirc;y:</p>
+                          <h3><strong>3.1. Apple Macbook Air (2018)</strong></h3>
+                          <p>Đ&acirc;y được coi l&agrave; một &ldquo;si&ecirc;u phẩm&rdquo; tuyệt vời của d&ograve;ng Macbook với sự &ldquo;lột x&aacute;c&rdquo; ho&agrave;n to&agrave;n mới mẻ. Sản phẩm được thiết kế v&ocirc; c&ugrave;ng tỉ mỉ, trau chuốt l&agrave;m n&ecirc;n một vẻ đẹp ho&agrave;n hảo chưa từng c&oacute;. B&ecirc;n cạnh đ&oacute;, n&oacute; c&ograve;n được sở hữu loại m&agrave;n h&igrave;nh mang t&ecirc;n l&agrave; Retina với độ ph&acirc;n giải cao, hứa hẹn mang đến những h&igrave;nh ảnh hiển thị trung thực, r&otilde; n&aacute;t v&agrave; sống động nhất. Đặc biệt l&agrave; cấu h&igrave;nh mạnh mẽ Core i thế hệ thứ 8 sẽ khiến cho người d&ugrave;ng cảm thấy thật ưng &yacute; khi thực hiện c&aacute;c t&aacute;c vụ đa nhiệm nhanh ch&oacute;ng, xuất sắc&hellip;Đ&acirc;y cũng ch&iacute;nh l&agrave; l&yacute; do khiến người d&ugrave;ng rất y&ecirc;u th&iacute;ch&nbsp;<strong><a href="https://www.adayroi.com/macbook-air-c33256009163013?utm_source=blog_article&amp;utm_medium=referral&amp;utm_campaign=d10183&amp;utm_term=top-10-laptop-cho-sinh-vien-cntt-de-lap-trinh-xem-phim-luot-web" target="_blank" rel="noopener">rinh chiếc Macbook Air trang bị hiện đại,&nbsp;</a></strong>t&iacute;ch hợp cảm biến Touch ID th&ocirc;ng minh nh&agrave; T&aacute;o n&agrave;y về sử dụng.</p>
+                          <p><img src="https://cdn02.static-adayroi.com/0/2019/10/21/15716493566_5641965.jpg" alt="Apple Macbook Air (2018) 13.3 inches MREA2 Bạc " /></p>
+                          <p><em>Apple Macbook Air (2018) 13.3 inches MREA2 Bạc (Nguồn:shopify.com)</em></p>
+                          <p><em><a href="https://www.adayroi.com/macbook-air-c33256009163013?utm_source=blog_article&amp;utm_medium=referral&amp;utm_campaign=d10183&amp;utm_term=top-10-laptop-cho-sinh-vien-cntt-de-lap-trinh-xem-phim-luot-web" target="_blank" rel="noopener"><img src="https://cdn02.static-adayroi.com/0/2019/10/18/1571366170361_7123245.png" alt="" /></a></em></p>
+                          <h3><strong>3.2. Apple MacBook Pro 2017 MPXT2LL/A</strong></h3>
+                          <p>Nếu muốn mua laptop cho sinh vi&ecirc;n CNTT th&igrave;&nbsp;<strong><a href="https://www.adayroi.com/apple-macbook-pro-2017-mpxw2-512gb-13-3-inches-xam-touch-bar-p-PRI1228882?utm_source=blog_article&amp;utm_medium=referral&amp;utm_campaign=d10183&amp;utm_term=top-10-laptop-cho-sinh-vien-cntt-de-lap-trinh-xem-phim-luot-web" target="_blank" rel="noopener">MacBook Pro 2017- một trong những d&ograve;ng Macbook si&ecirc;u đẹp</a></strong>, xịn s&ograve; đến từ g&atilde; khổng lồ c&ocirc;ng nghệ Apple cũng được coi l&agrave; một ứng cử vi&ecirc;n ho&agrave;n hảo d&agrave;nh cho c&aacute;c bạn c&oacute; điều kiện kinh tế t&agrave;i ch&iacute;nh kh&aacute; giả. Bởi với gi&aacute; th&agrave;nh cao ngất ngưởng 34.990.000 đồng khiến ai ai cũng phải d&egrave; chừng. Thế nhưng, b&ugrave; lại, bạn c&oacute; thể được sở hữu một chiếc m&aacute;y mang phong c&aacute;ch thật chuy&ecirc;n nghiệp, mang phong c&aacute;ch hiện đại h&uacute;t hồn với cấu h&igrave;nh Intel Core i5 2.3GHz mạnh mẽ, hệ điều h&agrave;nh Mac OS Sierra hiện đại, bảo mật cao&hellip;</p>
+                          <p><img src="https://cdn02.static-adayroi.com/0/2019/10/21/15716496933_9231438.jpg" alt="Apple MacBook Pro 2017 " /></p>
+                          <p><em>Apple MacBook Pro 2017 (Nguồn: stuff.tv)</em></p>
+                          <p><em><a href="https://www.adayroi.com/apple-macbook-pro-2017-mpxw2-512gb-13-3-inches-xam-touch-bar-p-PRI1228882?utm_source=blog_article&amp;utm_medium=referral&amp;utm_campaign=d10183&amp;utm_term=top-10-laptop-cho-sinh-vien-cntt-de-lap-trinh-xem-phim-luot-web" target="_blank" rel="noopener"><img src="https://cdn02.static-adayroi.com/0/2019/10/18/1571366170361_7123245.png" alt="" /></a></em></p>
+                          <h3><strong>3.3. Laptop Dell Vostro V3578C</strong></h3>
+                          <p>Trong mức gi&aacute; tầm trung, khoảng hơn 15 triệu đồng th&igrave; c&aacute;c bạn sinh vi&ecirc;n c&oacute; thể mua sản phẩm n&agrave;y.&nbsp;<strong><a href="https://www.adayroi.com/laptop-dell-vostro-3578-v3578c-15-6-inches-den-hang-chinh-hang-p-1241141?utm_source=blog_article&amp;utm_medium=referral&amp;utm_campaign=d10183&amp;utm_term=top-10-laptop-cho-sinh-vien-cntt-de-lap-trinh-xem-phim-luot-web" target="_blank" rel="noopener">Dell Vostro V3578C l&agrave; một trong những laptop c&oacute; thiết kế mỏng manh</a></strong>, gọn nhẹ n&ecirc;n c&oacute; thể thuận tiện mang theo mọi l&uacute;c mọi nơi. Được trang bị cấu h&igrave;nh Core i5-8250U n&ecirc;n c&oacute; khả năng xử l&yacute; mạnh mẽ, ổn định, m&aacute;y c&ograve;n k&egrave;m theo Ram l&ecirc;n tới 8GB v&agrave; ổ cứng HDD chứa dung lượng 1TB để vừa c&oacute; thể phục vụ trơn tru c&aacute;c t&aacute;c vụ cơ bản của người d&ugrave;ng như lướt web, nghe nhạc, chơi tr&ograve; chơi&hellip; Đồng thời, laptop Dell sở hữu khả năng lưu trữ dữ liệu &ldquo;tẹt ga&rdquo; cho bạn thoải m&aacute;i sử dụng.</p>
+                          <p><img src="https://cdn02.static-adayroi.com/0/2019/10/21/157164940688_5215751.jpg" alt="Dell Vostro V3578C" /></p>
+                          <p><em>Dell Vostro V3578C (Nguồn: fptshop.com.vn)</em></p>
+                          <p><em><a href="https://www.adayroi.com/laptop-dell-vostro-3578-v3578c-15-6-inches-den-hang-chinh-hang-p-1241141?utm_source=blog_article&amp;utm_medium=referral&amp;utm_campaign=d10183&amp;utm_term=top-10-laptop-cho-sinh-vien-cntt-de-lap-trinh-xem-phim-luot-web" target="_blank" rel="noopener"><img src="https://cdn02.static-adayroi.com/0/2019/10/18/1571366170361_7123245.png" alt="" /></a></em></p>
+                          <h3><strong>3.4. Laptop HP Probook 440 G4 Z6T14PA</strong></h3>
+                          <p>C&oacute; thể n&oacute;i HP Probook 440 G4 Z6T14PA ch&iacute;nh l&agrave; một chiếc laptop ph&ugrave; hợp cho sinh vi&ecirc;n c&ocirc;ng nghệ th&ocirc;ng tin. Bởi chỉ cần bỏ ra một số tiền cụ thể l&agrave;&nbsp;<strong>15.150.000 đồng&nbsp;</strong>l&agrave; c&oacute; thể được&nbsp;<strong><a href="https://www.adayroi.com/laptop-may-tinh-xach-tay-c350/hp?utm_source=blog_article&amp;utm_medium=referral&amp;utm_campaign=d10183&amp;utm_term=top-10-laptop-cho-sinh-vien-cntt-de-lap-trinh-xem-phim-luot-web" target="_blank" rel="noopener">sở hữu laptop HP c&oacute; thiết kế sang trọng cao cấp</a></strong>, cấu h&igrave;nh mạnh mẽ với bộ vi xử l&yacute; Intel thế hệ thứ 7 mới nhất&hellip; Đặc biệt, n&oacute; c&ograve;n được c&agrave;i đặt c&ocirc;ng nghệ TPM &ndash; một phần mềm bảo mật dữ liệu to&agrave;n diện, tối đa m&agrave; kh&ocirc;ng phải m&aacute;y n&agrave;o cũng c&oacute;.</p>
+                          <p><img src="https://cdn02.static-adayroi.com/0/2019/10/21/1571649767426_3547778.jpg" alt="Laptop HP" /></p>
+                          <p><em>Laptop HP (Nguồn: bachkhoashop.com)</em></p>
+                          <p><em><a href="https://www.adayroi.com/laptop-may-tinh-xach-tay-c350/hp?utm_source=blog_article&amp;utm_medium=referral&amp;utm_campaign=d10183&amp;utm_term=top-10-laptop-cho-sinh-vien-cntt-de-lap-trinh-xem-phim-luot-web" target="_blank" rel="noopener"><img src="https://cdn02.static-adayroi.com/0/2019/10/18/1571366170361_7123245.png" alt="" /></a></em></p>
+                          <h3><strong>3.5. Laptop Dell Inspiron 5567 i7-7500U</strong></h3>
+                          <p>Chiếc m&aacute;y n&agrave;y g&acirc;y ấn tượng với người d&ugrave;ng bởi b&ecirc;n ngo&agrave;i to&aacute;t l&ecirc;n vẻ sang trọng, lịch l&atilde;m hiện đại với đường n&eacute;t thiết kế giản đơn. Cũng như nhiều sản phẩm kh&aacute;c của d&ograve;ng m&aacute;y Dell, laptop Dell Inspiron 5567 được trang bị cấu h&igrave;nh Core i7-7500U với hiệu năng cao, c&oacute; thể đ&aacute;p ứng được mọi t&aacute;c vụ cơ bản trong cuộc sống thường ng&agrave;y của người d&ugrave;ng như nghe nhạc, tra cứu th&ocirc;ng tin, lướt web&hellip; Nhưng điểm nổi bật nhất, ch&iacute;nh l&agrave; m&agrave;n h&igrave;nh c&oacute; k&iacute;ch thước 15.6 inches lại được c&agrave;i đặt c&ocirc;ng nghệ Truelife để vừa bảo vệ đ&ocirc;i mắt của bạn lại mang đến h&igrave;nh ảnh hiển thị thật sống động, sắc n&eacute;t.</p>
+                          <h3><strong>3.6. Laptop Lenovo ThinkPad E570 20H5A02GVN</strong></h3>
+                          <p>Với những ai đ&atilde; từng&nbsp;<strong><a href="https://www.adayroi.com/laptop-may-tinh-xach-tay-c350/lenovo?utm_source=blog_article&amp;utm_medium=referral&amp;utm_campaign=d10183&amp;utm_term=top-10-laptop-cho-sinh-vien-cntt-de-lap-trinh-xem-phim-luot-web" target="_blank" rel="noopener">chọn mua laptop Lenovo ch&iacute;nh h&atilde;ng</a></strong>, b&aacute;n với mức gi&aacute; tầm trung về sử dụng đều đ&aacute;nh gi&aacute; tốt về d&ograve;ng sản phẩm n&agrave;y. Laptop Lenovo ThinkPad E570 20H5A02GVN 15.6 inches đang được rao b&aacute;n tr&ecirc;n thị trường với gi&aacute; l&agrave;&nbsp;<strong>15.290.000 đồng</strong>&nbsp;&ndash; một mức gi&aacute; tầm trung, kh&aacute; b&igrave;nh d&acirc;n v&agrave; ph&ugrave; hợp với nhiều bạn sinh vi&ecirc;n. Sản phẩm sẽ đ&aacute;p ứng được c&aacute;c nhu cầu cơ bản phổ biến của người d&ugrave;ng trong cuộc sống h&agrave;ng ng&agrave;y, từ c&ocirc;ng việc học tập đến giải tr&iacute;, thư gi&atilde;n đa phương tiện nhờ cấu h&igrave;nh Core i5-7200U c&oacute; hiệu năng v&ocirc; c&ugrave;ng mạnh mẽ. B&ecirc;n cạnh đ&oacute;,&nbsp;<strong><a href="https://www.adayroi.com/laptop-lenovo-thinkpad-e570-20h5a02fva-15-6-inches-den-p-733135?utm_source=blog_article&amp;utm_medium=referral&amp;utm_campaign=d10183&amp;utm_term=top-10-laptop-cho-sinh-vien-cntt-de-lap-trinh-xem-phim-luot-web" target="_blank" rel="noopener">Lenovo ThinkPad E570 c&ograve;n cực kỳ gọn nhẹ</a></strong>&nbsp;n&ecirc;n rất ph&ugrave; hợp để mang theo khi cần di chuyển mọi l&uacute;c mọi nơi.</p>
+                          <p><img src="https://cdn02.static-adayroi.com/0/2019/10/21/1571649814528_5545969.jpg" alt="Lenovo ThinkPad E570 20H5A02GVN" /></p>
+                          <p><em>Lenovo ThinkPad E570 20H5A02GVN&nbsp; (Nguồn: maytinhf5.vn)</em></p>
+                          <p><em><a href="https://www.adayroi.com/laptop-may-tinh-xach-tay-c350/lenovo?utm_source=blog_article&amp;utm_medium=referral&amp;utm_campaign=d10183&amp;utm_term=top-10-laptop-cho-sinh-vien-cntt-de-lap-trinh-xem-phim-luot-web" target="_blank" rel="noopener"><img src="https://cdn02.static-adayroi.com/0/2019/10/18/1571366170361_7123245.png" alt="" /></a></em></p>
+                          <h3><strong>3.7. Laptop Asus Vivobook S15 S510UQ-BQ475T</strong></h3>
+                          <p>Nếu bạn bỏ lỡ chiếc laptop cho sinh vi&ecirc;n IT như thế n&agrave;y th&igrave; sẽ thật đ&aacute;ng tiếc lắm đấy. Bởi d&ograve;ng sản phẩm Vivobook S15 S510UQ-BQ475T của Asus kh&ocirc;ng chỉ c&oacute; gi&aacute; cả phải chăng (dao động trong khoảng 15.290.000 đồng) m&agrave; c&ograve;n sở hữu một cấu h&igrave;nh Intel&reg; thế hệ 8 Kaby Lake-R mới v&ocirc; c&ugrave;ng mạnh mẽ ẩn s&acirc;u trong th&acirc;n h&igrave;nh mỏng manh, gọn nhẹ. K&egrave;m theo trang bị bộ Ram 4GB, do đ&oacute;&nbsp;<strong><a href="https://www.adayroi.com/laptop-may-tinh-xach-tay-c350/asus?utm_source=blog_article&amp;utm_medium=referral&amp;utm_campaign=d10183&amp;utm_term=top-10-laptop-cho-sinh-vien-cntt-de-lap-trinh-xem-phim-luot-web" target="_blank" rel="noopener">lựa chọn laptop Asus hỗ trợ cho c&aacute;c t&aacute;c vụ của người d&ugrave;ng</a></strong>&nbsp;trơn tru, mượt m&agrave; v&agrave; xuất sắc hơn bao giờ hết.</p>
+                          <h3><strong>3.8. Laptop Dell Vostro 3578 V3578C</strong></h3>
+                          <p>Kh&ocirc;ng giống như nhiều laptop kh&aacute;c, chiếc m&aacute;y n&agrave;y c&oacute; khả năng tản nhiệt v&ocirc; c&ugrave;ng hiệu quả, tr&aacute;nh được t&igrave;nh trạng m&aacute;y qu&aacute; n&oacute;ng trong khi đang hoạt động. Ngo&agrave;i ra,&nbsp;<strong><a href="https://www.adayroi.com/laptop-dell-vostro-3578-v3578c-15-6-inches-den-hang-chinh-hang-p-587688?utm_source=blog_article&amp;utm_medium=referral&amp;utm_campaign=d10183&amp;utm_term=top-10-laptop-cho-sinh-vien-cntt-de-lap-trinh-xem-phim-luot-web" target="_blank" rel="noopener">Dell Vostro 3578 V3578C c&ograve;n sở hữu cấu h&igrave;nh</a></strong>&nbsp;Core i5-8250U v&agrave; Ram 8GB n&ecirc;n ho&agrave;n to&agrave;n c&oacute; thể hỗ trợ tối đa c&aacute;c nhu cầu cơ bản của người sử dụng như tra cứu th&ocirc;ng tin, soạn thảo văn bản&hellip; &nbsp;Gi&aacute; đang được rao b&aacute;n tr&ecirc;n thị trường hiện nay của sản phẩm n&agrave;y l&agrave;&nbsp;<strong>15.400.000 đồng.</strong></p>
+                          <p><strong><img src="https://cdn02.static-adayroi.com/0/2019/10/21/1571649551652_3895203.jpg" alt="Dell Vostro 3578 V3578C" /></strong></p>
+                          <p><em>Dell Vostro 3578 V3578C (Nguồn: laptopxachtayshop.com)</em></p>
+                          <p><em><a href="https://www.adayroi.com/laptop-dell-vostro-3578-v3578c-15-6-inches-den-hang-chinh-hang-p-587688?utm_source=blog_article&amp;utm_medium=referral&amp;utm_campaign=d10183&amp;utm_term=top-10-laptop-cho-sinh-vien-cntt-de-lap-trinh-xem-phim-luot-web" target="_blank" rel="noopener"><img src="https://cdn02.static-adayroi.com/0/2019/10/18/1571366170361_7123245.png" alt="" /></a></em></p>
+                          <h3><strong>3.9. Laptop Acer Aspire E5-576G-87FG NX.GRQSV.002</strong></h3>
+                          <p>Với thiết kế trẻ trung, hiện đại v&agrave; sở hữu những đường n&eacute;t kh&aacute; nổi bật th&igrave; đ&acirc;y cũng rất xứng đ&aacute;ng l&agrave; laptop cho sinh vi&ecirc;n lập tr&igrave;nh n&ecirc;n mua. Kh&ocirc;ng những vậy, n&oacute; c&ograve;n c&oacute; m&agrave;n h&igrave;nh k&iacute;ch thước 15.6 inches với độ ph&acirc;n giải chuẩn HD k&egrave;m theo c&ocirc;ng nghệ LED Backlit n&ecirc;n chắc chắn sẽ mang đến những h&igrave;nh ảnh hiển thị v&ocirc; c&ugrave;ng sống động, sắc n&eacute;t v&agrave; ch&acirc;n thực, r&otilde; r&agrave;ng. Ngo&agrave;i ra, c&ograve;n c&oacute; cấu h&igrave;nh Core i7-8550U gi&uacute;p&nbsp;<strong><a href="https://www.adayroi.com/laptop-may-tinh-xach-tay-c350/acer?utm_source=blog_article&amp;utm_medium=referral&amp;utm_campaign=d10183&amp;utm_term=top-10-laptop-cho-sinh-vien-cntt-de-lap-trinh-xem-phim-luot-web" target="_blank" rel="noopener">laptop Acer cho hiệu năng hoạt động mạnh mẽ</a></strong>, ổn định&hellip;</p>
+                          <p><img src="https://cdn02.static-adayroi.com/0/2019/10/21/1571649599345_8471897.jpg" alt="Laptop Acer Aspire E5 c&oacute; thiết kế bắt mắt " /></p>
+                          <p><em>Laptop Acer Aspire E5 c&oacute; thiết kế bắt mắt (Nguồn: dienmaythienhoa.vn)</em></p>
+                          <p><em><a href="https://www.adayroi.com/laptop-may-tinh-xach-tay-c350/acer?utm_source=blog_article&amp;utm_medium=referral&amp;utm_campaign=d10183&amp;utm_term=top-10-laptop-cho-sinh-vien-cntt-de-lap-trinh-xem-phim-luot-web" target="_blank" rel="noopener"><img src="https://cdn02.static-adayroi.com/0/2019/10/18/1571366170361_7123245.png" alt="" /></a></em></p>
+                          <h3><strong>3.10. Laptop Dell Inspiron 5378 i7-7500U</strong></h3>
+                          <p><strong><a href="https://www.adayroi.com/laptop-dell-inspiron-5378-i5-7200u-8gb-1tb-win10-13-3-inches-p-245117?utm_source=blog_article&amp;utm_medium=referral&amp;utm_campaign=d10183&amp;utm_term=top-10-laptop-cho-sinh-vien-cntt-de-lap-trinh-xem-phim-luot-web" target="_blank" rel="noopener">Dell Inspiron 5378 mang phong c&aacute;ch giản đơn</a></strong>&nbsp;nhưng lại v&ocirc; c&ugrave;ng h&agrave;i h&ograve;a, hiện đại v&agrave; lu&ocirc;n mang đến cho người d&ugrave;ng cảm gi&aacute;c an to&agrave;n khi sử dụng nhờ c&oacute; bản lề to, chắc chắn. Tuy m&agrave;n h&igrave;nh chỉ c&oacute; k&iacute;ch thước 13.3 inches nhưng lại được trang bị c&ocirc;ng nghệ HD WLED TrueLife n&ecirc;n hứa hẹn sẽ mang lại h&igrave;nh ảnh hiển thị cực kỳ r&otilde; r&agrave;ng, sống động&hellip; Đồng thời lại l&agrave; m&agrave;n h&igrave;nh cảm ứng n&ecirc;n sẽ v&ocirc; c&ugrave;ng th&uacute; vị với c&aacute;c t&aacute;c vụ nhanh ch&oacute;ng, mượt m&agrave;.</p>
+                          <p><img src="https://cdn02.static-adayroi.com/0/2019/10/21/157164993713_3968559.jpg" alt="Dell Inspiron 5378 i7-7500U" /></p>
+                          <p><em>Dell Inspiron 5378 i7-7500U (Nguồn: cloudfront.net)</em></p>
+                          <p><em><a href="https://www.adayroi.com/laptop-dell-inspiron-5378-i5-7200u-8gb-1tb-win10-13-3-inches-p-245117?utm_source=blog_article&amp;utm_medium=referral&amp;utm_campaign=d10183&amp;utm_term=top-10-laptop-cho-sinh-vien-cntt-de-lap-trinh-xem-phim-luot-web" target="_blank" rel="noopener"><img src="https://cdn02.static-adayroi.com/0/2019/10/18/1571366170361_7123245.png" alt="" /></a></em></p>
+                          <p>Ph&iacute;a tr&ecirc;n l&agrave; những th&ocirc;ng tin gợi &yacute; về những chiếc laptop cho sinh vi&ecirc;n CNTT m&agrave; c&aacute;c bạn c&oacute; thể tham khảo qua để từ đ&oacute; lựa chọn cho m&igrave;nh được một &ldquo;người bạn đồng h&agrave;nh&rdquo; thật ưng &yacute; tr&ecirc;n chặng đường sắp tới. B&ecirc;n cạnh việc t&igrave;m hiểu trước c&aacute;c kiến thức về m&aacute;y t&iacute;nh như tr&ecirc;n th&igrave; bạn cũng n&ecirc;n&nbsp;<strong><a href="https://blog.adayroi.com/11-dia-chi-mua-laptop-o-dau-uy-tin-chat-luong-chinh-sach-hau-mai-tot-d5461" target="_blank" rel="noopener">tham khảo một số địa chỉ mua laptop uy t&iacute;n, chất lượng</a></strong>&nbsp;để tr&aacute;nh mua phải h&agrave;ng nh&aacute;i, h&agrave;ng giả&hellip;</p>
+                          <p>Xin giới thiệu một địa chỉ đ&aacute;ng tin cậy m&agrave; mọi người c&oacute; thể y&ecirc;n t&acirc;m khi mua h&agrave;ng, đ&oacute; l&agrave; website adayroi.com &ndash; nơi chuy&ecirc;n ph&acirc;n phối rất nhiều sản phẩm m&aacute;y t&iacute;nh, phụ kiện&hellip; ch&iacute;nh h&atilde;ng v&agrave; nhập khẩu. Bạn c&oacute; thể tha hồ, thoải m&aacute;i lựa chọn. Kh&ocirc;ng những vậy khi mua h&agrave;ng ở đ&acirc;y, bạn sẽ c&ograve;n được mua với gi&aacute; tốt nhất, được t&iacute;ch điểm VinID, chương tr&igrave;nh khuyến m&atilde;i hay trả g&oacute;p với l&atilde;i suất 0%...</p>
+                        </textarea>
+                        </td>
+                        <td style="width: 8%;">
+                            Tin Hot
+                        </td>
+                        <td style="width: 8%;">
+                            <img src="https://cdn02.static-adayroi.com/0/2019/06/05/1559711383988_1246232.jpg"
+                                style="width: 70%;">
+                        </td>
+                        <td style="width: 8%;">Admin</td>
+                        <td style="width: 8%;" class="chuc-nang">
+                            <a href="">Sửa</a>
+                            <a href="">Xóa</a>
+                        </td>
+                    </tr>
+                </tbody>
+                <!-- 5 -->
+                <tbody>
+                    <tr>
+                        <td style="width: 5%;">1</td>
+                        <td style="width: 30%;">Kinh nghiệm tự build dàn PC gaming giá rẻ (Phần 1)</td>
+                        <td style="width: 10%;">
+                            <textarea>Tự build dàn PC gaming giá rẻ cho riêng mình đang là xu hướng chung của các game thủ Việt. Song để tự xây dựng được dàn PC gaming giá rẻ không phải là chuyện đơn giản. Chính vì vậy trong bài viết hôm nay Gland computer sẽ chia sẻ đến bạn đọc những kinh nghiệm lựa chọn linh phụ kiện trong quá trình tự build dàn PC gaming cho riêng mình. Cùng tìm hiểu nhé!                    </textarea>
+                        </td>
+                        <td style="width: 31%;"><textarea class="tinymce" id="content">
+                          <h2>Những lưu &yacute; khi tự build d&agrave;n PC gaming gi&aacute; rẻ?</h2>
+                          <figure id="attachment_8452" class="wp-caption alignnone"><a title="vỏ case,vỏ case m&aacute;y t&iacute;nh,vỏ case m&aacute;y t&iacute;nh cũ,vỏ case m&aacute;y t&iacute;nh gi&aacute; rẻ,vỏ case m&aacute;y t&iacute;nh mini,vỏ case đẹp,vỏ case cũ,vỏ case mini,vỏ case m&aacute;y t&iacute;nh đẹp,vỏ case m&aacute;y t&iacute;nh nằm ngang,vỏ case cũ đẹp,vỏ case cũ,vỏ case mini,vỏ case m&aacute;y t&iacute;nh đẹp,vỏ case m&aacute;y t&iacute;nh nằm ngang, vỏ case cũ đẹp, vỏ case gi&aacute; rẻ, vỏ case m&aacute;y t&iacute;nh trong suốt, vỏ case pc, vỏ case m&aacute;y t&iacute;nh cũ h&agrave; nội, vỏ case vitra, vỏ case nhỏ gọn, vỏ case gaming, vỏ case mini cũ, tản nhiệt nước, tản nhiệt nước custom, tản nhiệt nước gi&aacute; rẻ, tản nhiệt nước all in one, bộ tản nhiệt nước, tản nhiệt nước custom tphcm, tản nhiệt nước cooler master, tản nhiệt nước custom gi&aacute; rẻ, tản nhiệt nước tự chế, tản nhiệt nước vga, tản nhiệt nước laptop, tản nhiệt nước cpu,  tản nhiệt nước aio, tản nhiệt nước pc, pc tản nhiệt nước, tản nhiệt nước l&agrave; g&igrave;, tản nhiệt nước cũ, tản nhiệt nước all in one gi&aacute; rẻ, bộ tản nhiệt nước custom, lắp tản nhiệt nước, chế tản nhiệt nước cho pc, bộ tản nhiệt nước gi&aacute; rẻ, tản nhiệt nước id cooling, độ tản nhiệt nước cho xe m&aacute;y, tản nhiệt nước cho điện thoại, tản nhiệt nước all in one cũ,tản nhiệt nước m&aacute;y t&iacute;nh, mua tản nhiệt nước, chế tản nhiệt nước cho laptop, tản nhiệt laptop bằng nước, b&agrave;n ph&iacute;m cơ h&agrave; nội, b&agrave;n ph&iacute;m cơ tại h&agrave; nội, b&agrave;n ph&iacute;m cơ gi&aacute; rẻ tại h&agrave; nội, sửa b&agrave;n ph&iacute;m cơ h&agrave; nội, b&agrave;n ph&iacute;m cơ gi&aacute; rẻ h&agrave; nội, thay switch b&agrave;n ph&iacute;m cơ h&agrave; nội, mua b&agrave;n ph&iacute;m cơ cũ h&agrave; nội, mua b&agrave;n ph&iacute;m cơ ở h&agrave; nội, b&agrave;n ph&iacute;m cơ h&agrave; nội computer, mua b&agrave;n ph&iacute;m cơ h&agrave; nội, sửa b&agrave;n ph&iacute;m cơ tại h&agrave; nội, mua b&agrave;n ph&iacute;m cơ gi&aacute; rẻ tại h&agrave; nội, chuột chơi game, chuột chơi game gi&aacute; rẻ, chuột chơi game tốt, chuột chơi game tốt gi&aacute; rẻ, chuột kh&ocirc;ng d&acirc;y chơi game, top 10 chuột chơi game gi&aacute; rẻ, chuột chơi game dưới 500k, chuột chơi game tốt nhất 2018,  chuột kh&ocirc;ng d&acirc;y chơi game gi&aacute; rẻ, chuột chơi game tầm trung, mua chuột chơi game, b&agrave;n ph&iacute;m v&agrave; chuột chơi game, chuột b&agrave;n ph&iacute;m chơi game điện thoại, b&agrave;n ph&iacute;m chuột chơi game, chơi game bằng chuột bay, chuột chơi game kh&ocirc;ng d&acirc;y gi&aacute; rẻ, tản nhiệt nước custom, tản nhiệt nước custom gi&aacute; rẻ, tản nhiệt nước custom tphcm,  bộ tản nhiệt nước custom, linh kiện tản nhiệt nước custom, gi&aacute; tản nhiệt nước custom, lắp tản nhiệt nước custom, c&aacute;ch lắp tản nhiệt nước custom, tản nhiệt nước custom l&agrave; g&igrave;, tản nhiệt nước custom hcm,  pc gaming gi&aacute; rẻ, pc chơi game gi&aacute; rẻ, build pc gaming gi&aacute; rẻ, bộ pc gaming gi&aacute; rẻ, mua pc chơi game gi&aacute; rẻ, d&agrave;n pc gaming gi&aacute; rẻ, pc gaming cũ gi&aacute; rẻ,  shop pc gaming gi&aacute; rẻ,  mua pc gaming gi&aacute; rẻ, b&aacute;n pc gaming gi&aacute; rẻ, pc gaming gi&aacute; rẻ hcm, pc gaming cũ gi&aacute; rẻ h&agrave; nội, build pc chơi game gi&aacute; rẻ, combo pc gaming gi&aacute; rẻ, pc gaming gi&aacute; rẻ h&agrave; nội, case pc gaming gi&aacute; rẻ, mua pc gaming cũ gi&aacute; rẻ, build pc gaming gi&aacute; rẻ 2018, http://bit.ly/2LM83Si. http://bit.ly/2LJiXIt, http://bit.ly/2LIVaZ6, http://bit.ly/2LLM2Tq, http://bit.ly/2LM8Wu6, http://bit.ly/2LMrnyQ, http://bit.ly/2LNbw35, http://bit.ly/2LWgmL8, http://bit.ly/2LMoJJv" href="https://gland.vn/kinh-nghiem-tu-build-dan-pc-gaming-gia-re-phan-1/%20http://bit.ly/2LMoJJv"><img class="size-full wp-image-8452" src="https://blogchiasekienthuc.com/wp-content/uploads/2016/11/build-case-may-tinh-choi-game-1.jpg" alt="build-case-may-tinh-choi-game-1" width="584" height="425" /></a></figure>
+                          <p>Trước khi Build d&agrave;n PC gaming gi&aacute; rẻ cho ri&ecirc;ng m&igrave;nh th&igrave; bạn cần phải l&agrave;m r&otilde; những yếu tố sau:</p>
+                          <ul>
+                          <li>Bạn sẽ bỏ ra bao nhi&ecirc;u tiền để build d&agrave;n PC gaming gi&aacute; rẻ</li>
+                          <li>Mục đ&iacute;ch Build d&agrave;n PC gaming gi&aacute; rẻ l&agrave; g&igrave; ?</li>
+                          <li>Bạn đ&atilde; c&oacute; g&igrave; rồi?&nbsp; &nbsp;B&agrave;n ph&iacute;m, chuột hay&nbsp;&nbsp;ổ cứng SSD....?</li>
+                          <li>Bạn n&ecirc;n x&aacute;c định trước m&igrave;nh cần phải mua những linh kiện g&igrave; để c&oacute; thể tự build một d&agrave;n PC gaming gi&aacute; rẻ ho&agrave;n chỉnh. Bạn h&atilde;y đọc qua b&agrave;i viết n&agrave;y trước</li>
+                          <li>T&igrave;m hiểu, nghi&ecirc;n cứu&hellip;đ&aacute;nh gi&aacute; xem linh kiện n&agrave;o l&agrave; rẻ nhất. Tuy nhi&ecirc;n lại phải l&agrave; tốt nhất so với gi&aacute; tiền, kh&ocirc;ng bị mua hớ v&agrave; lỗi thời.</li>
+                          </ul>
+                          <h2>Kinh nghiệm chọn CPU cho d&agrave;n PC gaming gi&aacute; rẻ của bạn</h2>
+                          <p>C&oacute; 2 bộ phận cực k&igrave; quan trọng trong d&agrave;n PC gaming gi&aacute; rẻ đ&oacute; l&agrave;&nbsp;<strong>CPU</strong>&nbsp;v&agrave;&nbsp;<strong>VGA</strong>. 2 loại n&agrave;y kh&aacute; đa dạng tr&ecirc;n thị trường v&agrave; kh&ocirc;ng kh&oacute; để t&igrave;m ra CPU v&agrave; VGA chất lượng cho d&agrave;n PC gaming gi&aacute; rẻ của bạn.Mặc d&ugrave; vậy&nbsp;để c&oacute; thể so s&aacute;nh hiệu năng giữa c&aacute;c h&atilde;ng, giữa c&aacute;c phi&ecirc;n bản th&igrave; bạn c&oacute; thể so s&aacute;nh hiệu năng tại 2 trang web sau:</p>
+                          <ul>
+                          <li>Trang web so s&aacute;nh hiệu năng 2 CPU:&nbsp;<a href="http://www.anandtech.com/bench/CPU/2" target="_blank" rel="noopener">http://www.anandtech.com/bench/CPU/2</a></li>
+                          <li>Trang web so s&aacute;nh hiệu năng c&aacute;c VGA:&nbsp;<a href="http://www.techpowerup.com/" target="_blank" rel="noopener">http://www.techpowerup.com/</a></li>
+                          </ul>
+                          <h3>Note:</h3>
+                          <p>CPU Socket 1155 của Intel c&oacute; 4 loại bo mạch chủ hỗ trợ&nbsp;đ&oacute; l&agrave;:</p>
+                          <ul>
+                          <li><strong>H61:</strong>&nbsp;Đ&acirc;y l&agrave; d&ograve;ng bo mạch chủ&nbsp;l&yacute; tưởng nhất cho c&aacute;c game thủ tự build d&agrave;n PC gaming gi&aacute; rẻ về mặt gi&aacute; cả. Về cấu tạo n&oacute; chỉ c&oacute; 2 khe RAM, kh&ocirc;ng c&oacute; giao tiếp USB 3.0 v&agrave; SATA3 6Gb/s. Linh kiện thiết kế cho c&aacute;c CPU của PC gaming gi&aacute; rẻ từ Core i3 trở xuống. Một số main linh kiện tốt c&oacute; thể đ&aacute;p ứng đến Core i5.</li>
+                          <li><strong>B75:&nbsp;</strong>Mainboard n&agrave;y&nbsp;cũng l&agrave; sự lựa chọn ho&agrave;n hảo cho c&aacute;c game thủ tự build d&agrave;n PC gaming gi&aacute; rẻ. Với 4 khe RAM, 4 cổng USB 3.0, 1 cổng SATA3 6Gb/s,&nbsp; giao tiếp PCI-Express 3.0 mới nhất. Loại main n&agrave;y được thiết kế ph&ugrave; hợp cắm CPU của d&agrave;n PC gaming gi&aacute; rẻ từ Core i5 trở xuống.</li>
+                          <li><strong>H77:</strong>&nbsp;Mainboard H77 so với B75 c&oacute; th&ecirc;m 1 cổng SATA3 6Gb/s, t&iacute;nh năng Quick Sync,&nbsp; RAID nhiều ổ cứng. Linh kiện thiết kế gắn được cho d&agrave;n PC gaming gi&aacute; rẻ d&ugrave;ng Core i7.</li>
+                          <li><strong>Z77:</strong>&nbsp;so với Mainboard<strong>&nbsp;H77</strong>&nbsp;th&igrave;<strong>&nbsp;Z77</strong>&nbsp;c&oacute; th&ecirc;m t&iacute;nh năng &eacute;p xung c&aacute;c CPU d&ograve;ng K.</li>
+                          </ul>
+                          <h2><span id="lua-chon-mainboard-cho-case"><strong>Lựa chọn Mainboard cho d&agrave;n PC gaming gi&aacute; rẻ</strong></span></h2>
+                          <p>Gland computer nghĩ rằng nếu d&agrave;n PC gaming gi&aacute; rẻ của bạn để chiến Game th&igrave; cứ main MSI, Gygabyte hoặc ASUS.</p>
+                          <p>Hơn nữa, khi lựa chọn Mainboard cho d&agrave;n PC gaming gi&aacute; rẻ th&igrave; bạn n&ecirc;n chọn những loại m&agrave; c&oacute; khả năng n&acirc;ng cấp về sau n&agrave;y. Bởi thường th&igrave; khi ch&uacute;ng ta mới bắt đầu build d&agrave;n PC gaming gi&aacute; rẻ, nhiều game thủ c&oacute; thể sẽ kh&ocirc;ng c&oacute; đủ tiền để mua ngay c&aacute;c linh kiện c&oacute; cấu h&igrave;nh cao. Ch&iacute;nh v&igrave; vậy bạn h&atilde;y lựa chọn c&aacute;c Mainboard cho d&agrave;n PC gaming gi&aacute; rẻ của m&igrave;nh c&oacute; khả năng n&acirc;ng cấp trong tương lai nh&eacute;.</p>
+                          <h2><span id="kinh-nghiem-lua-chon-man-hinh-khi-build-case"><strong>Lựa chọn m&agrave;n h&igrave;nh khi build d&agrave;n PC gaming gi&aacute; rẻ</strong></span></h2>
+                          <p>Bạn n&ecirc;n lựa chọn loại m&agrave;n h&igrave;nh ph&ugrave; hợp t&uacute;i tiền của bạn v&agrave; mức dự kiến ban đầu. Đối với d&agrave;n PC gaming th&igrave; m&agrave;n h&igrave;nh c&agrave;ng to th&igrave; chơi c&agrave;ng ph&ecirc;. Tuy nhi&ecirc;n ngược lại&nbsp;hệ thống sẽ phải xử l&yacute; nhiều hơn, khung h&igrave;nh k&eacute;m hơn.</p>
+                          <p>Một số lưu &yacute; cho bạn khi chọn mua m&agrave;n h&igrave;nh:</p>
+                          <ul>
+                          <li>K&iacute;ch thước &amp; độ ph&acirc;n giải: C&agrave;ng cao th&igrave; c&agrave;ng tốt.</li>
+                          <li>Độ tương phản tĩnh:&nbsp;Th&ocirc;ng số n&agrave;y c&agrave;ng cao th&igrave; c&agrave;ng tốt.</li>
+                          <li>Độ tương phản động: C&aacute;i n&agrave;y kh&ocirc;ng cần quan t&acirc;m lắm.</li>
+                          <li>Dải m&agrave;u: Th&ocirc;ng số n&agrave;y c&agrave;ng cao c&agrave;ng tốt.</li>
+                          <li>Thời gian đ&aacute;p ứng (ms): Th&ocirc;ng số n&agrave;y c&agrave;ng nhỏ th&igrave; c&agrave;ng tốt nh&eacute;.</li>
+                          <li>G&oacute;c nh&igrave;n: Th&ocirc;ng số n&agrave;y c&agrave;ng cao c&agrave;ng tốt.</li>
+                          </ul>
+                          <h2><span id="kinh-nghiem-lua-chon-ram-khi-tu-build-case"><strong>Lựa chọn RAM khi tự build d&agrave;n PC gaming gi&aacute; rẻ</strong></span></h2>
+                          <p>RAM cho d&agrave;n PC gaming th&igrave; bạn cứ mua từ 8 &ndash; 16 GB cho thỏa m&aacute;i.</p>
+                          <p>Nhưng bạn cần lưu &yacute; khi mua RAM đ&oacute; l&agrave; bạn n&ecirc;n sử dụng 2 thanh RAM giống hệt nhau sẽ tốt hơn. Chẳng hạn như bạn dự định mua 8GB RAM.Thay v&igrave; mua 1 thanh 8GB, h&atilde;y mua 2 thanh 4 GB sẽ mạnh mẽ hơn, Bạn cũng n&ecirc;n chạy Dual RAM cho m&aacute;y t&iacute;nh của m&igrave;nh.</p>
+                          <p>Kết: Như vậy l&agrave; Gland computer đ&atilde; chia sẽ đến bạn những kinh nghiệm trong việc x&acirc;y dựng d&agrave;n PC gaming phần 1. Đừng qu&ecirc;n đ&oacute;n đọc phần tiếp theo của b&agrave;i viết nh&eacute;!</p>
+                    </textarea>
+                        </td>
+                        <td style="width: 8%;">
+                            Tin Hot
+                        </td>
+                        <td style="width: 8%;">
+                            <img src="https://blogchiasekienthuc.com/wp-content/uploads/2016/11/build-case-may-tinh-choi-game-1.jpg"
+                                style="width: 70%;">
+                        </td>
+                        <td style="width: 8%;">Admin</td>
+                        <td style="width: 8%;" class="chuc-nang">
+                            <a href="">Sửa</a>
+                            <a href="">Xóa</a>
+                        </td>
+                    </tr>
+                </tbody>
+                <!-- 6 -->
+                <tbody>
+                    <tr>
+                        <td style="width: 5%;">1</td>
+                        <td style="width: 30%;">Chọn laptop nào phù hợp với lập trình viên?</td>
+                        <td style="width: 10%;">
+                            <textarea>Cách đây không lâu, trong một cuộc phỏng vấn, anh Mark Zúc Zúc gì đó, CEO Facebook đã từng nói rằng: “Laptop lập trình là điều quan trọng nhất, còn những thứ khác có hay không có, không quan trọng!”                        </textarea>
+                        </td>
+                        <td style="width: 31%;"><textarea class="tinymce" id="content">
+                          <p>Bill Gates, ng&agrave;y vừa s&aacute;ng lập Microsoft, cũng c&oacute; một c&acirc;u tương tự: &ldquo; C&oacute; hai thứ m&agrave; lập tr&igrave;nh vi&ecirc;n giỏi n&agrave;o cũng phải c&oacute;. Thứ đầu ti&ecirc;n l&agrave; một người thầy giỏi, động vi&ecirc;n v&agrave; dẫn dắt ta đi đ&uacute;ng hướng. Thứ c&ograve;n ch&iacute;nh l&agrave; một chiếc laptop nhanh, bền, tốt, lu&ocirc;n b&ecirc;n ta tr&ecirc;n con đường học nghề v&agrave; lập tr&igrave;nh.&rdquo;</p>
+                          <p>Đương nhi&ecirc;n l&agrave; 2 b&aacute;c ở tr&ecirc;n kh&ocirc;ng n&oacute;i ra c&acirc;u n&agrave;y, do Code Dạo chế ra cả th&ocirc;i. N&oacute;i c&oacute; vẻ đ&ugrave;a nhưng sự thật đ&uacute;ng l&agrave; như vậy!</p>
+                          <div class="VCSortableInPreviewMode">
+                          <div><img src="http://channel.mediacdn.vn/thumb_w/640/prupload/156/2017/09/img20170919160119090.jpg" alt="" data-original="http://channel.mediacdn.vn/prupload/156/2017/09/img20170919160119090.jpg" /></div>
+                          <div class="PhotoCMS_Caption">&nbsp;</div>
+                          </div>
+                          <p>Laptop l&agrave; một c&ocirc;ng cụ tuyệt vời vừa để học v&agrave; l&agrave;m việc, vừa để xem phim heo v&agrave; vui chơi giải tr&iacute;. Đối với developer, chiếc laptop c&ograve;n l&agrave; một người bạn, người anh em đồng h&agrave;nh tin cậy tr&ecirc;n qu&atilde;ng đường viết code v&agrave; thực h&agrave;nh nghề. Laptop tốt sẽ khiến c&ocirc;ng việc lập tr&igrave;nh &ldquo;dễ thở&rdquo; hơn nhiều!</p>
+                          <p>Do vậy, trong b&agrave;i viết n&agrave;y, m&igrave;nh sẽ chia sẻ một số ti&ecirc;u ch&iacute; để chọn laptop lập tr&igrave;nh, c&ugrave;ng một số mẫu laptop ph&ugrave; hợp cho c&aacute;c bạn tham khảo nh&eacute;.</p>
+                          <p><strong>Laptop n&agrave;o m&agrave; chả lập tr&igrave;nh được? Sao phải chọn?</strong></p>
+                          <p>Đương nhi&ecirc;n l&agrave; hầu như laptop n&agrave;o cũng d&ugrave;ng để lập tr&igrave;nh được, nhưng một chiếc laptop mạnh sẽ l&agrave;m tăng năng suất l&agrave;m việc của bạn hơn. Đừng tiếc tiền m&agrave; d&ugrave;ng m&aacute;y dỏm, v&igrave; một chiếc laptop c&oacute; hiệu năng cao sẽ tiết kiệm của bạn rất nhiều thời gian v&agrave; tiền bạc về sau.</p>
+                          <p>Giả sử bạn d&ugrave;ng laptop 8-10 tiếng một ng&agrave;y th&igrave; chiếc m&aacute;y nhanh hơn 10% sẽ gi&uacute;p bạn tiết kiệm mỗi ng&agrave;y 1 tiếng, 1 năm tiết kiệm được 365 tiếng... tức hơn 2 tuần.</p>
+                          <p>Chọn một chiếc laptop tử tế ngay từ đầu cũng sẽ gi&uacute;p bạn tiết kiệm được nhiều chi ph&iacute; để n&acirc;ng cấp, sửa chữa về sau. Chưa kể, nếu bạn muốn theo nghiệp lập tr&igrave;nh game, lập tr&igrave;nh di động th&igrave; phải c&oacute; laptop mạnh hoặc chuy&ecirc;n biệt th&igrave; mới đ&aacute;p ứng được nhu cầu.</p>
+                          <div class="VCSortableInPreviewMode">
+                          <div><img src="http://channel.mediacdn.vn/thumb_w/640/prupload/156/2017/09/img20170919160119220.jpg" alt="V&iacute; dụ code iOS m&agrave; kh&ocirc;ng d&ugrave;ng Mac th&igrave; c&agrave;i m&aacute;y ảo n&agrave;y nọ cũng mệt với khoai lắm nh&eacute;!" data-original="http://channel.mediacdn.vn/prupload/156/2017/09/img20170919160119220.jpg" /></div>
+                          <div class="PhotoCMS_Caption"><em>V&iacute; dụ code iOS m&agrave; kh&ocirc;ng d&ugrave;ng Mac th&igrave; c&agrave;i m&aacute;y ảo n&agrave;y nọ cũng mệt với khoai lắm nh&eacute;!</em></div>
+                          </div>
+                          <p>Tất nhi&ecirc;n, khi đi l&agrave;m th&igrave; thường c&ocirc;ng ty sẽ cung cấp cho bạn một cỗ m&aacute;y đủ mạnh để code v&agrave; l&agrave;m việc. Tuy nhi&ecirc;n, những l&uacute;c tự học, tự test c&ocirc;ng nghệ mới, l&agrave;m dự &aacute;n c&aacute; nh&acirc;n, bạn vẫn phải nghịch ngợm tr&ecirc;n chiếc laptop nho nhỏ của m&igrave;nh th&ocirc;i ;).</p>
+                          <p><strong>Những yếu tố cần lưu &yacute; khi lựa chọn laptop</strong></p>
+                          <p>Laptop cũng c&oacute; 5 - 7 loại, đắt c&oacute; rẻ c&oacute;, tha hồ chọn lựa. Sau đ&acirc;y, m&igrave;nh sẽ liệt k&ecirc; một số ti&ecirc;u ch&iacute; c&aacute;c bạn cần lưu &yacute; khi lựa chọn laptop để lập tr&igrave;nh:</p>
+                          <p>Cấu h&igrave;nh</p>
+                          <p>&bull; CPU: C&agrave;ng nhanh c&agrave;ng tốt, &iacute;t nhất l&ecirc;n mua chip i5 hoặc i7, tốc độ xử l&yacute; từ 3Ghz l&ecirc;n l&agrave; ok.</p>
+                          <p>&bull; RAM: C&agrave;ng nhiều c&agrave;ng tốt, &iacute;t nhất phải l&agrave; 8GB v&igrave; c&oacute; một số IDE ăn RAM rất khủng. Nếu được th&igrave; mua lu&ocirc;n 16GB sẽ dễ thở hơn, muốn chạy m&aacute;y ảo cũng kh&ocirc;ng phải lo nghĩ g&igrave;.</p>
+                          <p>&bull; Ổ cứng: N&ecirc;n chọn loại c&oacute; ổ SSD hoặc lắp th&ecirc;m ổ SSD. Chi ph&iacute; bỏ ra kh&ocirc;ng nhiều nhưng lại tăng tốc độ của m&aacute;y l&ecirc;n nhiều lần. Ổ cứng n&ecirc;n kiếm khoảng 500GB-1TB v&igrave; sẽ cần lưu trữ nhiều: t&agrave;i liệu học tập, c&aacute;c phầm mềm khủng,&hellip;</p>
+                          <p>&bull; Card đồ hoạ: Thật ra c&aacute;i n&agrave;y kh&ocirc;ng cần lắm, d&ugrave;ng card onboard vẫn code bay t&oacute;c rồi. Tuy nhi&ecirc;n, nếu l&agrave;m lập tr&igrave;nh game, l&agrave;m đồ hoạ hoặc cần encode video th&igrave; n&ecirc;n sắm loại c&oacute; card rời. Nếu muốn chơi game th&igrave; kiếm con n&agrave;o card ổn ổn một t&iacute; nh&eacute;.</p>
+                          <p>Tuy nhi&ecirc;n, nhiều bạn khi mua m&aacute;y cứ chăm chăm v&agrave;o cấu h&igrave;nh m&agrave; qu&ecirc;n c&aacute;c yếu tố kh&aacute;c rất quan trọng.</p>
+                          <p><strong>Vậy ngo&agrave;i cấu h&igrave;nh th&igrave; cần để &yacute; c&aacute;i chi?</strong></p>
+                          <p>&bull; M&agrave;n h&igrave;nh: To hay nhỏ? M&agrave;n h&igrave;nh c&oacute; đủ s&aacute;ng, hiển thị ok kh&ocirc;ng?</p>
+                          <p>&bull; Trọng lượng: M&aacute;y nặng hay nhẹ, c&oacute; dễ mang đi hay kh&ocirc;ng? Nếu hay di chuyển th&igrave; n&ecirc;n mua loại nhẹ, m&agrave;n h&igrave;nh nhỏ. Nếu &iacute;t di chuyển th&igrave; n&ecirc;n mua loại to v&agrave; nặng hơn, code cho sướng.</p>
+                          <p>&bull; Pin v&agrave; tản nhiệt: Pin tr&acirc;u hay pin yếu, tản nhiệt như thế n&agrave;o, x&agrave;i l&acirc;u c&oacute; bị n&oacute;ng kh&ocirc;ng?</p>
+                          <p>&bull; B&agrave;n ph&iacute;m: B&agrave;n ph&iacute;m để code g&otilde; c&oacute; thoải m&aacute;i kh&ocirc;ng? Đ&acirc;y l&agrave; thứ rất quan trọng v&igrave; bạn phải g&otilde; code rất nhiều. Ngo&agrave;i ra, ch&uacute;ng ta thường hay code đ&ecirc;m n&ecirc;n h&atilde;y ưu ti&ecirc;n loại c&oacute; đ&egrave;n b&agrave;n ph&iacute;m.</p>
+                          <p>&bull; Độ bền: M&aacute;y c&oacute; bền hay kh&ocirc;ng, bảo h&agrave;nh bao l&acirc;u? Laptop sẽ theo bạn &iacute;t nhất 4 năm đại học n&ecirc;n h&atilde;y hỏi bạn b&egrave; xem h&atilde;ng đ&oacute; m&aacute;y x&agrave;i bền hay mau hỏng, chế độ bảo h&agrave;nh thế n&agrave;o?</p>
+                          <p>&bull; Gi&aacute;: Gi&aacute; cả ra sao? C&oacute; ph&ugrave; hợp t&uacute;i tiền kh&ocirc;ng?</p>
+                          <div class="VCSortableInPreviewMode">
+                          <div><img src="http://channel.mediacdn.vn/thumb_w/640/prupload/156/2017/09/img20170919160119306.jpg" alt="Đừng chỉ ch&uacute; trọng v&agrave;o cấu h&igrave;nh, m&agrave; h&atilde;y quan t&acirc;m đến c&aacute;c yếu tố kh&aacute;c" data-original="http://channel.mediacdn.vn/prupload/156/2017/09/img20170919160119306.jpg" /></div>
+                          <div class="PhotoCMS_Caption"><em>Đừng chỉ ch&uacute; trọng v&agrave;o cấu h&igrave;nh, m&agrave; h&atilde;y quan t&acirc;m đến c&aacute;c yếu tố kh&aacute;c</em></div>
+                          </div>
+                          <p><strong>Một số mẫu laptop ph&ugrave; hợp</strong></p>
+                          <p>Dưới đ&acirc;y, m&igrave;nh c&oacute; khuyến kh&iacute;ch một số loại laptop dựa theo &yacute; kiến c&aacute; nh&acirc;n, nếu c&oacute; loại n&agrave;o ổn hơn anh em cứ giới thiệu nh&eacute;:</p>
+                          <p>Ngon bổ rẻ</p>
+                          <p>&bull; HP 15-AY013NR 15.6-inch: Gi&aacute; kh&ocirc;ng cao, CPU i5-6200U, RAM 8GB, SSD 128GB (n&ecirc;n gắn th&ecirc;m), card onboard Intel. Qu&aacute; đủ để code.</p>
+                          <p>Cho c&aacute;c bạn c&oacute; nhiều tiền</p>
+                          <p>&bull; D&ograve;ng Macbook Pro: M&aacute;y đẹp, chụp tự sướng tr&ocirc;ng rất bảnh, nhẹ n&ecirc;n tiện dụng dễ mang theo, pin tr&acirc;u 7-8 tiếng. M&aacute;y chạy bền v&agrave; ổn định, tắt mở rất nhanh, hỗ trợ command line v&agrave; c&aacute;c c&ocirc;ng cụ lập tr&igrave;nh rất tốt. Nhược điểm l&agrave; gi&aacute; hơi cao, đ&ocirc;i khi cần c&agrave;i th&ecirc;m Windows để code một số thứ. Ngo&agrave;i ra Mac kh&ocirc;ng th&iacute;ch hợp chơi game n&ecirc;n game kh&ocirc;ng nhiều, kh&oacute; chạy c&aacute;c game khủng.</p>
+                          <p>&bull; D&ograve;ng Alienware: Cấu h&igrave;nh ngon, chơi game v&agrave; code đ&atilde;, m&aacute;y ngầu hầm hố. Tuy nhi&ecirc;n gi&aacute; hơi cao v&agrave; do "hầm hố" n&ecirc;n m&aacute;y v&agrave; cục sạc hơi nặng, v&aacute;c theo rất mệt.</p>
+                          <p>&bull; Dell Latitude E7470 Business Ultrabook</p>
+                          <p>&bull; Asus K501UW-AB78 15.6-inch</p>
+                          <p>&bull; D&ograve;ng Dell XPS 13</p>
+                          <p>Tầm trung</p>
+                          <p>&bull; Lenovo Yoga 710 15.6-inch</p>
+                          <p>&bull; Asus Q304ua 13.3-inch 2-in-1 Touchscreen Full Hd</p>
+                          <p>&bull; Toshiba Satellite L55 15.6-inch</p>
+                          <p>Tầm thấp, gi&aacute; rẻ đủ code</p>
+                          <p>&bull; HP 14-AN013NR 14-inch Notebook</p>
+                          <p>&bull; Acer Chromebook CB3-131-C3SZ</p>
+                          <p>&bull; Acer Aspire ES 15</p>
+                          <p>Kết</p>
+                          <p>X&eacute;t cho c&ugrave;ng,&nbsp;<a draggable="false" href="https://www.adayroi.com/vinpro-vingroup-laptop-v7766-813?cids=350" target="_blank" rel="nofollow noopener">laptop</a>&nbsp;l&agrave; c&ocirc;ng cụ n&ecirc;n việc d&ugrave;ng c&ocirc;ng cụ thế n&agrave;o c&ograve;n t&ugrave;y thuộc rất lớn v&agrave;o bản th&acirc;n người sử dụng.</p>
+                          <p>Bạn c&oacute; laptop xịn 40-50 triệu m&agrave; chỉ d&ugrave;ng để suốt ng&agrave;y chơi game, lướt Facebook th&igrave; cũng chỉ tổ ph&iacute; tiền, c&ograve;n kh&ocirc;ng bằng thằng bạn chỉ c&oacute; laptop 6-7 triệu nhưng d&ugrave;ng để lướt blog T&ocirc;i đi code dạo, đọc Medium, học code online, l&agrave;m dự &aacute;n c&aacute; nh&acirc;n để học.</p>
+                          <div class="VCSortableInPreviewMode">
+                          <div><img src="http://channel.mediacdn.vn/thumb_w/640/prupload/156/2017/09/img20170919160119403.jpg" alt="Laptop xịn hay dỏm cũng kh&ocirc;ng quan trọng bằng việc bạn d&ugrave;ng n&oacute; như thế n&agrave;o" data-original="http://channel.mediacdn.vn/prupload/156/2017/09/img20170919160119403.jpg" /></div>
+                          <div class="PhotoCMS_Caption"><em>Laptop xịn hay dỏm cũng kh&ocirc;ng quan trọng bằng việc bạn d&ugrave;ng n&oacute; như thế n&agrave;o</em></div>
+                          </div>
+                          <p>Hi vọng b&agrave;i viết gi&uacute;p c&aacute;c bạn lựa chọn được người bạn ưng &yacute; tr&ecirc;n bước đường lập tr&igrave;nh nh&eacute;. C&oacute; thắc mắc hay g&oacute;p &yacute; g&igrave; mọi người cứ viết trong mục comment nha!</p>
+                          <p>Th&ocirc;ng tin t&aacute;c giả</p>
+                          <p>Anh Phạm Huy Ho&agrave;ng hiện đang theo học Thạc sĩ ng&agrave;nh Computer Science tại Đại học Lancaster, UK. Ho&agrave;ng cũng l&agrave; chủ blog T&ocirc;i Đi Code Dạo kh&aacute; nổi tiếng tại Việt Nam với hơn 2.5 triệu lượt xem v&agrave; 30000 lượt follow fanpage.</p>
+                          <p>Anh c&oacute; hơn 3 năm kinh nghiệm trong lĩnh vực phần mềm v&agrave; đam m&ecirc; nghi&ecirc;n cứu về bảo mật, c&ocirc;ng nghệ web, c&aacute;c c&ocirc;ng nghệ mới. Anh từng ph&aacute;t hiện v&agrave; c&ocirc;ng bố lỗ hổng bảo mật của Lotte Cinema v&agrave; Lozi.vn.</p>
+                        </textarea>
+                        </td>
+                        <td style="width: 8%;">
+                            Tin Hot
+                        </td>
+                        <td style="width: 8%;">
+                            <img src="http://channel.mediacdn.vn/thumb_w/640/prupload/156/2017/09/img20170919160119220.jpg"
+                                style="width: 70%;">
+                        </td>
+                        <td style="width: 8%;">Admin</td>
+                        <td style="width: 8%;" class="chuc-nang">
+                            <a href="">Sửa</a>
+                            <a href="">Xóa</a>
+                        </td>
+                    </tr>
+                </tbody>
+                <!-- 7 -->
+                <tbody>
+                    <tr>
+                        <td style="width: 5%;">1</td>
+                        <td style="width: 30%;">7 LỜI KHUYÊN KHI CHỌN CẤU HÌNH LAPTOP</td>
+                        <td style="width: 10%;">
+                            <textarea>Khi mua laptop, bạn không chỉ cần chú ý đến dòng sản phẩm mà phải cân nhắc đến cả những lựa chọn cấu hình trong dòng sản phẩm đó nữa. Hầu hết dòng laptop hiện giờ đều cung cấp nhiều lựa chọn cấu hình, cho người dùng chọn bộ vi xử lý, RAM, bộ nhớ lưu trữ, màn hình hay dung lượng pin.
+                    </textarea>
+                        </td>
+                        <td style="width: 31%;"><textarea class="tinymce" id="content">
+                          <p id="aui_3_2_0_1133">Một số nh&agrave; sản xuất như Lenovo c&ograve;n cho ph&eacute;p bạn tuỳ chọn cấu h&igrave;nh khi mua laptop trực tiếp tr&ecirc;n website của h&atilde;ng. Tuy nhi&ecirc;n, đa số c&aacute;c h&atilde;ng chỉ đơn giản cung cấp nhiều lựa chọn cấu h&igrave;nh định sẵn cho một d&ograve;ng sản phẩm. Trong trường hợp n&agrave;y, bạn cần quyết định n&ecirc;n chi tiền cho những n&acirc;ng cấp n&agrave;o để đ&aacute;p ứng nhu cầu của m&igrave;nh trong khi vẫn c&oacute; thể tiết kiệm tiền cho những thứ kh&ocirc;ng cần thiết.</p>
+                          <p><img src="http://vnreview.vn/image/14/51/90/1451909.jpg?t=1443872081799" alt="" /></p>
+                          <p>Dưới đ&acirc;y l&agrave; một số lời khuy&ecirc;n để bạn tham khảo khi lựa chọn cấu h&igrave;nh cho laptop. Lưu &yacute; l&agrave; b&agrave;i viết n&agrave;y được ch&uacute;ng t&ocirc;i chuyển ngữ từ trang Laptopmag.com, n&ecirc;n mức gi&aacute; của c&aacute;c th&agrave;nh phần linh kiện được n&ecirc;u trong b&agrave;i viết c&oacute; thể c&oacute; sự ch&ecirc;nh lệch nhất định so với gi&aacute; thực tế tại thị trường Việt Nam, song chắc l&agrave; kh&ocirc;ng nhiều.</p>
+                          <p><strong>Bộ vi xử l&yacute;: n&ecirc;n chi th&ecirc;m khoảng 100 USD cho Core i5</strong></p>
+                          <p><ins class="Other0"><ins class="adsbygoogle" data-ad-client="ca-pub-7002491002409919" data-ad-slot="9373751777/3326708450" data-adsbygoogle-status="done"><ins id="aswift_0_expand"><ins id="aswift_0_anchor"><iframe id="aswift_0" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-7002491002409919&amp;output=html&amp;h=90&amp;slotname=9373751777%2F3326708450&amp;adk=671274562&amp;adf=517430495&amp;w=728&amp;lmt=1575363815&amp;psa=0&amp;guci=2.2.0.0.2.2.0.0&amp;format=728x90&amp;url=https%3A%2F%2Fvnreview.vn%2Ftu-van-may-tinh%2F-%2Fview_content%2Fcontent%2F1663319%2F7-loi-khuyen-khi-chon-cau-hinh-laptop&amp;flash=0&amp;wgl=1&amp;adsid=NT&amp;dt=1575363813866&amp;bpp=44&amp;bdt=1774&amp;idt=1125&amp;shv=r20191114&amp;cbv=r20190131&amp;saldr=aa&amp;abxe=1&amp;correlator=4539075700532&amp;frm=20&amp;pv=2&amp;ga_vid=1306642552.1575363815&amp;ga_sid=1575363815&amp;ga_hid=1546546645&amp;ga_fc=0&amp;iag=0&amp;icsg=738871827496764&amp;dssz=101&amp;mdo=0&amp;mso=0&amp;u_tz=420&amp;u_his=3&amp;u_java=0&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1080&amp;u_aw=1920&amp;u_cd=24&amp;u_nplug=3&amp;u_nmime=4&amp;adx=424&amp;ady=1066&amp;biw=1903&amp;bih=975&amp;scr_x=0&amp;scr_y=0&amp;eid=20040013%2C21065126%2C410075105&amp;oid=3&amp;pvsid=27786977123746&amp;pem=952&amp;ref=https%3A%2F%2Fwww.google.com%2F&amp;rx=0&amp;eae=0&amp;fc=896&amp;brdim=0%2C0%2C0%2C0%2C1920%2C0%2C1920%2C1080%2C1920%2C975&amp;vis=1&amp;rsz=o%7C%7CeEbr%7C&amp;abl=CS&amp;pfx=0&amp;fu=8208&amp;bc=31&amp;jar=2019-12-03-09&amp;ifi=1&amp;uci=a!1&amp;btvi=1&amp;fsb=1&amp;xpc=2XP9rBxJpo&amp;p=https%3A//vnreview.vn&amp;dtd=1144" name="aswift_0" width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allowfullscreen="allowfullscreen" data-google-container-id="a!1" data-google-query-id="CKvQm8WPmeYCFUxevQodEukIoQ" data-load-complete="true" data-mce-fragment="1"></iframe></ins></ins></ins></ins></p>
+                          <div id="beacon_139ec4c126"><img src="https://ads.home.vn/www/delivery/lg.php?bannerid=46&amp;campaignid=1&amp;zoneid=56&amp;loc=https%3A%2F%2Fvnreview.vn%2Ftu-van-may-tinh%2F-%2Fview_content%2Fcontent%2F1663319%2F7-loi-khuyen-khi-chon-cau-hinh-laptop&amp;cb=139ec4c126" alt="" width="0" height="0" /></div>
+                          <p>&nbsp;</p>
+                          <p>&nbsp;</p>
+                          <p><img src="http://vnreview.vn/image/14/51/91/1451918.jpg?t=1443872676524" alt="" /></p>
+                          <p>Hầu hết laptop phổ th&ocirc;ng hiện nay sử dụng bộ vi xử l&yacute; Core của Intel gồm Core i3, i5 hoặc i7, c&ograve;n những mẫy gi&aacute; rẻ c&oacute; thể sử dụng chip AMD hoặc Pentium, Celeron v&agrave; Atom của Intel. Th&ocirc;ng thường, c&aacute;c laptop n&acirc;ng cấp từ Core i3 l&ecirc;n Core i5 sẽ đắt hơn khoảng 100 USD v&agrave; 200 USD nếu n&acirc;ng từ Core i5 l&ecirc;n Core i7. Nếu bạn muốn c&oacute; hiệu năng kh&aacute; mạnh mẽ v&agrave; đủ d&ugrave;ng cho v&agrave;i năm tới th&igrave; n&ecirc;n đầu tư l&ecirc;n ch&uacute;t để c&oacute; Core i5. Tuy nhi&ecirc;n, nếu nhu cầu chỉ d&ugrave;ng để lướt web v&agrave; gửi nhận email th&igrave; laptop Core i3 c&oacute; thể n&oacute;i l&agrave; đủ d&ugrave;ng. Chuyển l&ecirc;n Core i5 sẽ nhanh hơn ch&uacute;t nhưng sự cải thiện hiệu năng đ&oacute; kh&ocirc;ng xứng đ&aacute;ng nếu nhu cầu chỉ đơn giản như vậy.</p>
+                          <p><strong>Bộ nhớ lưu trữ: ổ cứng HDD rẻ, ổ SSD đắt nhưng đ&aacute;ng</strong></p>
+                          <p>N&acirc;ng cấp từ ổ cứng thường (HDD) cỡ nhỏ l&ecirc;n cỡ lớn hơn hiện nay kh&aacute; rẻ. Chẳng hạn, bạn chỉ mất th&ecirc;m khoảng 20 USD để n&acirc;ng cấp chiếc laptop HP 15t Touch từ ổ cứng 750GB l&ecirc;n 1TB. Chuyển từ ổ HDD tốc độ 5.400 rpm l&ecirc;n 7.200 rpm cũng kh&ocirc;ng đắt. Nếu bạn kh&ocirc;ng đủ khả năng đầu tư ổ SSD th&igrave; n&acirc;ng cấp tốc độ của ổ cứng HDD l&agrave; việc n&ecirc;n l&agrave;m, cũng được coi l&agrave; một cải thiện đ&aacute;ng tiền. Toshiba chỉ t&iacute;nh gi&aacute; c&oacute; khoảng 10 USD để n&acirc;ng cấp chiếc Tecra A500 từ ổ cứng 500GB tốc độ 5400 rpm l&ecirc;n ổ cứng dung lượng tương tự nhưng tốc độ 7200 rpm.</p>
+                          <p><img src="http://vnreview.vn/image/14/51/93/1451930.jpg?t=1443872676524" alt="" /></p>
+                          <p>Tuy nhi&ecirc;n, nếu bạn c&oacute; khả năng th&igrave; đầu tư ổ SSD thay cho ổ cứng HDD l&agrave; việc tốt nhất bạn c&oacute; thể l&agrave;m để tăng hiệu năng chung của laptop. Bởi v&igrave; ổ SSD kh&ocirc;ng c&oacute; c&aacute;c bộ phận chuyển động như ổ cứng HDD n&ecirc;n mọi thứ từ khởi động đến chuyển đổi ứng dụng hay mở ứng dụng mới v&agrave; lưu file đều nhanh hơn, thường nhanh hơn 300% so với ổ cứng HDD. Thế nhưng, chi ph&iacute; cho ổ SSD cũng đắt hơn.</p>
+                          <p>Theo lựa chọn cấu h&igrave;nh của c&aacute;c gi&aacute; nh&agrave; sản xuất laptop, chi ph&iacute; để chuyển từ ổ cứng HDD sang ổ SSD dung lượng 128GB thường tốn th&ecirc;m khoảng 100 USD v&agrave; tăng từ ổ SSD 128GB l&ecirc;n ổ SSD 256GB sẽ tăng l&ecirc;n khoảng 140 USD. Tuy nhi&ecirc;n, gi&aacute; ổ SSD theo lựa chọn n&acirc;ng cấp cấu h&igrave;nh của c&aacute;c nh&agrave; sản xuất thường đắt hơn kh&aacute; nhiều so với mua lẻ ngo&agrave;i thị trường. Ở ngo&agrave;i thị trường b&aacute;n lẻ, gi&aacute; ổ SSD 256GB chỉ khoảng 150 USD, c&ograve;n ổ 128GB chỉ khoảng 100 USD. Tuy nhi&ecirc;n, bạn n&ecirc;n lưu &yacute; l&agrave; nhiều laptop rất kh&oacute; thay ổ cứng v&agrave; l&agrave;m như vậy sẽ mất bảo h&agrave;nh.</p>
+                          <p>Nếu muốn tiết kiệm chi ph&iacute;, bạn c&oacute; thể c&acirc;n nhắc sắm laptop ổ SSD dung lượng 128GB, sau đ&oacute; chịu kh&oacute; thường xuy&ecirc;n sao lưu dữ liệu sang ổ cứng thường hoặc chuyển l&ecirc;n c&aacute;c dịch vụ lưu trữ đ&aacute;m m&acirc;y. N&oacute;i chung, n&acirc;ng cấp cho SSD từ 128GB l&ecirc;n 256GB với chi ph&iacute; khoảng tr&ecirc;n dưới 2 triệu đồng thực sự l&agrave; việc l&agrave;m rất đ&aacute;ng tiền.</p>
+                          <div id="sas_44269_container">
+                          <div id="sas_44269">&nbsp;</div>
+                          </div>
+                          <p><strong>Bộ nhớ RAM: đừng sắm qu&aacute; 8GB với người d&ugrave;ng phổ th&ocirc;ng</strong></p>
+                          <p>C&agrave;ng nhiều chương tr&igrave;nh hoặc tab tr&igrave;nh duyệt mở c&ugrave;ng l&uacute;c, m&aacute;y c&agrave;ng cần đến nhiều RAM hơn. C&aacute;c chương tr&igrave;nh lớn như phần mềm chỉnh sửa ảnh v&agrave; video cũng ngốn nhiều RAM. Hiện nay, laptop RAM 8GB c&oacute; thể coi l&agrave; đủ tối ưu v&agrave; mạnh mẽ cho người d&ugrave;ng phổ th&ocirc;ng, c&ograve;n 4GB l&agrave; mức tối thiểu để đảm bảo hiệu năng cho số đ&ocirc;ng người d&ugrave;ng. Chỉ c&oacute; những laptop gi&aacute; rẻ mới c&oacute; RAM dưới 4GB.</p>
+                          <p><ins class="Other0"><ins class="adsbygoogle" data-ad-client="ca-pub-7002491002409919" data-ad-slot="9373751777/3407462272" data-adsbygoogle-status="done"><ins id="aswift_2_expand"><ins id="aswift_2_anchor"><iframe id="aswift_2" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-7002491002409919&amp;output=html&amp;h=90&amp;slotname=9373751777%2F3407462272&amp;adk=4048376434&amp;adf=2114341946&amp;w=728&amp;lmt=1575363815&amp;psa=0&amp;guci=2.2.0.0.2.2.0.0&amp;format=728x90&amp;url=https%3A%2F%2Fvnreview.vn%2Ftu-van-may-tinh%2F-%2Fview_content%2Fcontent%2F1663319%2F7-loi-khuyen-khi-chon-cau-hinh-laptop&amp;flash=0&amp;wgl=1&amp;adsid=NT&amp;dt=1575363814173&amp;bpp=13&amp;bdt=2081&amp;idt=878&amp;shv=r20191114&amp;cbv=r20190131&amp;saldr=aa&amp;abxe=1&amp;prev_fmts=728x90%2C0x0&amp;nras=1&amp;correlator=4539075700532&amp;frm=20&amp;pv=1&amp;ga_vid=1306642552.1575363815&amp;ga_sid=1575363815&amp;ga_hid=1546546645&amp;ga_fc=0&amp;iag=0&amp;icsg=738871827496764&amp;dssz=102&amp;mdo=0&amp;mso=0&amp;u_tz=420&amp;u_his=3&amp;u_java=0&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1080&amp;u_aw=1920&amp;u_cd=24&amp;u_nplug=3&amp;u_nmime=4&amp;adx=424&amp;ady=3246&amp;biw=1903&amp;bih=975&amp;scr_x=0&amp;scr_y=0&amp;eid=20040013%2C21065126%2C410075105&amp;oid=3&amp;pvsid=27786977123746&amp;pem=952&amp;ref=https%3A%2F%2Fwww.google.com%2F&amp;rx=0&amp;eae=0&amp;fc=896&amp;brdim=0%2C0%2C0%2C0%2C1920%2C0%2C1920%2C1080%2C1920%2C975&amp;vis=1&amp;rsz=o%7C%7CeEbr%7C&amp;abl=CS&amp;pfx=0&amp;fu=8208&amp;bc=31&amp;jar=2019-12-03-09&amp;ifi=2&amp;uci=a!2&amp;btvi=2&amp;fsb=1&amp;xpc=ojUZaoHKv3&amp;p=https%3A//vnreview.vn&amp;dtd=890" name="aswift_2" width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allowfullscreen="allowfullscreen" data-google-container-id="a!2" data-google-query-id="CNnRnsWPmeYCFVO_vQod9b8DUA" data-load-complete="true" data-mce-fragment="1"></iframe></ins></ins></ins></ins></p>
+                          <div id="beacon_ebd2d110f5"><img src="https://ads.home.vn/www/delivery/lg.php?bannerid=47&amp;campaignid=1&amp;zoneid=60&amp;loc=https%3A%2F%2Fvnreview.vn%2Ftu-van-may-tinh%2F-%2Fview_content%2Fcontent%2F1663319%2F7-loi-khuyen-khi-chon-cau-hinh-laptop&amp;cb=ebd2d110f5" alt="" width="0" height="0" /></div>
+                          <p>&nbsp;</p>
+                          <p>&nbsp;</p>
+                          <p><img src="http://vnreview.vn/image/14/51/92/1451921.jpg?t=1443872676524" alt="" /></p>
+                          <p>Theo lựa chọn cấu h&igrave;nh của c&aacute;c nh&agrave; sản xuất, n&acirc;ng cấp th&ecirc;m 2GB RAM tốn khoảng 40 USD. Giống như ổ SSD, RAM l&agrave; th&agrave;nh phần c&oacute; gi&aacute; n&acirc;ng cấp theo cấu h&igrave;nh của nh&agrave; sản xuất đắt hơn nhiều so với gi&aacute; mua lẻ b&ecirc;n ngo&agrave;i thị trường. Mua lẻ b&ecirc;n ngo&agrave;i, RAM 4GB chỉ c&oacute; khoảng 20 USD. Nếu c&oacute; nhu cầu d&ugrave;ng nhiều chương tr&igrave;nh c&ugrave;ng l&uacute;c hoặc chạy c&aacute;c ứng dụng nặng, bạn n&ecirc;n t&iacute;nh đến chuyện n&acirc;ng cấp RAM từ mức 4GB l&ecirc;n 8GB, với chi ph&iacute; tăng th&ecirc;m khoảng tr&ecirc;n dưới 50 USD. Tất nhi&ecirc;n, c&aacute;c chuy&ecirc;n gia về đồ hoạ th&igrave; nhu cầu RAM sẽ kh&aacute;c.</p>
+                          <p><strong>M&agrave;n h&igrave;nh: n&ecirc;n chi th&ecirc;m để c&oacute; m&agrave;n Full-HD, kh&ocirc;ng n&ecirc;n chọn m&agrave;n cảm ứng</strong></p>
+                          <p>Bạn sẽ thấy sự kh&aacute;c biệt lớn về chất lượng h&igrave;nh ảnh khi n&acirc;ng cấp từ m&agrave;n h&igrave;nh độ ph&acirc;n giải thấp (1366 x 768 pixel hoặc 1600 x 900 pixel) l&ecirc;n độ ph&acirc;n giải Full-HD (1920 x 1080 pixel). Sự ch&ecirc;nh lệch giữa m&agrave;n h&igrave;nh độ ph&acirc;n giải thấp v&agrave; Full-HD chỉ khoảng 100 USD nhưng sự cải thiện về chất lượng h&igrave;nh ảnh sẽ rất r&otilde; rệt.</p>
+                          <p>Một số laptop cao cấp c&ograve;n c&oacute; lựa chọn độ ph&acirc;n giải cao hơn Full-HD như 2K (2560 x 1440 pixel), 3K (2880 x 1620 pixel) hay 4K (3840 x 2160 pixel). Bạn c&oacute; thể kh&ocirc;ng cần đến độ ph&acirc;n giải tr&ecirc;n Full-HD nếu chỉ d&ugrave;ng c&aacute;c ứng dụng văn ph&ograve;ng, nhưng bạn sẽ thấy h&igrave;nh ảnh v&agrave; video sẽ sắc n&eacute;t hơn tr&ecirc;n c&aacute;c m&agrave;n h&igrave;nh 2K hoặc 3K. Hoặc nếu bạn l&agrave;m những việc li&ecirc;n quan đến đồ hoạ hoặc chơi nhiều game cao cấp, n&ecirc;n chi th&ecirc;m để c&oacute; độ ph&acirc;n giải cao hơn.</p>
+                          <p><img src="http://vnreview.vn/image/14/51/92/1451924.jpg?t=1443872676524" alt="" /></p>
+                          <p>Một số laptop c&ograve;n c&oacute; những lựa chọn m&agrave;u sắc v&agrave; độ s&aacute;ng kh&aacute;c nhau. Bạn sẽ c&oacute; g&oacute;c nh&igrave;n rộng hơn v&agrave; h&igrave;nh ảnh ấn tượng hơn nếu chi th&ecirc;m 100 USD cho những m&agrave;n h&igrave;nh IPS hoặc m&agrave;n h&igrave;nh si&ecirc;u s&aacute;ng.</p>
+                    </textarea>
+                        </td>
+                        <td style="width: 8%;">
+                            Tin Hot
+                        </td>
+                        <td style="width: 8%;">
+                            <img src="http://vnreview.vn/image/14/51/90/1451909.jpg?t=1443872081799"
+                                style="width: 70%;">
+                        </td>
+                        <td style="width: 8%;">Admin</td>
+                        <td style="width: 8%;" class="chuc-nang">
+                            <a href="">Sửa</a>
+                            <a href="">Xóa</a>
+                        </td>
+                    </tr>
+                </tbody>
+                <!-- 8 -->
+                <tbody>
+                    <tr>
+                        <td style="width: 5%;">1</td>
+                        <td style="width: 30%;">Intel core i9-9980XE – Ông trùm cuối xuất hiện</td>
+                        <td style="width: 10%;">
+                            <textarea>Bạn là một Designer, dù bạn đang xử lý một bộ phim điện ảnh mới nhất  hay đang tiếp tục cho chuỗi các video trên youtube với hàng loạt kỹ xảo chồng chéo . Bộ xử lý Skylake, intel core i9-9980 XE thiết kế nhằm đáp ứng được các nhu cầu về hiệu năng của bạn , bằng cách sử dụng 2 nhân nhanh nhất với tần suất cao hơn hẳn , và với 18 nhân 36 luồng khi cần đa nhiệm đỉnh cao , trải nghiệm hiệu năng cực khủng với hình ảnh 4K đầy chân thực. Bộ nhớ đệm tốc độ cao cùng công nghệ cải tiến mới nhất . Tất cả đều được  thiết kế nhằm mục đích rút ngắn thời gian từ khâu lập kế hoạch đến khi hoàn thành sản phẩm nhanh hơn bao giờ hết .
+                    </textarea>
+                        </td>
+                        <td style="width: 31%;"><textarea class="tinymce" id="content">
+                        <p><img class="alignnone wp-image-7800 size-full" src="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-1.jpg" sizes="(max-width: 1950px) 100vw, 1950px" srcset="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-1.jpg 1950w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-1-213x142.jpg 213w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-1-640x427.jpg 640w" alt="" width="1950" height="1300" /><br /><em><strong>Hiện tại thời điểm n&agrave;y th&igrave; i9 9980XE vẫn l&agrave; cpu core i9 tr&ugrave;m cuối mạnh nhất của intel (4/2019)</strong></em></p>
+<p>&nbsp;&nbsp;Với c&ocirc;ng nghệ Intel Turbo Boost max 3.0 th&igrave; xung boot l&ecirc;n được 4.5 Ghz cho bạn hiệu năng cực khủng so với c&aacute;c đối thủ kh&aacute;c . C&ocirc;ng nghệ n&agrave;y sẽ x&aacute;c định 2 nh&acirc;n nhanh nhất tr&ecirc;n bộ vi xử của bạn , khi bạn thực hiện c&aacute;c t&aacute;c vụ nặng th&igrave; bộ xử l&yacute; sẽ điều hướng c&ocirc;ng việc của bạn đến 2 l&otilde;i n&agrave;y nhằm tăng tốc độ xử l&yacute; cho t&aacute;c vụ . Hiệu năng đơn nh&acirc;n được cải tiến ,hi&ecirc;u năng của cả bộ m&aacute;y của bạn cũng được tăng &nbsp;tốc đ&aacute;ng kể . Với lượng nh&acirc;n lớn v&agrave; xung nhịp cao th&igrave; bạn kh&ocirc;ng cần băn khoăn về vấn đề drop h&igrave;nh hay giật lag khi thiết kế sản phẩm gi&uacute;p bạn thỏa sức s&aacute;ng tạo .</p>
+<p>&nbsp;&nbsp;&nbsp;Tiếp theo trong i9-9980 XE l&agrave; c&ocirc;ng nghệ ảo h&oacute;a VT-x của intel .Với c&ocirc;ng nghệ n&agrave;y bạn c&oacute; thể &ldquo; ph&acirc;n v&ugrave;ng &ldquo; một m&aacute;y t&iacute;nh để hoạt động nếu như c&oacute; v&agrave;i m&aacute;y t&iacute;nh độc lập , cho ph&eacute;p hệ thống chạy v&agrave;i hệ điều h&agrave;nh c&ugrave;ng l&uacute;c . Những hệ điều h&agrave;nh c&oacute; thể l&agrave; kh&aacute;c nhau, v&iacute; dụ bạn c&oacute; thể chạy window tr&ecirc;n một m&aacute;y ảo v&agrave; Linux tr&ecirc;n một m&aacute;y ảo kh&aacute;c . Với ảo h&oacute;a , bạn c&oacute; thể chạy v&agrave;i hệ điều h&agrave;nh song song nhau v&agrave; mỗi hệ điều h&agrave;nh lại chạy được v&agrave;i chương tr&igrave;nh kh&aacute;c c&ugrave;ng l&uacute;c . V&agrave; mỗi hệ điều h&agrave;nh chạy tr&ecirc;n ảo h&oacute;a đều nghĩ n&oacute; đang chạy tr&ecirc;n một m&aacute;y t&iacute;nh &nbsp;ho&agrave;n to&agrave;n độc lập .<br /><br /><img class="alignnone wp-image-7802 size-full" src="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-3.jpg" sizes="(max-width: 1950px) 100vw, 1950px" srcset="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-3.jpg 1950w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-3-213x142.jpg 213w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-3-640x427.jpg 640w" alt="" width="1950" height="1300" /></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;Kế đến l&agrave; 1 c&aacute;i t&ecirc;n kh&ocirc;ng c&ograve;n xa lạ với c&aacute;c fan của Intel &ndash; Intel optane. C&ocirc;ng nghệ n&agrave;y cho ph&eacute;p tăng tốc ổ cứng của bạn chạy nhanh l&ecirc;n gấp nhiều lần .Khi bạn mở c&aacute;c phần mềm tr&ecirc;n m&aacute;y t&iacute;nh th&igrave; t&iacute;nh năng n&agrave;y sẽ ghi nhớ v&agrave; ưu ti&ecirc;n chương tr&igrave;nh c&oacute; tần suất truy xuất cao , từ đ&oacute; gi&uacute;p bạn mở v&agrave; khởi động phần mềm nhanh đến bất ngờ .</p>
+<p>&nbsp;&nbsp;&nbsp;Tr&ecirc;n một CPU đỉnh cao như n&agrave;y th&igrave; c&ocirc;ng nghệ si&ecirc;u ph&acirc;n luồng l&agrave; kh&ocirc;ng thể thiếu .C&ocirc;ng nghệ si&ecirc;u ph&acirc;n luồng Hyper Threading , mỗi ứng dụng tr&ecirc;n m&aacute;y t&iacute;nh sẽ thực hiện nhiều tiến tr&igrave;nh, mỗi tiến tr&igrave;nh lại gồm nhiều luồng xử l&yacute; . Với bộ xử l&yacute; đơn luồng, tại một thời điểm chỉ c&oacute; một luồng xử l&yacute; được thực hiện , nếu c&oacute; nhiều luồng muốn c&ugrave;ng thực hiện th&igrave; c&aacute;c luồng n&agrave;y sẽ thực hiện tuần tự ( FIFO) ,t&aacute;c vụ n&agrave;o đến trước th&igrave; xử l&yacute; trước , t&aacute;c vụ n&agrave;o đến sau th&igrave; xử l&yacute; sau . Với bộ xử l&yacute; si&ecirc;u ph&acirc;n luồng , n&oacute; c&oacute; thể thực hiện song song 2 luồng xử l&yacute; , tận dụng tối đa t&agrave;i nguy&ecirc;n hệ thống v&agrave; r&uacute;t ngắn thời gian xử l&yacute; t&aacute;c vụ.<br /><br /><img class="alignnone wp-image-7803 size-full" src="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-2.jpg" sizes="(max-width: 1950px) 100vw, 1950px" srcset="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-2.jpg 1950w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-2-213x142.jpg 213w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-2-640x427.jpg 640w" alt="" width="1950" height="1300" /></p>
+<p>&nbsp;&nbsp;&nbsp;N&acirc;ng cao hiệu quả bằng c&ocirc;ng nghệ bộ nhớ đệm th&ocirc;ng minh Intel Smart Cache . N&acirc;ng cấp l&ecirc;n th&agrave;nh 24.75 Mb bộ nhớ smart cache. Giờ &nbsp;đ&acirc;y tất cả c&aacute;c nh&acirc;n đều c&oacute; thể truy cập to&agrave;n diện v&agrave;o bộ nhớ đệm ở cấp cuối c&ugrave;ng , tải sẵn dữ liệu trước khi y&ecirc;u cầu được thực hiện .</p>
+<p>&nbsp;&nbsp;Ngo&agrave;i ra c&ograve;n rất nhiều c&aacute;c c&ocirc;ng nghệ kh&aacute;c được t&iacute;ch hợp tr&ecirc;n i9-9980 XE như : intel SpeedTep n&acirc;ng cao , intel SSE 4.1 , &nbsp;intel SSE4.2 , , intel AVX2 , intel AVX-512, số lượng đơn vị FMA AVX -512:2<br />&nbsp;&nbsp;Hiệu năng th&igrave; khỏi phải b&agrave;n c&atilde;i đối với tr&ugrave;m cuối của intel , trong hầu hết c&aacute;c t&aacute;c vụ l&agrave;m việc th&igrave; ADM threadripper đều b&aacute;m s&aacute;t với i9-9980 XE nhưng kh&ocirc;ng thể vượt qua . C&ograve;n nếu x&eacute;t về hiệu năng chơi game th&igrave; I9-9980 XE ho&agrave;n to&agrave;n &aacute;p đảo với ADM threadripper .Nếu bạn muốn c&oacute; hiệu năng cao &nbsp;v&agrave; rủng rỉnh về t&agrave;i ch&iacute;nh th&igrave; intel core i9-9980XE l&agrave; lựa chọn tốt nhất cho bạn<br /><br /><img class="alignnone wp-image-7801 size-full" src="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-5.jpg" sizes="(max-width: 1950px) 100vw, 1950px" srcset="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-5.jpg 1950w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-5-213x142.jpg 213w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-5-640x427.jpg 640w" alt="" width="1950" height="1300" /><br /><br /><br /><strong>Cấu h&igrave;nh chi tiếu Build Sẵn tại M&aacute;y T&iacute;nh Nguyễn C&ocirc;ng :&nbsp;</strong></p>
+<p><strong>&bull; CPU</strong>&nbsp;: Intel Core i9-9980XE Extreme Edition 3.0 Turbo 4.4(18 Cores, 36 Threads)<br /><strong>&bull; TẢN NHIỆT</strong>&nbsp;: Corsair H150i Pro RGB<br /><strong>&bull; MAIN</strong>&nbsp;: GIGABYTE X299 DESIGNARE EX<br /><strong>&bull; RAM</strong>&nbsp;: Gskill TridenT Z 128Gb Bus 3000 RGB ( 8*16)<br /><strong>&bull; SSD</strong>&nbsp;: M2 Samsung 970 EVO 500GB<br /><strong>&bull; HDD</strong>&nbsp;: Western Caviar Black 4T/7200RPM<br /><strong>&bull; VGA</strong>&nbsp;: GIGABYTE AORUS GeForce RTX 2080 Ti XTREME 11G (GV-N208TAORUS X-11GC)<br /><strong>&bull; NGUỒN</strong>&nbsp;: EVGA 120-GP-1000-X1 1000W<br /><strong>&bull; CASE</strong>&nbsp;: CoolerMaster C700P</p>
+<p><em>Gi&aacute; :&nbsp;</em><strong>188.600.000</strong><em><strong>đ<br /></strong></em></p>
+                    </textarea>
+                        </td>
+                        <td style="width: 8%;">
+                            Tin Hot
+                        </td>
+                        <td style="width: 8%;">
+                            <img src="https://www.acervietnam.com.vn/Data/Sites/1/media/tin-tuc/s%E1%BA%A3n-ph%E1%BA%A9m/helios-300/3.jpg"
+                                style="width: 70%;">
+                        </td>
+                        <td style="width: 8%;">Admin</td>
+                        <td style="width: 8%;" class="chuc-nang">
+                            <a href="">Sửa</a>
+                            <a href="">Xóa</a>
+                        </td>
+                    </tr>
+                </tbody>
+                <!-- 9 -->
+                <tbody>
+                    <tr>
+                        <td style="width: 5%;">1</td>
+                        <td style="width: 30%;">Intel core i9-9980XE – Ông trùm cuối xuất hiện</td>
+                        <td style="width: 10%;">
+                            <textarea>Bạn là một Designer, dù bạn đang xử lý một bộ phim điện ảnh mới nhất  hay đang tiếp tục cho chuỗi các video trên youtube với hàng loạt kỹ xảo chồng chéo . Bộ xử lý Skylake, intel core i9-9980 XE thiết kế nhằm đáp ứng được các nhu cầu về hiệu năng của bạn , bằng cách sử dụng 2 nhân nhanh nhất với tần suất cao hơn hẳn , và với 18 nhân 36 luồng khi cần đa nhiệm đỉnh cao , trải nghiệm hiệu năng cực khủng với hình ảnh 4K đầy chân thực. Bộ nhớ đệm tốc độ cao cùng công nghệ cải tiến mới nhất . Tất cả đều được  thiết kế nhằm mục đích rút ngắn thời gian từ khâu lập kế hoạch đến khi hoàn thành sản phẩm nhanh hơn bao giờ hết .
+                        </textarea>
+                        </td>
+                        <td style="width: 31%;"><textarea class="tinymce" id="content">
+                            <p><img class="alignnone wp-image-7800 size-full" src="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-1.jpg" sizes="(max-width: 1950px) 100vw, 1950px" srcset="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-1.jpg 1950w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-1-213x142.jpg 213w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-1-640x427.jpg 640w" alt="" width="1950" height="1300" /><br /><em><strong>Hiện tại thời điểm n&agrave;y th&igrave; i9 9980XE vẫn l&agrave; cpu core i9 tr&ugrave;m cuối mạnh nhất của intel (4/2019)</strong></em></p>
+    <p>&nbsp;&nbsp;Với c&ocirc;ng nghệ Intel Turbo Boost max 3.0 th&igrave; xung boot l&ecirc;n được 4.5 Ghz cho bạn hiệu năng cực khủng so với c&aacute;c đối thủ kh&aacute;c . C&ocirc;ng nghệ n&agrave;y sẽ x&aacute;c định 2 nh&acirc;n nhanh nhất tr&ecirc;n bộ vi xử của bạn , khi bạn thực hiện c&aacute;c t&aacute;c vụ nặng th&igrave; bộ xử l&yacute; sẽ điều hướng c&ocirc;ng việc của bạn đến 2 l&otilde;i n&agrave;y nhằm tăng tốc độ xử l&yacute; cho t&aacute;c vụ . Hiệu năng đơn nh&acirc;n được cải tiến ,hi&ecirc;u năng của cả bộ m&aacute;y của bạn cũng được tăng &nbsp;tốc đ&aacute;ng kể . Với lượng nh&acirc;n lớn v&agrave; xung nhịp cao th&igrave; bạn kh&ocirc;ng cần băn khoăn về vấn đề drop h&igrave;nh hay giật lag khi thiết kế sản phẩm gi&uacute;p bạn thỏa sức s&aacute;ng tạo .</p>
+    <p>&nbsp;&nbsp;&nbsp;Tiếp theo trong i9-9980 XE l&agrave; c&ocirc;ng nghệ ảo h&oacute;a VT-x của intel .Với c&ocirc;ng nghệ n&agrave;y bạn c&oacute; thể &ldquo; ph&acirc;n v&ugrave;ng &ldquo; một m&aacute;y t&iacute;nh để hoạt động nếu như c&oacute; v&agrave;i m&aacute;y t&iacute;nh độc lập , cho ph&eacute;p hệ thống chạy v&agrave;i hệ điều h&agrave;nh c&ugrave;ng l&uacute;c . Những hệ điều h&agrave;nh c&oacute; thể l&agrave; kh&aacute;c nhau, v&iacute; dụ bạn c&oacute; thể chạy window tr&ecirc;n một m&aacute;y ảo v&agrave; Linux tr&ecirc;n một m&aacute;y ảo kh&aacute;c . Với ảo h&oacute;a , bạn c&oacute; thể chạy v&agrave;i hệ điều h&agrave;nh song song nhau v&agrave; mỗi hệ điều h&agrave;nh lại chạy được v&agrave;i chương tr&igrave;nh kh&aacute;c c&ugrave;ng l&uacute;c . V&agrave; mỗi hệ điều h&agrave;nh chạy tr&ecirc;n ảo h&oacute;a đều nghĩ n&oacute; đang chạy tr&ecirc;n một m&aacute;y t&iacute;nh &nbsp;ho&agrave;n to&agrave;n độc lập .<br /><br /><img class="alignnone wp-image-7802 size-full" src="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-3.jpg" sizes="(max-width: 1950px) 100vw, 1950px" srcset="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-3.jpg 1950w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-3-213x142.jpg 213w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-3-640x427.jpg 640w" alt="" width="1950" height="1300" /></p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;Kế đến l&agrave; 1 c&aacute;i t&ecirc;n kh&ocirc;ng c&ograve;n xa lạ với c&aacute;c fan của Intel &ndash; Intel optane. C&ocirc;ng nghệ n&agrave;y cho ph&eacute;p tăng tốc ổ cứng của bạn chạy nhanh l&ecirc;n gấp nhiều lần .Khi bạn mở c&aacute;c phần mềm tr&ecirc;n m&aacute;y t&iacute;nh th&igrave; t&iacute;nh năng n&agrave;y sẽ ghi nhớ v&agrave; ưu ti&ecirc;n chương tr&igrave;nh c&oacute; tần suất truy xuất cao , từ đ&oacute; gi&uacute;p bạn mở v&agrave; khởi động phần mềm nhanh đến bất ngờ .</p>
+    <p>&nbsp;&nbsp;&nbsp;Tr&ecirc;n một CPU đỉnh cao như n&agrave;y th&igrave; c&ocirc;ng nghệ si&ecirc;u ph&acirc;n luồng l&agrave; kh&ocirc;ng thể thiếu .C&ocirc;ng nghệ si&ecirc;u ph&acirc;n luồng Hyper Threading , mỗi ứng dụng tr&ecirc;n m&aacute;y t&iacute;nh sẽ thực hiện nhiều tiến tr&igrave;nh, mỗi tiến tr&igrave;nh lại gồm nhiều luồng xử l&yacute; . Với bộ xử l&yacute; đơn luồng, tại một thời điểm chỉ c&oacute; một luồng xử l&yacute; được thực hiện , nếu c&oacute; nhiều luồng muốn c&ugrave;ng thực hiện th&igrave; c&aacute;c luồng n&agrave;y sẽ thực hiện tuần tự ( FIFO) ,t&aacute;c vụ n&agrave;o đến trước th&igrave; xử l&yacute; trước , t&aacute;c vụ n&agrave;o đến sau th&igrave; xử l&yacute; sau . Với bộ xử l&yacute; si&ecirc;u ph&acirc;n luồng , n&oacute; c&oacute; thể thực hiện song song 2 luồng xử l&yacute; , tận dụng tối đa t&agrave;i nguy&ecirc;n hệ thống v&agrave; r&uacute;t ngắn thời gian xử l&yacute; t&aacute;c vụ.<br /><br /><img class="alignnone wp-image-7803 size-full" src="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-2.jpg" sizes="(max-width: 1950px) 100vw, 1950px" srcset="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-2.jpg 1950w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-2-213x142.jpg 213w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-2-640x427.jpg 640w" alt="" width="1950" height="1300" /></p>
+    <p>&nbsp;&nbsp;&nbsp;N&acirc;ng cao hiệu quả bằng c&ocirc;ng nghệ bộ nhớ đệm th&ocirc;ng minh Intel Smart Cache . N&acirc;ng cấp l&ecirc;n th&agrave;nh 24.75 Mb bộ nhớ smart cache. Giờ &nbsp;đ&acirc;y tất cả c&aacute;c nh&acirc;n đều c&oacute; thể truy cập to&agrave;n diện v&agrave;o bộ nhớ đệm ở cấp cuối c&ugrave;ng , tải sẵn dữ liệu trước khi y&ecirc;u cầu được thực hiện .</p>
+    <p>&nbsp;&nbsp;Ngo&agrave;i ra c&ograve;n rất nhiều c&aacute;c c&ocirc;ng nghệ kh&aacute;c được t&iacute;ch hợp tr&ecirc;n i9-9980 XE như : intel SpeedTep n&acirc;ng cao , intel SSE 4.1 , &nbsp;intel SSE4.2 , , intel AVX2 , intel AVX-512, số lượng đơn vị FMA AVX -512:2<br />&nbsp;&nbsp;Hiệu năng th&igrave; khỏi phải b&agrave;n c&atilde;i đối với tr&ugrave;m cuối của intel , trong hầu hết c&aacute;c t&aacute;c vụ l&agrave;m việc th&igrave; ADM threadripper đều b&aacute;m s&aacute;t với i9-9980 XE nhưng kh&ocirc;ng thể vượt qua . C&ograve;n nếu x&eacute;t về hiệu năng chơi game th&igrave; I9-9980 XE ho&agrave;n to&agrave;n &aacute;p đảo với ADM threadripper .Nếu bạn muốn c&oacute; hiệu năng cao &nbsp;v&agrave; rủng rỉnh về t&agrave;i ch&iacute;nh th&igrave; intel core i9-9980XE l&agrave; lựa chọn tốt nhất cho bạn<br /><br /><img class="alignnone wp-image-7801 size-full" src="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-5.jpg" sizes="(max-width: 1950px) 100vw, 1950px" srcset="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-5.jpg 1950w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-5-213x142.jpg 213w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-5-640x427.jpg 640w" alt="" width="1950" height="1300" /><br /><br /><br /><strong>Cấu h&igrave;nh chi tiếu Build Sẵn tại M&aacute;y T&iacute;nh Nguyễn C&ocirc;ng :&nbsp;</strong></p>
+    <p><strong>&bull; CPU</strong>&nbsp;: Intel Core i9-9980XE Extreme Edition 3.0 Turbo 4.4(18 Cores, 36 Threads)<br /><strong>&bull; TẢN NHIỆT</strong>&nbsp;: Corsair H150i Pro RGB<br /><strong>&bull; MAIN</strong>&nbsp;: GIGABYTE X299 DESIGNARE EX<br /><strong>&bull; RAM</strong>&nbsp;: Gskill TridenT Z 128Gb Bus 3000 RGB ( 8*16)<br /><strong>&bull; SSD</strong>&nbsp;: M2 Samsung 970 EVO 500GB<br /><strong>&bull; HDD</strong>&nbsp;: Western Caviar Black 4T/7200RPM<br /><strong>&bull; VGA</strong>&nbsp;: GIGABYTE AORUS GeForce RTX 2080 Ti XTREME 11G (GV-N208TAORUS X-11GC)<br /><strong>&bull; NGUỒN</strong>&nbsp;: EVGA 120-GP-1000-X1 1000W<br /><strong>&bull; CASE</strong>&nbsp;: CoolerMaster C700P</p>
+    <p><em>Gi&aacute; :&nbsp;</em><strong>188.600.000</strong><em><strong>đ<br /></strong></em></p>
+                        </textarea>
+                        </td>
+                        <td style="width: 8%;">
+                            Tin Hot
+                        </td>
+                        <td style="width: 8%;">
+                            <img src="https://www.acervietnam.com.vn/Data/Sites/1/media/tin-tuc/s%E1%BA%A3n-ph%E1%BA%A9m/helios-300/3.jpg"
+                                style="width: 70%;">
+                        </td>
+                        <td style="width: 8%;">Admin</td>
+                        <td style="width: 8%;" class="chuc-nang">
+                            <a href="">Sửa</a>
+                            <a href="">Xóa</a>
+                        </td>
+                    </tr>
+                </tbody>
+                <!-- 10 -->
+                <tbody>
+                    <tr>
+                        <td style="width: 5%;">1</td>
+                        <td style="width: 30%;">Intel core i9-9980XE – Ông trùm cuối xuất hiện</td>
+                        <td style="width: 10%;">
+                            <textarea>Bạn là một Designer, dù bạn đang xử lý một bộ phim điện ảnh mới nhất  hay đang tiếp tục cho chuỗi các video trên youtube với hàng loạt kỹ xảo chồng chéo . Bộ xử lý Skylake, intel core i9-9980 XE thiết kế nhằm đáp ứng được các nhu cầu về hiệu năng của bạn , bằng cách sử dụng 2 nhân nhanh nhất với tần suất cao hơn hẳn , và với 18 nhân 36 luồng khi cần đa nhiệm đỉnh cao , trải nghiệm hiệu năng cực khủng với hình ảnh 4K đầy chân thực. Bộ nhớ đệm tốc độ cao cùng công nghệ cải tiến mới nhất . Tất cả đều được  thiết kế nhằm mục đích rút ngắn thời gian từ khâu lập kế hoạch đến khi hoàn thành sản phẩm nhanh hơn bao giờ hết .
+                    </textarea>
+                        </td>
+                        <td style="width: 31%;"><textarea class="tinymce" id="content">
+                        <p><img class="alignnone wp-image-7800 size-full" src="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-1.jpg" sizes="(max-width: 1950px) 100vw, 1950px" srcset="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-1.jpg 1950w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-1-213x142.jpg 213w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-1-640x427.jpg 640w" alt="" width="1950" height="1300" /><br /><em><strong>Hiện tại thời điểm n&agrave;y th&igrave; i9 9980XE vẫn l&agrave; cpu core i9 tr&ugrave;m cuối mạnh nhất của intel (4/2019)</strong></em></p>
+<p>&nbsp;&nbsp;Với c&ocirc;ng nghệ Intel Turbo Boost max 3.0 th&igrave; xung boot l&ecirc;n được 4.5 Ghz cho bạn hiệu năng cực khủng so với c&aacute;c đối thủ kh&aacute;c . C&ocirc;ng nghệ n&agrave;y sẽ x&aacute;c định 2 nh&acirc;n nhanh nhất tr&ecirc;n bộ vi xử của bạn , khi bạn thực hiện c&aacute;c t&aacute;c vụ nặng th&igrave; bộ xử l&yacute; sẽ điều hướng c&ocirc;ng việc của bạn đến 2 l&otilde;i n&agrave;y nhằm tăng tốc độ xử l&yacute; cho t&aacute;c vụ . Hiệu năng đơn nh&acirc;n được cải tiến ,hi&ecirc;u năng của cả bộ m&aacute;y của bạn cũng được tăng &nbsp;tốc đ&aacute;ng kể . Với lượng nh&acirc;n lớn v&agrave; xung nhịp cao th&igrave; bạn kh&ocirc;ng cần băn khoăn về vấn đề drop h&igrave;nh hay giật lag khi thiết kế sản phẩm gi&uacute;p bạn thỏa sức s&aacute;ng tạo .</p>
+<p>&nbsp;&nbsp;&nbsp;Tiếp theo trong i9-9980 XE l&agrave; c&ocirc;ng nghệ ảo h&oacute;a VT-x của intel .Với c&ocirc;ng nghệ n&agrave;y bạn c&oacute; thể &ldquo; ph&acirc;n v&ugrave;ng &ldquo; một m&aacute;y t&iacute;nh để hoạt động nếu như c&oacute; v&agrave;i m&aacute;y t&iacute;nh độc lập , cho ph&eacute;p hệ thống chạy v&agrave;i hệ điều h&agrave;nh c&ugrave;ng l&uacute;c . Những hệ điều h&agrave;nh c&oacute; thể l&agrave; kh&aacute;c nhau, v&iacute; dụ bạn c&oacute; thể chạy window tr&ecirc;n một m&aacute;y ảo v&agrave; Linux tr&ecirc;n một m&aacute;y ảo kh&aacute;c . Với ảo h&oacute;a , bạn c&oacute; thể chạy v&agrave;i hệ điều h&agrave;nh song song nhau v&agrave; mỗi hệ điều h&agrave;nh lại chạy được v&agrave;i chương tr&igrave;nh kh&aacute;c c&ugrave;ng l&uacute;c . V&agrave; mỗi hệ điều h&agrave;nh chạy tr&ecirc;n ảo h&oacute;a đều nghĩ n&oacute; đang chạy tr&ecirc;n một m&aacute;y t&iacute;nh &nbsp;ho&agrave;n to&agrave;n độc lập .<br /><br /><img class="alignnone wp-image-7802 size-full" src="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-3.jpg" sizes="(max-width: 1950px) 100vw, 1950px" srcset="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-3.jpg 1950w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-3-213x142.jpg 213w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-3-640x427.jpg 640w" alt="" width="1950" height="1300" /></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;Kế đến l&agrave; 1 c&aacute;i t&ecirc;n kh&ocirc;ng c&ograve;n xa lạ với c&aacute;c fan của Intel &ndash; Intel optane. C&ocirc;ng nghệ n&agrave;y cho ph&eacute;p tăng tốc ổ cứng của bạn chạy nhanh l&ecirc;n gấp nhiều lần .Khi bạn mở c&aacute;c phần mềm tr&ecirc;n m&aacute;y t&iacute;nh th&igrave; t&iacute;nh năng n&agrave;y sẽ ghi nhớ v&agrave; ưu ti&ecirc;n chương tr&igrave;nh c&oacute; tần suất truy xuất cao , từ đ&oacute; gi&uacute;p bạn mở v&agrave; khởi động phần mềm nhanh đến bất ngờ .</p>
+<p>&nbsp;&nbsp;&nbsp;Tr&ecirc;n một CPU đỉnh cao như n&agrave;y th&igrave; c&ocirc;ng nghệ si&ecirc;u ph&acirc;n luồng l&agrave; kh&ocirc;ng thể thiếu .C&ocirc;ng nghệ si&ecirc;u ph&acirc;n luồng Hyper Threading , mỗi ứng dụng tr&ecirc;n m&aacute;y t&iacute;nh sẽ thực hiện nhiều tiến tr&igrave;nh, mỗi tiến tr&igrave;nh lại gồm nhiều luồng xử l&yacute; . Với bộ xử l&yacute; đơn luồng, tại một thời điểm chỉ c&oacute; một luồng xử l&yacute; được thực hiện , nếu c&oacute; nhiều luồng muốn c&ugrave;ng thực hiện th&igrave; c&aacute;c luồng n&agrave;y sẽ thực hiện tuần tự ( FIFO) ,t&aacute;c vụ n&agrave;o đến trước th&igrave; xử l&yacute; trước , t&aacute;c vụ n&agrave;o đến sau th&igrave; xử l&yacute; sau . Với bộ xử l&yacute; si&ecirc;u ph&acirc;n luồng , n&oacute; c&oacute; thể thực hiện song song 2 luồng xử l&yacute; , tận dụng tối đa t&agrave;i nguy&ecirc;n hệ thống v&agrave; r&uacute;t ngắn thời gian xử l&yacute; t&aacute;c vụ.<br /><br /><img class="alignnone wp-image-7803 size-full" src="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-2.jpg" sizes="(max-width: 1950px) 100vw, 1950px" srcset="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-2.jpg 1950w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-2-213x142.jpg 213w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-2-640x427.jpg 640w" alt="" width="1950" height="1300" /></p>
+<p>&nbsp;&nbsp;&nbsp;N&acirc;ng cao hiệu quả bằng c&ocirc;ng nghệ bộ nhớ đệm th&ocirc;ng minh Intel Smart Cache . N&acirc;ng cấp l&ecirc;n th&agrave;nh 24.75 Mb bộ nhớ smart cache. Giờ &nbsp;đ&acirc;y tất cả c&aacute;c nh&acirc;n đều c&oacute; thể truy cập to&agrave;n diện v&agrave;o bộ nhớ đệm ở cấp cuối c&ugrave;ng , tải sẵn dữ liệu trước khi y&ecirc;u cầu được thực hiện .</p>
+<p>&nbsp;&nbsp;Ngo&agrave;i ra c&ograve;n rất nhiều c&aacute;c c&ocirc;ng nghệ kh&aacute;c được t&iacute;ch hợp tr&ecirc;n i9-9980 XE như : intel SpeedTep n&acirc;ng cao , intel SSE 4.1 , &nbsp;intel SSE4.2 , , intel AVX2 , intel AVX-512, số lượng đơn vị FMA AVX -512:2<br />&nbsp;&nbsp;Hiệu năng th&igrave; khỏi phải b&agrave;n c&atilde;i đối với tr&ugrave;m cuối của intel , trong hầu hết c&aacute;c t&aacute;c vụ l&agrave;m việc th&igrave; ADM threadripper đều b&aacute;m s&aacute;t với i9-9980 XE nhưng kh&ocirc;ng thể vượt qua . C&ograve;n nếu x&eacute;t về hiệu năng chơi game th&igrave; I9-9980 XE ho&agrave;n to&agrave;n &aacute;p đảo với ADM threadripper .Nếu bạn muốn c&oacute; hiệu năng cao &nbsp;v&agrave; rủng rỉnh về t&agrave;i ch&iacute;nh th&igrave; intel core i9-9980XE l&agrave; lựa chọn tốt nhất cho bạn<br /><br /><img class="alignnone wp-image-7801 size-full" src="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-5.jpg" sizes="(max-width: 1950px) 100vw, 1950px" srcset="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-5.jpg 1950w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-5-213x142.jpg 213w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-5-640x427.jpg 640w" alt="" width="1950" height="1300" /><br /><br /><br /><strong>Cấu h&igrave;nh chi tiếu Build Sẵn tại M&aacute;y T&iacute;nh Nguyễn C&ocirc;ng :&nbsp;</strong></p>
+<p><strong>&bull; CPU</strong>&nbsp;: Intel Core i9-9980XE Extreme Edition 3.0 Turbo 4.4(18 Cores, 36 Threads)<br /><strong>&bull; TẢN NHIỆT</strong>&nbsp;: Corsair H150i Pro RGB<br /><strong>&bull; MAIN</strong>&nbsp;: GIGABYTE X299 DESIGNARE EX<br /><strong>&bull; RAM</strong>&nbsp;: Gskill TridenT Z 128Gb Bus 3000 RGB ( 8*16)<br /><strong>&bull; SSD</strong>&nbsp;: M2 Samsung 970 EVO 500GB<br /><strong>&bull; HDD</strong>&nbsp;: Western Caviar Black 4T/7200RPM<br /><strong>&bull; VGA</strong>&nbsp;: GIGABYTE AORUS GeForce RTX 2080 Ti XTREME 11G (GV-N208TAORUS X-11GC)<br /><strong>&bull; NGUỒN</strong>&nbsp;: EVGA 120-GP-1000-X1 1000W<br /><strong>&bull; CASE</strong>&nbsp;: CoolerMaster C700P</p>
+<p><em>Gi&aacute; :&nbsp;</em><strong>188.600.000</strong><em><strong>đ<br /></strong></em></p>
+                    </textarea>
+                        </td>
+                        <td style="width: 8%;">
+                            Tin Hot
+                        </td>
+                        <td style="width: 8%;">
+                            <img src="https://www.acervietnam.com.vn/Data/Sites/1/media/tin-tuc/s%E1%BA%A3n-ph%E1%BA%A9m/helios-300/3.jpg"
+                                style="width: 70%;">
+                        </td>
+                        <td style="width: 8%;">Admin</td>
+                        <td style="width: 8%;" class="chuc-nang">
+                            <a href="">Sửa</a>
+                            <a href="">Xóa</a>
+                        </td>
+                    </tr>
+                </tbody>
+                <!-- 11 -->
+                <tbody>
+                    <tr>
+                        <td style="width: 5%;">1</td>
+                        <td style="width: 30%;">Intel core i9-9980XE – Ông trùm cuối xuất hiện</td>
+                        <td style="width: 10%;">
+                            <textarea>Bạn là một Designer, dù bạn đang xử lý một bộ phim điện ảnh mới nhất  hay đang tiếp tục cho chuỗi các video trên youtube với hàng loạt kỹ xảo chồng chéo . Bộ xử lý Skylake, intel core i9-9980 XE thiết kế nhằm đáp ứng được các nhu cầu về hiệu năng của bạn , bằng cách sử dụng 2 nhân nhanh nhất với tần suất cao hơn hẳn , và với 18 nhân 36 luồng khi cần đa nhiệm đỉnh cao , trải nghiệm hiệu năng cực khủng với hình ảnh 4K đầy chân thực. Bộ nhớ đệm tốc độ cao cùng công nghệ cải tiến mới nhất . Tất cả đều được  thiết kế nhằm mục đích rút ngắn thời gian từ khâu lập kế hoạch đến khi hoàn thành sản phẩm nhanh hơn bao giờ hết .
+                    </textarea>
+                        </td>
+                        <td style="width: 31%;"><textarea class="tinymce" id="content">
+                        <p><img class="alignnone wp-image-7800 size-full" src="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-1.jpg" sizes="(max-width: 1950px) 100vw, 1950px" srcset="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-1.jpg 1950w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-1-213x142.jpg 213w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-1-640x427.jpg 640w" alt="" width="1950" height="1300" /><br /><em><strong>Hiện tại thời điểm n&agrave;y th&igrave; i9 9980XE vẫn l&agrave; cpu core i9 tr&ugrave;m cuối mạnh nhất của intel (4/2019)</strong></em></p>
+<p>&nbsp;&nbsp;Với c&ocirc;ng nghệ Intel Turbo Boost max 3.0 th&igrave; xung boot l&ecirc;n được 4.5 Ghz cho bạn hiệu năng cực khủng so với c&aacute;c đối thủ kh&aacute;c . C&ocirc;ng nghệ n&agrave;y sẽ x&aacute;c định 2 nh&acirc;n nhanh nhất tr&ecirc;n bộ vi xử của bạn , khi bạn thực hiện c&aacute;c t&aacute;c vụ nặng th&igrave; bộ xử l&yacute; sẽ điều hướng c&ocirc;ng việc của bạn đến 2 l&otilde;i n&agrave;y nhằm tăng tốc độ xử l&yacute; cho t&aacute;c vụ . Hiệu năng đơn nh&acirc;n được cải tiến ,hi&ecirc;u năng của cả bộ m&aacute;y của bạn cũng được tăng &nbsp;tốc đ&aacute;ng kể . Với lượng nh&acirc;n lớn v&agrave; xung nhịp cao th&igrave; bạn kh&ocirc;ng cần băn khoăn về vấn đề drop h&igrave;nh hay giật lag khi thiết kế sản phẩm gi&uacute;p bạn thỏa sức s&aacute;ng tạo .</p>
+<p>&nbsp;&nbsp;&nbsp;Tiếp theo trong i9-9980 XE l&agrave; c&ocirc;ng nghệ ảo h&oacute;a VT-x của intel .Với c&ocirc;ng nghệ n&agrave;y bạn c&oacute; thể &ldquo; ph&acirc;n v&ugrave;ng &ldquo; một m&aacute;y t&iacute;nh để hoạt động nếu như c&oacute; v&agrave;i m&aacute;y t&iacute;nh độc lập , cho ph&eacute;p hệ thống chạy v&agrave;i hệ điều h&agrave;nh c&ugrave;ng l&uacute;c . Những hệ điều h&agrave;nh c&oacute; thể l&agrave; kh&aacute;c nhau, v&iacute; dụ bạn c&oacute; thể chạy window tr&ecirc;n một m&aacute;y ảo v&agrave; Linux tr&ecirc;n một m&aacute;y ảo kh&aacute;c . Với ảo h&oacute;a , bạn c&oacute; thể chạy v&agrave;i hệ điều h&agrave;nh song song nhau v&agrave; mỗi hệ điều h&agrave;nh lại chạy được v&agrave;i chương tr&igrave;nh kh&aacute;c c&ugrave;ng l&uacute;c . V&agrave; mỗi hệ điều h&agrave;nh chạy tr&ecirc;n ảo h&oacute;a đều nghĩ n&oacute; đang chạy tr&ecirc;n một m&aacute;y t&iacute;nh &nbsp;ho&agrave;n to&agrave;n độc lập .<br /><br /><img class="alignnone wp-image-7802 size-full" src="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-3.jpg" sizes="(max-width: 1950px) 100vw, 1950px" srcset="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-3.jpg 1950w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-3-213x142.jpg 213w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-3-640x427.jpg 640w" alt="" width="1950" height="1300" /></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;Kế đến l&agrave; 1 c&aacute;i t&ecirc;n kh&ocirc;ng c&ograve;n xa lạ với c&aacute;c fan của Intel &ndash; Intel optane. C&ocirc;ng nghệ n&agrave;y cho ph&eacute;p tăng tốc ổ cứng của bạn chạy nhanh l&ecirc;n gấp nhiều lần .Khi bạn mở c&aacute;c phần mềm tr&ecirc;n m&aacute;y t&iacute;nh th&igrave; t&iacute;nh năng n&agrave;y sẽ ghi nhớ v&agrave; ưu ti&ecirc;n chương tr&igrave;nh c&oacute; tần suất truy xuất cao , từ đ&oacute; gi&uacute;p bạn mở v&agrave; khởi động phần mềm nhanh đến bất ngờ .</p>
+<p>&nbsp;&nbsp;&nbsp;Tr&ecirc;n một CPU đỉnh cao như n&agrave;y th&igrave; c&ocirc;ng nghệ si&ecirc;u ph&acirc;n luồng l&agrave; kh&ocirc;ng thể thiếu .C&ocirc;ng nghệ si&ecirc;u ph&acirc;n luồng Hyper Threading , mỗi ứng dụng tr&ecirc;n m&aacute;y t&iacute;nh sẽ thực hiện nhiều tiến tr&igrave;nh, mỗi tiến tr&igrave;nh lại gồm nhiều luồng xử l&yacute; . Với bộ xử l&yacute; đơn luồng, tại một thời điểm chỉ c&oacute; một luồng xử l&yacute; được thực hiện , nếu c&oacute; nhiều luồng muốn c&ugrave;ng thực hiện th&igrave; c&aacute;c luồng n&agrave;y sẽ thực hiện tuần tự ( FIFO) ,t&aacute;c vụ n&agrave;o đến trước th&igrave; xử l&yacute; trước , t&aacute;c vụ n&agrave;o đến sau th&igrave; xử l&yacute; sau . Với bộ xử l&yacute; si&ecirc;u ph&acirc;n luồng , n&oacute; c&oacute; thể thực hiện song song 2 luồng xử l&yacute; , tận dụng tối đa t&agrave;i nguy&ecirc;n hệ thống v&agrave; r&uacute;t ngắn thời gian xử l&yacute; t&aacute;c vụ.<br /><br /><img class="alignnone wp-image-7803 size-full" src="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-2.jpg" sizes="(max-width: 1950px) 100vw, 1950px" srcset="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-2.jpg 1950w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-2-213x142.jpg 213w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-2-640x427.jpg 640w" alt="" width="1950" height="1300" /></p>
+<p>&nbsp;&nbsp;&nbsp;N&acirc;ng cao hiệu quả bằng c&ocirc;ng nghệ bộ nhớ đệm th&ocirc;ng minh Intel Smart Cache . N&acirc;ng cấp l&ecirc;n th&agrave;nh 24.75 Mb bộ nhớ smart cache. Giờ &nbsp;đ&acirc;y tất cả c&aacute;c nh&acirc;n đều c&oacute; thể truy cập to&agrave;n diện v&agrave;o bộ nhớ đệm ở cấp cuối c&ugrave;ng , tải sẵn dữ liệu trước khi y&ecirc;u cầu được thực hiện .</p>
+<p>&nbsp;&nbsp;Ngo&agrave;i ra c&ograve;n rất nhiều c&aacute;c c&ocirc;ng nghệ kh&aacute;c được t&iacute;ch hợp tr&ecirc;n i9-9980 XE như : intel SpeedTep n&acirc;ng cao , intel SSE 4.1 , &nbsp;intel SSE4.2 , , intel AVX2 , intel AVX-512, số lượng đơn vị FMA AVX -512:2<br />&nbsp;&nbsp;Hiệu năng th&igrave; khỏi phải b&agrave;n c&atilde;i đối với tr&ugrave;m cuối của intel , trong hầu hết c&aacute;c t&aacute;c vụ l&agrave;m việc th&igrave; ADM threadripper đều b&aacute;m s&aacute;t với i9-9980 XE nhưng kh&ocirc;ng thể vượt qua . C&ograve;n nếu x&eacute;t về hiệu năng chơi game th&igrave; I9-9980 XE ho&agrave;n to&agrave;n &aacute;p đảo với ADM threadripper .Nếu bạn muốn c&oacute; hiệu năng cao &nbsp;v&agrave; rủng rỉnh về t&agrave;i ch&iacute;nh th&igrave; intel core i9-9980XE l&agrave; lựa chọn tốt nhất cho bạn<br /><br /><img class="alignnone wp-image-7801 size-full" src="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-5.jpg" sizes="(max-width: 1950px) 100vw, 1950px" srcset="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-5.jpg 1950w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-5-213x142.jpg 213w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-5-640x427.jpg 640w" alt="" width="1950" height="1300" /><br /><br /><br /><strong>Cấu h&igrave;nh chi tiếu Build Sẵn tại M&aacute;y T&iacute;nh Nguyễn C&ocirc;ng :&nbsp;</strong></p>
+<p><strong>&bull; CPU</strong>&nbsp;: Intel Core i9-9980XE Extreme Edition 3.0 Turbo 4.4(18 Cores, 36 Threads)<br /><strong>&bull; TẢN NHIỆT</strong>&nbsp;: Corsair H150i Pro RGB<br /><strong>&bull; MAIN</strong>&nbsp;: GIGABYTE X299 DESIGNARE EX<br /><strong>&bull; RAM</strong>&nbsp;: Gskill TridenT Z 128Gb Bus 3000 RGB ( 8*16)<br /><strong>&bull; SSD</strong>&nbsp;: M2 Samsung 970 EVO 500GB<br /><strong>&bull; HDD</strong>&nbsp;: Western Caviar Black 4T/7200RPM<br /><strong>&bull; VGA</strong>&nbsp;: GIGABYTE AORUS GeForce RTX 2080 Ti XTREME 11G (GV-N208TAORUS X-11GC)<br /><strong>&bull; NGUỒN</strong>&nbsp;: EVGA 120-GP-1000-X1 1000W<br /><strong>&bull; CASE</strong>&nbsp;: CoolerMaster C700P</p>
+<p><em>Gi&aacute; :&nbsp;</em><strong>188.600.000</strong><em><strong>đ<br /></strong></em></p>
+                    </textarea>
+                        </td>
+                        <td style="width: 8%;">
+                            Tin Hot
+                        </td>
+                        <td style="width: 8%;">
+                            <img src="https://www.acervietnam.com.vn/Data/Sites/1/media/tin-tuc/s%E1%BA%A3n-ph%E1%BA%A9m/helios-300/3.jpg"
+                                style="width: 70%;">
+                        </td>
+                        <td style="width: 8%;">Admin</td>
+                        <td style="width: 8%;" class="chuc-nang">
+                            <a href="">Sửa</a>
+                            <a href="">Xóa</a>
+                        </td>
+                    </tr>
+                </tbody>
+                <!-- 12 -->
+                <tbody>
+                    <tr>
+                        <td style="width: 5%;">1</td>
+                        <td style="width: 30%;">Intel core i9-9980XE – Ông trùm cuối xuất hiện</td>
+                        <td style="width: 10%;">
+                            <textarea>Bạn là một Designer, dù bạn đang xử lý một bộ phim điện ảnh mới nhất  hay đang tiếp tục cho chuỗi các video trên youtube với hàng loạt kỹ xảo chồng chéo . Bộ xử lý Skylake, intel core i9-9980 XE thiết kế nhằm đáp ứng được các nhu cầu về hiệu năng của bạn , bằng cách sử dụng 2 nhân nhanh nhất với tần suất cao hơn hẳn , và với 18 nhân 36 luồng khi cần đa nhiệm đỉnh cao , trải nghiệm hiệu năng cực khủng với hình ảnh 4K đầy chân thực. Bộ nhớ đệm tốc độ cao cùng công nghệ cải tiến mới nhất . Tất cả đều được  thiết kế nhằm mục đích rút ngắn thời gian từ khâu lập kế hoạch đến khi hoàn thành sản phẩm nhanh hơn bao giờ hết .
+                        </textarea>
+                        </td>
+                        <td style="width: 31%;"><textarea class="tinymce" id="content">
+                            <p><img class="alignnone wp-image-7800 size-full" src="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-1.jpg" sizes="(max-width: 1950px) 100vw, 1950px" srcset="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-1.jpg 1950w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-1-213x142.jpg 213w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-1-640x427.jpg 640w" alt="" width="1950" height="1300" /><br /><em><strong>Hiện tại thời điểm n&agrave;y th&igrave; i9 9980XE vẫn l&agrave; cpu core i9 tr&ugrave;m cuối mạnh nhất của intel (4/2019)</strong></em></p>
+    <p>&nbsp;&nbsp;Với c&ocirc;ng nghệ Intel Turbo Boost max 3.0 th&igrave; xung boot l&ecirc;n được 4.5 Ghz cho bạn hiệu năng cực khủng so với c&aacute;c đối thủ kh&aacute;c . C&ocirc;ng nghệ n&agrave;y sẽ x&aacute;c định 2 nh&acirc;n nhanh nhất tr&ecirc;n bộ vi xử của bạn , khi bạn thực hiện c&aacute;c t&aacute;c vụ nặng th&igrave; bộ xử l&yacute; sẽ điều hướng c&ocirc;ng việc của bạn đến 2 l&otilde;i n&agrave;y nhằm tăng tốc độ xử l&yacute; cho t&aacute;c vụ . Hiệu năng đơn nh&acirc;n được cải tiến ,hi&ecirc;u năng của cả bộ m&aacute;y của bạn cũng được tăng &nbsp;tốc đ&aacute;ng kể . Với lượng nh&acirc;n lớn v&agrave; xung nhịp cao th&igrave; bạn kh&ocirc;ng cần băn khoăn về vấn đề drop h&igrave;nh hay giật lag khi thiết kế sản phẩm gi&uacute;p bạn thỏa sức s&aacute;ng tạo .</p>
+    <p>&nbsp;&nbsp;&nbsp;Tiếp theo trong i9-9980 XE l&agrave; c&ocirc;ng nghệ ảo h&oacute;a VT-x của intel .Với c&ocirc;ng nghệ n&agrave;y bạn c&oacute; thể &ldquo; ph&acirc;n v&ugrave;ng &ldquo; một m&aacute;y t&iacute;nh để hoạt động nếu như c&oacute; v&agrave;i m&aacute;y t&iacute;nh độc lập , cho ph&eacute;p hệ thống chạy v&agrave;i hệ điều h&agrave;nh c&ugrave;ng l&uacute;c . Những hệ điều h&agrave;nh c&oacute; thể l&agrave; kh&aacute;c nhau, v&iacute; dụ bạn c&oacute; thể chạy window tr&ecirc;n một m&aacute;y ảo v&agrave; Linux tr&ecirc;n một m&aacute;y ảo kh&aacute;c . Với ảo h&oacute;a , bạn c&oacute; thể chạy v&agrave;i hệ điều h&agrave;nh song song nhau v&agrave; mỗi hệ điều h&agrave;nh lại chạy được v&agrave;i chương tr&igrave;nh kh&aacute;c c&ugrave;ng l&uacute;c . V&agrave; mỗi hệ điều h&agrave;nh chạy tr&ecirc;n ảo h&oacute;a đều nghĩ n&oacute; đang chạy tr&ecirc;n một m&aacute;y t&iacute;nh &nbsp;ho&agrave;n to&agrave;n độc lập .<br /><br /><img class="alignnone wp-image-7802 size-full" src="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-3.jpg" sizes="(max-width: 1950px) 100vw, 1950px" srcset="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-3.jpg 1950w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-3-213x142.jpg 213w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-3-640x427.jpg 640w" alt="" width="1950" height="1300" /></p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;Kế đến l&agrave; 1 c&aacute;i t&ecirc;n kh&ocirc;ng c&ograve;n xa lạ với c&aacute;c fan của Intel &ndash; Intel optane. C&ocirc;ng nghệ n&agrave;y cho ph&eacute;p tăng tốc ổ cứng của bạn chạy nhanh l&ecirc;n gấp nhiều lần .Khi bạn mở c&aacute;c phần mềm tr&ecirc;n m&aacute;y t&iacute;nh th&igrave; t&iacute;nh năng n&agrave;y sẽ ghi nhớ v&agrave; ưu ti&ecirc;n chương tr&igrave;nh c&oacute; tần suất truy xuất cao , từ đ&oacute; gi&uacute;p bạn mở v&agrave; khởi động phần mềm nhanh đến bất ngờ .</p>
+    <p>&nbsp;&nbsp;&nbsp;Tr&ecirc;n một CPU đỉnh cao như n&agrave;y th&igrave; c&ocirc;ng nghệ si&ecirc;u ph&acirc;n luồng l&agrave; kh&ocirc;ng thể thiếu .C&ocirc;ng nghệ si&ecirc;u ph&acirc;n luồng Hyper Threading , mỗi ứng dụng tr&ecirc;n m&aacute;y t&iacute;nh sẽ thực hiện nhiều tiến tr&igrave;nh, mỗi tiến tr&igrave;nh lại gồm nhiều luồng xử l&yacute; . Với bộ xử l&yacute; đơn luồng, tại một thời điểm chỉ c&oacute; một luồng xử l&yacute; được thực hiện , nếu c&oacute; nhiều luồng muốn c&ugrave;ng thực hiện th&igrave; c&aacute;c luồng n&agrave;y sẽ thực hiện tuần tự ( FIFO) ,t&aacute;c vụ n&agrave;o đến trước th&igrave; xử l&yacute; trước , t&aacute;c vụ n&agrave;o đến sau th&igrave; xử l&yacute; sau . Với bộ xử l&yacute; si&ecirc;u ph&acirc;n luồng , n&oacute; c&oacute; thể thực hiện song song 2 luồng xử l&yacute; , tận dụng tối đa t&agrave;i nguy&ecirc;n hệ thống v&agrave; r&uacute;t ngắn thời gian xử l&yacute; t&aacute;c vụ.<br /><br /><img class="alignnone wp-image-7803 size-full" src="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-2.jpg" sizes="(max-width: 1950px) 100vw, 1950px" srcset="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-2.jpg 1950w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-2-213x142.jpg 213w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-2-640x427.jpg 640w" alt="" width="1950" height="1300" /></p>
+    <p>&nbsp;&nbsp;&nbsp;N&acirc;ng cao hiệu quả bằng c&ocirc;ng nghệ bộ nhớ đệm th&ocirc;ng minh Intel Smart Cache . N&acirc;ng cấp l&ecirc;n th&agrave;nh 24.75 Mb bộ nhớ smart cache. Giờ &nbsp;đ&acirc;y tất cả c&aacute;c nh&acirc;n đều c&oacute; thể truy cập to&agrave;n diện v&agrave;o bộ nhớ đệm ở cấp cuối c&ugrave;ng , tải sẵn dữ liệu trước khi y&ecirc;u cầu được thực hiện .</p>
+    <p>&nbsp;&nbsp;Ngo&agrave;i ra c&ograve;n rất nhiều c&aacute;c c&ocirc;ng nghệ kh&aacute;c được t&iacute;ch hợp tr&ecirc;n i9-9980 XE như : intel SpeedTep n&acirc;ng cao , intel SSE 4.1 , &nbsp;intel SSE4.2 , , intel AVX2 , intel AVX-512, số lượng đơn vị FMA AVX -512:2<br />&nbsp;&nbsp;Hiệu năng th&igrave; khỏi phải b&agrave;n c&atilde;i đối với tr&ugrave;m cuối của intel , trong hầu hết c&aacute;c t&aacute;c vụ l&agrave;m việc th&igrave; ADM threadripper đều b&aacute;m s&aacute;t với i9-9980 XE nhưng kh&ocirc;ng thể vượt qua . C&ograve;n nếu x&eacute;t về hiệu năng chơi game th&igrave; I9-9980 XE ho&agrave;n to&agrave;n &aacute;p đảo với ADM threadripper .Nếu bạn muốn c&oacute; hiệu năng cao &nbsp;v&agrave; rủng rỉnh về t&agrave;i ch&iacute;nh th&igrave; intel core i9-9980XE l&agrave; lựa chọn tốt nhất cho bạn<br /><br /><img class="alignnone wp-image-7801 size-full" src="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-5.jpg" sizes="(max-width: 1950px) 100vw, 1950px" srcset="https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-5.jpg 1950w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-5-213x142.jpg 213w, https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-5-640x427.jpg 640w" alt="" width="1950" height="1300" /><br /><br /><br /><strong>Cấu h&igrave;nh chi tiếu Build Sẵn tại M&aacute;y T&iacute;nh Nguyễn C&ocirc;ng :&nbsp;</strong></p>
+    <p><strong>&bull; CPU</strong>&nbsp;: Intel Core i9-9980XE Extreme Edition 3.0 Turbo 4.4(18 Cores, 36 Threads)<br /><strong>&bull; TẢN NHIỆT</strong>&nbsp;: Corsair H150i Pro RGB<br /><strong>&bull; MAIN</strong>&nbsp;: GIGABYTE X299 DESIGNARE EX<br /><strong>&bull; RAM</strong>&nbsp;: Gskill TridenT Z 128Gb Bus 3000 RGB ( 8*16)<br /><strong>&bull; SSD</strong>&nbsp;: M2 Samsung 970 EVO 500GB<br /><strong>&bull; HDD</strong>&nbsp;: Western Caviar Black 4T/7200RPM<br /><strong>&bull; VGA</strong>&nbsp;: GIGABYTE AORUS GeForce RTX 2080 Ti XTREME 11G (GV-N208TAORUS X-11GC)<br /><strong>&bull; NGUỒN</strong>&nbsp;: EVGA 120-GP-1000-X1 1000W<br /><strong>&bull; CASE</strong>&nbsp;: CoolerMaster C700P</p>
+    <p><em>Gi&aacute; :&nbsp;</em><strong>188.600.000</strong><em><strong>đ<br /></strong></em></p>
+                        </textarea>
+                        </td>
+                        <td style="width: 8%;">
+                            Tin Hot
+                        </td>
+                        <td style="width: 8%;">
+                            <img src="https://www.acervietnam.com.vn/Data/Sites/1/media/tin-tuc/s%E1%BA%A3n-ph%E1%BA%A9m/helios-300/3.jpg"
+                                style="width: 70%;">
+                        </td>
+                        <td style="width: 8%;">Admin</td>
+                        <td style="width: 8%;" class="chuc-nang">
+                            <a href="">Sửa</a>
+                            <a href="">Xóa</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class=" container-fluid pt-4 my-md pt-md-5 border-top footer">
+            <div class="row">
+                <div class="col-12 col-md">
+                    <img class="mb-2"
+                        src="data:image/png;base64,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"
+                        alt="" width="120" height="50" style="border-radius: 10px 10px;">
+
+                    <small class="d-block mb-3 text-muted" id="copyright">&copy;
+                        <script>
+                            document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
+                        </script>
+                        Designed and Coded by
+                        <a href="https://www.facebook.com/pastetuaam" target="_blank"
+                            style="color: #026670;">Pastetu</a>
+                    </small>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Features</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Cool stuff</a></li>
+                        <li><a class="text-muted" href="#">Random feature</a></li>
+                        <li><a class="text-muted" href="#">Team feature</a></li>
+                        <li><a class="text-muted" href="#">Stuff for developers</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Resource</a></li>
+                        <li><a class="text-muted" href="#">Resource name</a></li>
+                        <li><a class="text-muted" href="#">Another resource</a></li>
+                        <li><a class="text-muted" href="#">Final resource</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>About</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Team</a></li>
+                        <li><a class="text-muted" href="#">Locations</a></li>
+                        <li><a class="text-muted" href="#">Privacy</a></li>
+                        <li><a class="text-muted" href="#">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
 
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="../vendors/js/vendor/jquery.slim.min.js"><\/script>')</script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="../vendors/js/vendor/jquery.slim.min.js"><\/script>')</script>
 
-  <script src="/vendors/dist/js/perfect-scrollbar.jquery.min.js"></script>
-  <script src="/vendors/dist/js/bootstrap.bundle.js"></script>
-  <script src="/vendors/dist/js/ct-navbar.js"></script>
-  <script src="/resources/js/app.js"></script>
+        <script src="/vendors/dist/js/perfect-scrollbar.jquery.min.js"></script>
+        <script src="/vendors/dist/js/bootstrap.bundle.js"></script>
+        <script src="/vendors/dist/js/ct-navbar.js"></script>
+        <script src="/resources/js/app.js"></script>
+        <!--tinymce---------------->
+        <script type="text/javascript" src="../vendors/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="../vendors/tinymce/js/tinymce/tinymce.min.js"></script>
+        <script type="text/javascript" src="../vendors/test/test.js"></script>
+
+        <!-- phân trang-->
+        <div id="choose">
+        </div>
+
+
+        <script language="javascript">
+            $(function () {
+                $('#choose').pagination({
+                    items: 5,
+                    itemsOnPage: 2,
+                    cssStyle: 'light-theme',
+                    onPageClick: function (pageNumber) { test(pageNumber) }
+                });
+            });
+        </script>
 </body>
 
 </html>
