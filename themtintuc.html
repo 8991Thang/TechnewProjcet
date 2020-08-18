@@ -49,46 +49,71 @@
     </script>
   </div>
   <header>
-    <!-- NAVBAR---------------------- -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="
-    background-color: #212121;">
-      <a class=" navbar-brand" href="#">
-        <img src="/resources/img/Logotn.png" alt="logo" style="width: 40px;">
-        TechNews
-      </a>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="quanlyadmin.html">Quản lý Admin</a>
-            <ul class="nav-link" style="position:absolute;">
-                <li class="nav-item"><a class="nav-link" href="themadmin.html">Thêm admin</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="quanlyuser.html">Quản lý Users</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="quanlytintuc.html">Quản lý Tin tức</a>
-            <ul class="nav-link" style="position:absolute;">
-                <li class="nav-item"><a class="nav-link" href="themtintuc.html">Thêm tin tức</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="quanlymeovat.html">Quản lý Mẹo vặt</a>
-            <ul class="nav-link" style="position:absolute;">
-                <li class="nav-item"><a class="nav-link" href="themmeovat.html">Thêm mẹo vặt</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="quanlyforum.html">Quản lý Forum</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="quanlygocuytin.html">Quản lý Góc uy tín</a>
-          </li>
-        </ul>
+<!-- NAVBAR---------------------- -->
+<nav class="navbar navbar-expand-md navbar-dark fixed-top" style="
+background-color: #212121;">
+  <a class=" navbar-brand" href="quantri.html">
+    <img src="/resources/img/Logotn.png" alt="logo" style="width: 40px;">
+    TechNews
+  </a>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto cssf">
+      <!-- Example split danger button -->
+      <li>
+      <div class="btn-group">
+        <a href="quanlyadmin.html"><button type="button" class="btn btn-danger">Quản lý Admin</button></a>
+        <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="themadmin.html">Thêm admin</a>
+        </div>
       </div>
-    </nav>
-    <!-- END NAVBAR-------------------------------- -->
+    </li>
+
+    <li>
+      <a href="quanlyuser.html"><button type="button" class="btn btn-danger">Quản lý Users</button></a>
+    </li>
+
+    <li>
+      <div class="btn-group">
+        <a href="quanlytintuc.html"><button type="button" class="btn btn-danger">Quản lý Tin tức</button></a>
+        <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="themtintuc.html">Thêm tin tức<</a>
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <div class="btn-group">
+        <a href="quanlymeovat.html"><button type="button" class="btn btn-danger">Quản lý Mẹo vặt</button></a>
+        <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="themmeovat.html">Thêm mẹo vặt<</a>
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <a href="quanlyforum.html"><button type="button" class="btn btn-danger">Quản lý Forum</button></a>
+    </li>
+
+    <li>
+      <a href="quanlygocuytin.html"><button type="button" class="btn btn-danger">Quản lý Góc uy tín</button></a>
+    </li>
+    </ul>
+  </div>
+</nav>
+<!-- END NAVBAR-------------------------------- -->
+<p style="margin-top: 50px;border: 3px solid #fff;font-size:30px;text-align: center;">Thêm tin tức</p>
 
 
     <!-- FOOTER -->
