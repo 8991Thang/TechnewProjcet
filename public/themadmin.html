@@ -7,13 +7,13 @@
   <meta name="description" content="">
   <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
   <meta name="generator" content="Jekyll v4.0.1">
-  <title>Technews</title>
-  <link rel="shortcut icon" type="image/png" href="/resources/img/Logotn.png" />
-  <!-- Bootstrap core CSS ---------------------------------------->
+  <title>TechNews</title>
+  <link rel="shortcut icon" type="image/png" href="/resources/img/Logotn.png"/>
+  <!-- Bootstrap core CSS -->
+
   <link href="/vendors/dist/css/bootstrap.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
   <style>
     .bd-placeholder-img {
@@ -31,8 +31,7 @@
       }
     }
   </style>
-
-  <!-- Custom styles for this template ---------------------------->
+  <!-- Custom styles for this template -->
   <link href="/resources/css/style.css" rel="stylesheet">
 </head>
 
@@ -41,165 +40,83 @@
     <p class="float-right"><a href="#" style="color: #026670;"> <i class="far fa-arrow-alt-circle-up"></i></a></p>
   </div>
 
-  <div id="weather" class="float-right" style="width: 100px; height: 40px; ">
-    <a class="weatherwidget-io" style="border-radius: 10px 0 0 13px;"
-        href="https://forecast7.com/en/21d00105d82/hanoi/" data-label_1="HÀ NỘI" data-label_2="WEATHER"
-        data-font="Ubuntu" data-icons="Climacons Animated" data-mode="Current" data-days="3"
-        data-theme="marine"></a>
+  <div id="weather" class="float-right" style="width: 100px; height: 40px; border-radius: 10px 10px;">
+    <a class="weatherwidget-io" style="border-radius: 10px 0 0 13px;" href="https://forecast7.com/en/21d00105d82/hanoi/"
+      data-label_1="HÀ NỘI" data-label_2="WEATHER" data-font="Ubuntu" data-icons="Climacons Animated"
+      data-mode="Current" data-days="3" data-theme="marine"></a>
     <script>
-        !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+      !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
     </script>
-</div>
+  </div>
   <header>
-    <!-- NAVBAR---------------------- -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="
-    background-color: #212121;">
-      <a class=" navbar-brand" href="index.html">
-        <img src="/resources/img/Logotn.png" alt="logo" style="width: 40px;">
-        TechNews
-      </a>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="news.html">Tin Tức</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="tips.html"
-              style="font-weight:bold; color: white;border-bottom: 2px solid white;">Mẹo Vặt</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="forum.html">Forum</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="vote.html">Góc Uy Tín</a>
-          </li>
-        </ul>
-        <div class="nav-link" style="margin-right: 20px;">
-          <a href="https://www.facebook.com/" class="nav-link-icon" title="Follow us on Facebook" target="_blank">
-            <i class="fab fa-facebook-square"></i>
-          </a>
+<!-- NAVBAR---------------------- -->
+<nav class="navbar navbar-expand-md navbar-dark fixed-top" style="
+background-color: #212121;">
+  <a class=" navbar-brand" href="quantri.html">
+    <img src="/resources/img/Logotn.png" alt="logo" style="width: 40px;">
+    TechNews
+  </a>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto cssf">
+      <!-- Example split danger button -->
+      <li>
+      <div class="btn-group">
+        <a href="quanlyadmin.html"><button type="button" class="btn btn-danger">Quản lý Admin</button></a>
+        <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="themadmin.html">Thêm admin</a>
         </div>
-        <div class="dropdown account-item">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-user-circle"></i>
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-            <button class="dropdown-item" type="button">
-              <i class="fas fa-sign-in-alt"></i> Action</button>
-          </div>
+      </div>
+    </li>
+
+    <li>
+      <a href="quanlyuser.html"><button type="button" class="btn btn-danger">Quản lý Users</button></a>
+    </li>
+
+    <li>
+      <div class="btn-group">
+        <a href="quanlytintuc.html"><button type="button" class="btn btn-danger">Quản lý Tin tức</button></a>
+        <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="themtintuc.html">Thêm tin tức<</a>
         </div>
+      </div>
+    </li>
 
-        <form class="form-inline mt-2 mt-md-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Tìm Kiếm" aria-label="Search">
-          <button class="btn btn-outline-success" id="btn-search-pj" type="submit">
-            <i class="fas fa-search"></i>
-          </button>
-        </form>
+    <li>
+      <div class="btn-group">
+        <a href="quanlymeovat.html"><button type="button" class="btn btn-danger">Quản lý Mẹo vặt</button></a>
+        <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="themmeovat.html">Thêm mẹo vặt<</a>
+        </div>
       </div>
-    </nav>
-    <!-- END NAVBAR---------------------------------->
-  </header>
-  <!-- HEAD TIPS----------------------------------->
-  <section class="jumbotron text-center">
-    <div class="container">
-      <h1 class="title-section-vote font-title">Chào Mừng Bạn Đến Với</h1>
-      <h1 class="title-section-vote font-title">Mẹo Vặt</h1>
-      <br>
-      <p class="lead text-muted" style="color: rgb(117, 108, 108) !important ;font-weight: 400;">Something short and
-        leading about the collection below—its contents, the creator,
-        etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
-      <p>
-        <a href="#" class="btn btn-primary my-2" onclick="scrollToElement('tipclick')">Khám Phá</a>
-      </p>
-      <br><br>
-      <div class="animate__animated animate__bounce animate__infinite" style="font-size: 100px;"><i
-          class="fas fa-angle-double-down"></i></div>
-    </div>
+    </li>
 
-  </section>
-  <br><br>
+    <li>
+      <a href="quanlyforum.html"><button type="button" class="btn btn-danger">Quản lý Forum</button></a>
+    </li>
 
-
-  <!-- END HEAD TIPS-------------------->
-  <!-- TIPS-MINI------------------------>
-  <div  class="container-xl pg-tips" id="tipclick">
-    <!-- <div class="container-xl title-news">
-    <h2>Tin Tức</h2>
-    <a href="" class="more">
-      <p class="more">
-        Xem thêm
-        <i class="fas fa-angle-double-right"></i>
-      </p>
-    </a>
-  </div> -->
-    <div class="row row-tips-mini" >
-      <div class="col-md-3 img-mini-tips">
-        <a href=""><img src="resources/img/1.jpg" alt="" class="mini-img"></a>
-      </div>
-      <div class="col-md-3 img-mini-tips">
-        <a href=""><img src="resources/img/2.jpg" alt="" class="mini-img"></a>
-      </div>
-      <div class="col-md-3 img-mini-tips">
-        <a href=""><img src="resources/img/3.jpg" alt="" class="mini-img"></a>
-      </div>
-      <div class="col-md-3 img-mini-tips">
-        <a href=""><img src="resources/img/4.jpg" alt="" class="mini-img"></a>
-      </div>
-    </div>
+    <li>
+      <a href="quanlygocuytin.html"><button type="button" class="btn btn-danger">Quản lý Góc uy tín</button></a>
+    </li>
+    </ul>
   </div>
-  <!--END TIPS-MINI--------------------->
-
-  <!-- TIPS NEWS------------------------>
-  <div id="container" class="container-xl xl-tips">
-    <div class="container-xl title-tips">
-      <h2>Mẹo Vặt</h2>
-      <a href="" class="more">
-        <p class="more">
-          Xem thêm
-          <i class="fas fa-angle-double-right"></i>
-        </p>
-      </a>
-    </div>
-    <div class="row row-tips">
-      <div class="col-md-5 row-left">
-        <a href="">
-          <img src="resources/img/4.jpg" class="img-tips1">
-        </a>
-        <a href="">
-          <img src="resources/img/2.jpg" class="img-tips1">
-        </a>
-        <a href="">
-          <img
-            src="https://images.pexels.com/photos/2343475/pexels-photo-2343475.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-            class="img-tips1">
-        </a>
-        <a href="">
-          <img src="resources/img/1.jpg" class="img-tips1">
-        </a>
-      </div>
-      <div class="col-md-7 row-right">
-        <a href="">
-          <img src="resources/img/3.jpg" class="img-tips2">
-        </a>
-        <a href="">
-          <img src="resources/img/4.jpg" class="img-tips2">
-        </a>
-        <a href="">
-          <img src="resources/img/1.jpg" class="img-tips2">
-        </a>
-      </div>
-    </div>
-
-  </div>
-  <!--END TIPS NEWS--------------------->
+</nav>
+<!-- END NAVBAR-------------------------------- -->
+<p style="margin-top: 50px;border: 3px solid #fff;font-size:30px;text-align: center;">Thêm Admin</p>
 
 
-
-  <!-- FOOTER -->
+    <!-- FOOTER -->
   <footer class=" container-fluid pt-4 my-md pt-md-5 border-top footer">
     <div class="row">
       <div class="col-12 col-md">
@@ -208,20 +125,20 @@
           alt="" width="120" height="50" style="border-radius: 10px 10px;">
 
         <small class="d-block mb-3 text-muted" id="copyright">&copy;
-          <script>
-            document.getElementById('copyright').appendChild(document.createTextNode(dayjs().format('YYYY')))
-          </script>
-          Designed by
-          <a href="https://www.facebook.com/pastetuaam" target="_blank" style="color: #026670;">Pastetu</a>
-        </small>
+                    <script>
+                        document.getElementById('copyright').appendChild(document.createTextNode(dayjs().format('YYYY')))
+                    </script>
+                    Designed by
+                    <a href="https://www.facebook.com/pastetuaam" target="_blank" style="color: #026670;">Pastetu</a>
+                </small>
       </div>
       <div class="col-6 col-md">
         <h5>Chịu trách nhiệm quản lý nội dung</h5>
         <ul class="list-unstyled text-small">
-          <li><a class="text-muted" href="https://www.facebook.com/12344566g" target="_blank">Phạm Đức Long</a></li>
+          <li><a class="text-muted" href="https://www.facebook.com/899thang" target="_blank">Phạm Thắng</a></li>
+
           <li><a class="text-muted" href="https://www.facebook.com/pastetuaam" target="_blank">Đinh Quang Anh</a></li>
-          <li><a class="text-muted" href="https://www.facebook.com/tho.tranquang.921" target="_blank">Trần Quang Thọ</a>
-          </li>
+          <li><a class="text-muted" href="https://www.facebook.com/tho.tranquang.921" target="_blank">Trần Quang Thọ</a></li>
         </ul>
       </div>
       <div class="col-6 col-md">
@@ -229,7 +146,7 @@
         <ul class="list-unstyled text-small">
           <li><a class="text-muted" href="#"><i class="fas fa-phone-alt"></i> 0567 444 444</a></li>
           <li><a class="text-muted" href="#"><i class="fas fa-envelope"></i> technews@gmail.com</a></li>
-
+          
         </ul>
       </div>
       <div class="col-6 col-md">
@@ -242,17 +159,14 @@
   </footer>
 
 
-
-
-  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-  <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="../vendors/js/vendor/jquery.slim.min.js"><\/script>')</script>
-  <script src="../vendors/dist/js/perfect-scrollbar.jquery.min.js"></script>
-  <script src="../vendors/dist/js/bootstrap.bundle.js"></script>
-  <script src="../vendors/dist/js/ct-navbar.js"></script>
+
+  <script src="/vendors/dist/js/perfect-scrollbar.jquery.min.js"></script>
+  <script src="/vendors/dist/js/bootstrap.bundle.js"></script>
+  <script src="/vendors/dist/js/ct-navbar.js"></script>
   <script src="/resources/js/app.js"></script>
 </body>
 

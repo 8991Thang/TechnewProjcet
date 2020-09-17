@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TechNews</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.20.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.20.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.20.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.20.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.20.0/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+    <link href="/vendors/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+  
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="/resources/css/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <div id="scroll-up">
+      <p class="float-right"><a href="#" style="color: #026670;"> <i class="far fa-arrow-alt-circle-up"></i></a></p>
+    </div>
+  
+    <div id="weather" class="float-right" style="width: 100px; height: 40px; border-radius: 10px 10px;">
+      <a class="weatherwidget-io" style="border-radius: 10px 0 0 13px;" href="https://forecast7.com/en/21d00105d82/hanoi/"
+        data-label_1="HÀ NỘI" data-label_2="WEATHER" data-font="Ubuntu" data-icons="Climacons Animated"
+        data-mode="Current" data-days="3" data-theme="marine"></a>
+      <script>
+        !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+      </script>
+    </div>
+    <header>
+      <!-- NAVBAR---------------------- -->
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="
+      background-color: #212121;">
+        <a class=" navbar-brand" href="index.html">
+          <img src="/resources/img/Logotn.png" alt="logo" style="width: 40px;">
+          TechNews
+        </a>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"
+                style="font-weight:bold; color: white;border-bottom: 2px solid white;">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="news.html">Tin Tức</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tips.html">Mẹo Vặt</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="forum.html">Forum</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="vote.html">Góc Uy Tín</a>
+            </li>
+          </ul>
+          <div class="nav-link" style="margin-right: 20px;">
+            <a href="https://www.facebook.com/" class="nav-link-icon" title="Follow us on Facebook" target="_blank">
+              <i class="fab fa-facebook-square"></i>
+            </a>
+          </div>
+          <div class="dropdown account-item">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-user-circle"></i>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <button class="dropdown-item" type="button">
+                <i class="fas fa-sign-in-alt"></i> Action</button>
+            </div>
+          </div>
+  
+          <form class="form-inline mt-2 mt-md-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Tìm Kiếm" aria-label="Search">
+            <button class="btn btn-outline-success" id="btn-search-pj" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+        </div>
+      </nav>
+      <!-- END NAVBAR-------------------------------- -->
+  
+      <!-- BANNER ------------------------------------->
+      <div id="mycarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#mycarousel" data-slide-to="1"></li>
+          <li data-target="#mycarousel" data-slide-to="2"></li>
+          <li data-target="#mycarousel" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+              <rect width="100%" height="100%" fill="white" />
+              <img src="/resources/img/tintuc.png" alt=""></svg>
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h1>Tin Tức</h1>
+                <p>Những tin tức bổ ích, thông tin từ trong nước và ngoài nước.Đem đến cho chúng ta sự hiểu biết về công
+                  nghệ.</p>
+                <p><a class="btn btn-lg btn-primary" role="button" href="#" onclick="scrollToElement('news')">Khám Phá</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+              <rect width="100%" height="100%" fill="#777" />
+              <img src="/resources/img/meo.png" alt="img">
+            </svg>
+            <div class="container">
+              <div class="carousel-caption text-right">
+                <h1>Mẹo Vặt</h1>
+                <p class="text-head">Là nơi chúng tôi chia sẻ những kiến thức chắt lọc từ quá trình sử dụng công nghệ.
+                  Giúp cho mọi người tham khảo các ý kiến
+                  để sắm cho mình cấu hình phù hợp hoặc giúp chiếc máy hoạt động hiệu quả.
+                </p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button" onclick="scrollToElement('tips')">Khám Phá</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+              <rect width="100%" height="100%" fill="#777" />
+              <img src="/resources/img/forum.png" alt=""></svg>
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h1>Forum</h1>
+                <p>Mạng xã hội về công nghệ giúp mọi người tương tác và đóng góp ý kiến, đăng các tin về công nghệ do
+                  chính mình tự tạo. Đồng thời có chức năng chia sẻ
+                  và bình luận đóng góp ý kiến.
+                </p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button" onclick="scrollToElement('forum')">Khám
+                    Phá</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+              <rect width="100%" height="100%" fill="#777" />
+              <img src="/resources/img/vote.png" alt=""></svg>
+            <div class="container">
+              <div class="carousel-caption text-right">
+                <h1>Góc uy tín</h1>
+                <p class="text-head">Nơi mọi người tự đánh giá các cửa hàng bán đồ công nghệ giúp cho cộng đồng tìm kiếm
+                  được nơi
+                  uy tín để sắm cho mình sản phẩm chất lượng tốt.
+                </p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button" onclick="scrollToElement('vote')">Khám Phá</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+  
+      <!-- END BANNER---------------------------------- -->
+    </header>
+  
+  
+    <main role="main">
+      <!--NEWS--------------------------------------------->
+  
+      <div class="container-content" id="news">
+        <div class="container-xl title-content font-title">
+          <h2>Tin Tức</h2>
+          <a href="news.html" class="more">
+            <p class="more">
+              Xem thêm
+              <i class="fas fa-angle-double-right"></i>
+            </p>
+          </a>
+        </div>
+        <div class="container-xl container-pg-home">
+          <div class="row row-title">
+            <div class="col-md-9 big-img">
+              <a href="tin1.html" class="tab-link">
+                <div class="trans" style="width: 100%; height: 100%;
+              background-image:url(https://nguyencongpc.vn/wp-content/uploads/I9-9980XE-1.jpg);
+              background-size: cover;">
+                  <div class="content-backgr">
+                    <div class="blur"></div>
+                    <h2 class="title-bg">Intel core i9-9980XE – Ông trùm cuối xuất hiện.Intel core i9-9980XE – Ông trùm
+                      cuối xuất hiện.Intel core i9-9980XE – Ông trùm cuối xuất hiện.</h2>
+                    <small class="time-bg"><i class="far fa-clock"></i> 20/8/2020</small>
+                    <p class="content-bg">Bạn là một Designer, dù bạn đang xử lý một bộ phim điện ảnh mới nhất hay đang
+                      tiếp tục cho chuỗi các video trên youtube với hàng loạt kỹ xảo chồng chéo . Bộ xử lý Skylake, intel
+                      core i9-9980 XE thiết kế nhằm đáp ứng được các nhu cầu về hiệu năng của bạn , bằng cách sử dụng 2
+                      nhân nhanh nhất với tần suất cao hơn hẳn , và với 18 nhân 36 luồng khi cần đa nhiệm đỉnh cao , trải
+                      nghiệm hiệu năng cực khủng với hình ảnh 4K đầy chân thực. Bộ nhớ đệm tốc độ cao cùng công nghệ cải
+                      tiến mới nhất . Tất cả đều được thiết kế nhằm mục đích rút ngắn thời gian từ khâu lập kế hoạch đến
+                      khi hoàn thành sản phẩm nhanh hơn bao giờ hết .
+                    </p>
+                  </div>
+                </div>
+  
+              </a>
+            </div>
+            <div class="col-md-3 small-img">
+              <a href="" class="tab-link">
+                <div class="trans" style="width: 100%; height: 100%;
+              background-image:url(https://anphat.com.vn/media/product/25347_vga_nvidia_titan_v_1.jpg);
+              background-size: cover;">
+                  <div class="content-backgr content-backgr-sm">
+                    <div class="blur blur-sm"></div>
+                    <h6 class="title-sm">Đánh giá card đồ họa mạnh mẽ nhất hiện nay:
+                      Nvidia Titan V.</h6>
+                    <small class="time-sm"><i class="far fa-clock"></i> 20/8/2020</small>
+                    <p class="content-sm">Titan V là chiếc card đồ họa phổ thông mạnh nhất thế giới. Đó là tuyên bố của
+                      Nvidia và cái giá của nó đã nói lên tất cả. Nhưng mạnh như thế nào và nó có đáng giá cả trăm triệu
+                      đồng khi về đến Việt Nam hay không thì chúng ta có thể mường tượng ra được sau bài đánh giá này
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <a href="" class="tab-link">
+                <div class="trans" style="width: 100%; height: 100%;
+              background-image:url(https://www.acervietnam.com.vn/Data/Sites/1/media/tin-tuc/s%E1%BA%A3n-ph%E1%BA%A9m/helios-300/3.jpg);
+              background-size: cover;">
+                  <div class="content-backgr content-backgr-sm">
+                    <div class="blur blur-sm"></div>
+                    <h6 class="title-sm">Predator Helios 300 phiên bản 2019: Thiết kế cực ngầu, sức mạnh
+                      vô biên!</h6>
+                    <small class="time-sm"><i class="far fa-clock"></i> 20/8/2020</small>
+                    <p class="content-sm">Với mức giá bán lẻ từ 37,990,000 đồng để nhận lại tất cả những phẩm chất tinh
+                      túy nhất của một chiếc laptop chơi game thực thụ, Predator Helios 300 phiên bản 2019 với thiết kế
+                      mới, hiệu năng tối tân, cùng dịch vụ bảo hành VIP 3S1 dành riêng cho các sản phẩm cao cấp của Acer -
+                      hư là đổi nếu không sửa được trong vòng 3 ngày, kể cả Thứ Bảy và Chủ Nhật - sẽ là một chiến binh
+                      thực sự không thể bỏ qua cho mọi game thủ trong mùa hè này!
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <a href="" class="tab-link">
+                <div class="trans" style="width: 100%; height: 100%;
+              background-image:url(http://4lap.com.vn/wp-content/uploads/2018/08/laptop-dell-precision-7710-600x417.jpg);
+              background-size: cover;">
+                  <div class="content-backgr content-backgr-sm">
+                    <div class="blur blur-sm"></div>
+                    <h6 class="title-sm">REVIEW ĐÁNH GIÁ CHI TIẾT LAPTOP DELL PRECISION 7710 WORKSTATION.</h6>
+                    <small class="time-sm"><i class="far fa-clock"></i> 20/8/2020</small>
+                    <p class="content-sm">Hãng laptop Dell gần đây đã hoàn toàn sửa đổi máy trạm 17 inch di động lớn, mang
+                      lại nhiều đổi mới trong năm mô hình mới. Ngoài một khung gầm mới, đặc biệt là các giao diện mới, bộ
+                      vi xử lý, chip đồ hoạ và hiển thị cung cấp một giá trị gia tăng đáng kể. Chúng tôi đã kiểm tra cụ
+                      thể như thế nào Dell Precision 7710 thực sự thực hiện.
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!--END NEWS---------------------------------------->
+  
+      <!-- TIPS------------------------------------------->
+      <div class="container-content" id="tips">
+        <div class="container-xl title-content font-title">
+          <h2>Mẹo Vặt</h2>
+          <a href="tips.html" class="more">
+            <p class="more">
+              Xem thêm
+              <i class="fas fa-angle-double-right"></i>
+            </p>
+          </a>
+        </div>
+        <div class="container-xl container-pg-home">
+          <div class="row row-title">
+            <div class="col-md-9 big-img">
+              <a href="" class="tab-link">
+                <div class="trans" style="width: 100%; height: 100%;
+              background-image:url(https://genk.mediacdn.vn/thumb_w/640/139269124445442048/2020/7/9/photo1594354869029-15943548693981464524458.jpg);
+              background-size: cover;">
+                  <div class="content-backgr">
+                    <div class="blur"></div>
+                    <h2 class="title-bg">Cách nhận dạng và tìm đúng font chữ được sử dụng trên hình ảnh</h2>
+                    <small class="time-bg"><i class="far fa-clock"></i> 20/8/2020</small>
+                    <p class="content-bg">Không cần đến phần mềm mà bạn vẫn có thể nhận dạng và tìm đúng
+                      font chữ được sử dụng trên hình ảnh.
+                      Trong khi lướt web, có thể bạn sẽ gặp một hay nhiều font chữ "khá hay ho" được sử dụng
+                      trên hình ảnh nào đó và bạn muốn sở hữu chúng để có thể sử dụng cho các mục đích
+                      sau này thì phải làm thế nào?</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-3 small-img">
+              <a href="" class="tab-link">
+                <div class="trans" style="width: 100%; height: 100%;
+              background-image:url(https://genk.mediacdn.vn/thumb_w/640/139269124445442048/2020/7/25/photo1595650945441-1595650945837554268131.jpg);
+              background-size: cover;">
+                  <div class="content-backgr content-backgr-sm">
+                    <div class="blur blur-sm"></div>
+                    <h6 class="title-sm">Cách tối ưu hóa hiệu suất chơi Game cho máy tính cấu hình yếu.</h6>
+                    <small class="time-sm"><i class="far fa-clock"></i> 20/8/2020</small>
+                    <p class="content-sm">Nếu sử dụng Windows 10, hẳn bạn sẽ rất ấn tượng với chế độ Game Mode mà
+                      Microsoft đã tích hợp sẳn. Tuy nhiên, dường như Game Mode chỉ thật sự "công hiệu" khi bạn sở hữu một
+                      chiếc máy tính có cấu hình ổn. Còn với cấu hình "khiêm tốn", Game Mode không thật sự hiệu quả.
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <a href="" class="tab-link">
+                <div class="trans" style="width: 100%; height: 100%;
+              background-image:url(https://longvan.net/hinhanh/tintuc/phimtatkhoidongwindows10ochedohibernatehoactatnhanhchong2025499jpg6000.jpg);
+              background-size: cover;">
+                  <div class="content-backgr content-backgr-sm">
+                    <div class="blur blur-sm"></div>
+                    <h6 class="title-sm">Dùng máy tính mà không biết 11 thủ thuật phím tắt siêu lợi
+  
+                      này thì thật là quá phí
+                    </h6>
+                    <small class="time-sm"><i class="far fa-clock"></i> 20/8/2020</small>
+                    <p class="content-sm">Anh em xài máy tính ai cũng có thể sử dụng bàn phím thành thạo nhưng không phải
+                      ai cũng biết những bí mật nho nhỏ này – cách sử dụng một số phím tắt trên bàn phím.
+  
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <a href="" class="tab-link">
+                <div class="trans" style="width: 100%; height: 100%;
+              background-image:url(https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+              background-size: cover;">
+                  <div class="content-backgr content-backgr-sm">
+                    <div class="blur blur-sm"></div>
+                    <h6 class="title-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6>
+                    <small class="time-sm"><i class="far fa-clock"></i> 20/8/2020</small>
+                    <p class="content-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique id ducimus
+                      voluptate exercitationem aliquam dolorum voluptatibus, culpa molestias, ullam temporibus fugiat
+                      assumenda quam dicta? Reiciendis perspiciatis commodi facilis quaerat esse!</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END TIPS ------------------------------------------->
+  
+      <!-- FORUM ---------------------------------------------->
+      <div class="container-content" id="forum">
+        <div class="container-xl title-content font-title ">
+          <h2>Forum </h2>
+          <a href="forum.html" class="more">
+            <p class="more">
+              Xem thêm
+              <i class="fas fa-angle-double-right"></i>
+            </p>
+          </a>
+        </div>
+        <div class="container-xl container-pg-home">
+          <div class="row row-title">
+            <div class="col-md-9 big-img">
+              <a href="" class="tab-link">
+                <div class="trans" style="width: 100%; height: 100%;
+              background-image:url(https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+              background-size: cover;">
+                  <div class="content-backgr">
+                    <div class="blur"></div>
+                    <h2 class="title-bg">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
+                    <small class="time-bg"><i class="far fa-clock"></i> 20/8/2020</small>
+                    <p class="content-bg">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique id ducimus
+                      voluptate exercitationem aliquam dolorum voluptatibus, culpa molestias, ullam temporibus fugiat
+                      assumenda quam dicta? Reiciendis perspiciatis commodi facilis quaerat esse!</p>
+  
+                  </div>
+                </div>
+  
+              </a>
+            </div>
+            <div class="col-md-3 small-img">
+              <a href="" class="tab-link">
+                <div class="trans" style="width: 100%; height: 100%;
+              background-image:url(https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+              background-size: cover;">
+                  <div class="content-backgr content-backgr-sm">
+                    <div class="blur blur-sm"></div>
+                    <h6 class="title-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6>
+                    <small class="time-sm"><i class="far fa-clock"></i> 20/8/2020</small>
+                    <p class="content-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique id ducimus
+                      voluptate exercitationem aliquam dolorum voluptatibus, culpa molestias, ullam temporibus fugiat
+                      assumenda quam dicta? Reiciendis perspiciatis commodi facilis quaerat esse!</p>
+                  </div>
+                </div>
+              </a>
+              <a href="" class="tab-link">
+                <div class="trans" style="width: 100%; height: 100%;
+              background-image:url(https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+              background-size: cover;">
+                  <div class="content-backgr content-backgr-sm">
+                    <div class="blur blur-sm"></div>
+                    <h6 class="title-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6>
+                    <small class="time-sm"><i class="far fa-clock"></i> 20/8/2020</small>
+                    <p class="content-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique id ducimus
+                      voluptate exercitationem aliquam dolorum voluptatibus, culpa molestias, ullam temporibus fugiat
+                      assumenda quam dicta? Reiciendis perspiciatis commodi facilis quaerat esse!</p>
+                  </div>
+                </div>
+              </a>
+              <a href="" class="tab-link">
+                <div class="trans" style="width: 100%; height: 100%;
+              background-image:url(https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+              background-size: cover;">
+                  <div class="content-backgr content-backgr-sm">
+                    <div class="blur blur-sm"></div>
+                    <h6 class="title-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6>
+                    <small class="time-sm"><i class="far fa-clock"></i> 20/8/2020</small>
+                    <p class="content-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique id ducimus
+                      voluptate exercitationem aliquam dolorum voluptatibus, culpa molestias, ullam temporibus fugiat
+                      assumenda quam dicta? Reiciendis perspiciatis commodi facilis quaerat esse!</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- END FORUM ---------------------------------------------->
+  
+      <!--REPUTATION ---------------------------------------------->
+      <div class="container-content" id="vote">
+        <div class="container-xl title-content font-title">
+          <h2>Góc uy tín</h2>
+          <a href="vote.html" class="more">
+            <p class="more">
+              Xem thêm
+              <i class="fas fa-angle-double-right"></i>
+            </p>
+          </a>
+        </div>
+        <div class="container-xl container-pg-home">
+          <div class="row row-title">
+            <div class="col-md-9 big-img">
+              <a href="" class="tab-link">
+                <div class="trans" style="width: 100%; height: 100%;
+              background-image:url(https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+              background-size: cover;">
+                  <div class="content-backgr">
+                    <div class="blur"></div>
+                    <h2 class="title-bg">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
+                    <small class="time-bg"><i class="far fa-clock"></i> 20/8/2020</small>
+                    <p class="content-bg">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique id ducimus
+                      voluptate exercitationem aliquam dolorum voluptatibus, culpa molestias, ullam temporibus fugiat
+                      assumenda quam dicta? Reiciendis perspiciatis commodi facilis quaerat esse!</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-3 small-img">
+              <a href="" class="tab-link">
+                <div class="trans" style="width: 100%; height: 100%;
+              background-image:url(https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+              background-size: cover;">
+                  <div class="content-backgr content-backgr-sm">
+                    <div class="blur blur-sm"></div>
+                    <h6 class="title-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6>
+                    <small class="time-sm"><i class="far fa-clock"></i> 20/8/2020</small>
+                    <p class="content-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique id ducimus
+                      voluptate exercitationem aliquam dolorum voluptatibus, culpa molestias, ullam temporibus fugiat
+                      assumenda quam dicta? Reiciendis perspiciatis commodi facilis quaerat esse!</p>
+                  </div>
+                </div>
+              </a>
+              <a href="" class="tab-link">
+                <div class="trans" style="width: 100%; height: 100%;
+              background-image:url(https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+              background-size: cover;">
+                  <div class="content-backgr content-backgr-sm">
+                    <div class="blur blur-sm"></div>
+                    <h6 class="title-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6>
+                    <small class="time-sm"><i class="far fa-clock"></i> 20/8/2020</small>
+                    <p class="content-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique id ducimus
+                      voluptate exercitationem aliquam dolorum voluptatibus, culpa molestias, ullam temporibus fugiat
+                      assumenda quam dicta? Reiciendis perspiciatis commodi facilis quaerat esse!</p>
+                  </div>
+                </div>
+              </a>
+              <a href="" class="tab-link">
+                <div class="trans" style="width: 100%; height: 100%;
+              background-image:url(https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+              background-size: cover;">
+                  <div class="content-backgr content-backgr-sm">
+                    <div class="blur blur-sm"></div>
+                    <h6 class="title-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6>
+                    <small class="time-sm"><i class="far fa-clock"></i> 20/8/2020</small>
+                    <p class="content-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique id ducimus
+                      voluptate exercitationem aliquam dolorum voluptatibus, culpa molestias, ullam temporibus fugiat
+                      assumenda quam dicta? Reiciendis perspiciatis commodi facilis quaerat esse!</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- END REPUTATION ---------------------------------------------->
+  
+    </main>
+    <!-- FOOTER -->
+    <footer class=" container-fluid pt-4 my-md pt-md-5 border-top footer">
+      <div class="row">
+        <div class="col-12 col-md">
+          <img class="mb-2"
+            src="data:image/png;base64,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"
+            alt="" width="120" height="50" style="border-radius: 10px 10px;">
+  
+          <small class="d-block mb-3 text-muted" id="copyright">&copy;
+            <script>
+              document.getElementById('copyright').appendChild(document.createTextNode(dayjs().format('YYYY')))
+            </script>
+            Designed by
+            <a href="https://www.facebook.com/pastetuaam" target="_blank" style="color: #026670;">Pastetu</a>
+          </small>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Chịu trách nhiệm quản lý nội dung</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="https://www.facebook.com/12344566g" target="_blank">Phạm Văn Thắng</a></li>
+            <li><a class="text-muted" href="https://www.facebook.com/pastetuaam" target="_blank">Đinh Quang Anh</a></li>
+            <li><a class="text-muted" href="https://www.facebook.com/tho.tranquang.921" target="_blank">Trần Quang Thọ</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Hợp tác truyền thông</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#"><i class="fas fa-phone-alt"></i> 0567 444 444</a></li>
+            <li><a class="text-muted" href="#"><i class="fas fa-envelope"></i> technews@gmail.com</a></li>
+  
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Đối tác phát triển</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="https://mindx.edu.vn/">MINDX</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- END FOOTER--------------------- -->
+  
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../vendors/js/vendor/jquery.slim.min.js"><\/script>')</script>
+  
+    <script src="/vendors/dist/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="/vendors/dist/js/bootstrap.bundle.js"></script>
+    <script src="/vendors/dist/js/ct-navbar.js"></script>
+    <script src="/resources/js/app.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+
+      });
+    </script>
+  </body>
+</html>
